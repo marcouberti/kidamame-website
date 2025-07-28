@@ -23,4 +23,26 @@ h1 {
 	&:not(:last-child) {
 		margin-right: 0.75rem;
 	}
+}
+
+// Fix copyright positioning to bottom of page
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+#wrapper {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	padding-bottom: 0 !important;
+}
+
+.copyright {
+	margin-top: auto !important;
+	padding-top: 2rem !important;
+	padding-bottom: 1rem !important;
+	margin-bottom: 0 !important;
 } 
