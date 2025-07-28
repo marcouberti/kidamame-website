@@ -27,6 +27,24 @@
 			}, 100);
 		});
 
+	// Dynamic year in copyright.
+		$(document).ready(function() {
+			var currentYear = new Date().getFullYear();
+			var startYear = 2025;
+			var yearText = '';
+			
+			if (currentYear === startYear) {
+				yearText = startYear.toString();
+			} else if (currentYear > startYear) {
+				yearText = startYear + ' - ' + currentYear;
+			} else {
+				// Fallback for years before 2025
+				yearText = currentYear.toString();
+			}
+			
+			$('#dynamic-year').text(yearText);
+		});
+
 	// Hack: Enable IE workarounds.
 		if (browser.name == 'ie')
 			$body.addClass('is-ie');
