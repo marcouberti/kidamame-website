@@ -1,26 +1,9 @@
 /* Custom Styles */
 
-// Intro paragraph with gradual responsive scaling (much more subtle than original)
+// Keep intro paragraph consistent across all devices (matching original desktop size)
 section.intro header p {
-	font-size: 24px !important; // Large desktop size
+	font-size: 24px !important; // Fixed to match original large desktop size (18pt)
 	line-height: 1.6;
-	
-	// Gradual decrease for smaller screens
-	@include breakpoint('<=xlarge') {
-		font-size: 22px !important; // ≤1920px: slight decrease
-	}
-	
-	@include breakpoint('<=large') {
-		font-size: 20px !important; // ≤1152px: gentle decrease
-	}
-	
-	@include breakpoint('<=medium') {
-		font-size: 18px !important; // ≤736px: moderate decrease
-	}
-	
-	@include breakpoint('<=small') {
-		font-size: 16px !important; // ≤480px: final decrease but still readable
-	}
 }
 
 // H1 customization for better readability across devices

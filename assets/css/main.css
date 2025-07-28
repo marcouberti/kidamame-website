@@ -3135,26 +3135,6 @@ section.intro header p {
   font-size: 24px !important;
   line-height: 1.6;
 }
-@media screen and (max-width: 1920px) {
-  section.intro header p {
-    font-size: 22px !important;
-  }
-}
-@media screen and (max-width: 1280px) {
-  section.intro header p {
-    font-size: 20px !important;
-  }
-}
-@media screen and (max-width: 1152px) {
-  section.intro header p {
-    font-size: 18px !important;
-  }
-}
-@media screen and (max-width: 736px) {
-  section.intro header p {
-    font-size: 18px !important;
-  }
-}
 
 h1 {
   font-size: 4.5rem;
