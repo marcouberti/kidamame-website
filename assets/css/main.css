@@ -3132,16 +3132,16 @@ body.is-ie #wrapper > section > .content > section {
 
 /* Custom Styles */
 h1 {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
 }
 @media screen and (max-width: 736px) {
   h1 {
-    font-size: 3rem;
+    font-size: 4.5rem;
   }
 }
 @media screen and (max-width: 360px) {
   h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
 }
 
