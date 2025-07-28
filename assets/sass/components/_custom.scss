@@ -1,15 +1,15 @@
 /* Custom Styles */
 
-// H1 customization for better readability across devices
+// H1 customization for smaller font size
 h1 {
-	font-size: 4.5rem; // Increased from 3.5rem for better visibility
+	font-size: 3.5rem; // Ridotto da 5rem a 3.5rem
 	
 	@include breakpoint('<=small') {
-		font-size: 4.5rem; // Increased from 4rem for better tablet readability
+		font-size: 3rem; // Ridotto da 4.5rem a 3rem
 	}
 
 	@include breakpoint('<=xxsmall') {
-		font-size: 4rem; // Increased from 3.5rem for better mobile visibility
+		font-size: 2.5rem; // Ridotto da 3.75rem a 2.5rem
 	}
 }
 
