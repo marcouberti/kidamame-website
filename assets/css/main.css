@@ -3131,6 +3131,11 @@ body.is-ie #wrapper > section > .content > section {
 }
 
 /* Custom Styles */
+section.intro header p {
+  font-size: 24px !important;
+  line-height: 1.6;
+}
+
 h1 {
   font-size: 4.5rem;
 }

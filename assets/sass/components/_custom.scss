@@ -1,5 +1,11 @@
 /* Custom Styles */
 
+// Keep intro paragraph consistent across all devices (matching original desktop size)
+section.intro header p {
+	font-size: 24px !important; // Fixed to match original large desktop size (18pt)
+	line-height: 1.6;
+}
+
 // H1 customization for better readability across devices
 h1 {
 	font-size: 4.5rem; // Increased from 3.5rem for better visibility
