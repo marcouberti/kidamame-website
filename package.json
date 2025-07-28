@@ -1,0 +1,13 @@
+{
+  "name": "kidamame-website",
+  "version": "1.0.0", 
+  "description": "Website with SASS compilation",
+  "scripts": {
+    "sass": "sass assets/sass/main.scss assets/css/main.css",
+    "sass:watch": "sass --watch assets/sass/main.scss:assets/css/main.css",
+    "sass:compressed": "sass assets/sass/main.scss assets/css/main.css --style compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
