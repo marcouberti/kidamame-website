@@ -11,4 +11,16 @@ h1 {
 	@include breakpoint('<=xxsmall') {
 		font-size: 2.5rem; // Ridotto da 3.75rem a 2.5rem
 	}
+}
+
+// Larger social media icons
+.icon.brands {
+	&:before {
+		font-size: 1.5rem; // Ingrandito da 1.25rem default per tutte le icone social
+	}
+	
+	// Spaziatura tra icone (senza spazio agli estremi)
+	&:not(:last-child) {
+		margin-right: 0.75rem;
+	}
 } 
