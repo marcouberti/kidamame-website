@@ -1,5 +1,12 @@
 /* Custom Styles */
 
+// Intro logo image sizing - never more than 90% of screen width
+section.intro header img {
+	max-width: 60vw !important; // 90% of viewport width
+	height: auto; // Maintain aspect ratio
+	width: auto; // Let it scale naturally within the max-width constraint
+}
+
 // H1 customization for smaller font size
 h1 {
 	font-size: 3.5rem; // Ridotto da 5rem a 3.5rem

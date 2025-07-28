@@ -3131,6 +3131,12 @@ body.is-ie #wrapper > section > .content > section {
 }
 
 /* Custom Styles */
+section.intro header img {
+  max-width: 60vw !important;
+  height: auto;
+  width: auto;
+}
+
 h1 {
   font-size: 3.5rem;
 }
