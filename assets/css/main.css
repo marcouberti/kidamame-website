@@ -2765,14 +2765,14 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
   margin: 7.5rem 0 0 0;
 }
 #wrapper section > header {
-  padding: 2rem;
+  padding: 0rem 2rem 0rem 4rem;
   width: 35rem;
 }
 #wrapper section > .content {
   padding: 0 5rem;
 }
 #wrapper section > footer {
-  padding: 0 10rem;
+  padding: 0rem 2rem 0rem 4rem;
 }
 #wrapper > section > header:before {
   height: calc(100% + 10rem);
@@ -2819,14 +2819,14 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
     margin: 6rem 0 0 0;
   }
   #wrapper section > header {
-    padding: 2rem;
+    padding: 0rem 2rem 0rem 4rem;
     width: 33rem;
   }
   #wrapper section > .content {
     padding: 0 4rem;
   }
   #wrapper section > footer {
-    padding: 0 8rem;
+    padding: 0rem 2rem 0rem 4rem;
   }
   #wrapper > section > header:before {
     height: calc(100% + 8rem);
