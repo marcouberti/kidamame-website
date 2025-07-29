@@ -3146,7 +3146,6 @@ section.intro header > * {
 }
 
 section.intro header img {
-  max-width: 70% !important;
   width: auto !important;
   height: auto !important;
   display: block !important;
@@ -3154,7 +3153,12 @@ section.intro header img {
 }
 @media screen and (min-width: 1153px) {
   section.intro header img {
-    max-width: 70% !important;
+    max-width: 60% !important;
+  }
+}
+@media screen and (max-width: 736px) {
+  section.intro header img {
+    max-width: 70vw !important;
   }
 }
 
@@ -3166,9 +3170,6 @@ section.intro header p {
   section.intro header {
     padding: 2rem !important;
     min-height: 50vh !important;
-  }
-  section.intro header img {
-    max-width: 70vw !important;
   }
 }
 h1 {

@@ -19,7 +19,7 @@ section.intro header > * {
 
 // Logo-specific styling with perfect centering
 section.intro header img {
-	max-width: 70% !important;     // Never exceed container width
+	//max-width: 90% !important;     // Never exceed container width
 	width: auto !important;         // Maintain aspect ratio
 	height: auto !important;
 	display: block !important;
@@ -27,7 +27,10 @@ section.intro header img {
 	
 	// Limit size on very large screens (desktop two-column layout)
 	@include breakpoint('>=large') {
-		max-width: 70% !important;  // 90% of the left column width
+		max-width: 60% !important;  // 90% of the left column width
+	}
+	@include breakpoint('<=small') {
+		max-width: 70vw !important;
 	}
 }
 
@@ -42,10 +45,7 @@ section.intro header p {
 		padding: 2rem !important;
 		min-height: 50vh !important; // Full height only on mobile (no two-column layout)
 	}
-	
-	section.intro header img {
-		max-width: 70vw !important; // Slightly larger on mobile for better visibility
-	}
+
 }
 
 // H1 customization for smaller font size
