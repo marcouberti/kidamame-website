@@ -2726,7 +2726,7 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
   align-items: center;
 }
 #wrapper > section.intro > header {
-  padding-top: 4rem;
+  padding: 2rem;
   width: 100%;
 }
 #wrapper > section.intro > header > * {
@@ -2766,7 +2766,7 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
   margin: 7.5rem 0 0 0;
 }
 #wrapper section > header {
-  padding: 0 10rem 0 5rem;
+  padding: 0 10rem 0 10rem;
   width: 35rem;
 }
 #wrapper section > .content {
@@ -2820,7 +2820,7 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
     margin: 6rem 0 0 0;
   }
   #wrapper section > header {
-    padding: 0 8rem 0 4rem;
+    padding: 0 8rem 0 8rem;
     width: 33rem;
   }
   #wrapper section > .content {
@@ -2991,7 +2991,7 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
     padding: 0 4rem 4rem 4rem;
   }
   #wrapper > section.intro > header {
-    padding: 8rem 4rem 5rem 4rem;
+    padding: 5rem 4rem 5rem 4rem;
   }
   #wrapper .copyright {
     padding: 0 4rem 4rem 4rem;
@@ -3131,16 +3131,47 @@ body.is-ie #wrapper > section > .content > section {
 }
 
 /* Custom Styles */
+section.intro header {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  min-height: 50vh !important;
+}
+
+section.intro header > * {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: auto !important;
+}
+
 section.intro header img {
-  max-width: 60vw !important;
-  height: auto;
-  width: auto;
+  max-width: 90% !important;
+  width: auto !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+@media screen and (min-width: 1153px) {
+  section.intro header img {
+    max-width: 90% !important;
+  }
 }
 
 section.intro header p {
   color: #59acff;
 }
 
+@media screen and (max-width: 736px) {
+  section.intro header {
+    padding: 2rem 1rem !important;
+    min-height: 50vh !important;
+  }
+  section.intro header img {
+    max-width: 70vw !important;
+  }
+}
 h1 {
   font-size: 3.5rem;
 }

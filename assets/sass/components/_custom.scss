@@ -1,15 +1,51 @@
 /* Custom Styles */
 
-// Intro logo image sizing - never more than 90% of screen width
+// PERFECT LOGO CENTERING: Make intro header a flex container for centering
+section.intro header {
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: center !important; // Vertical centering
+	align-items: center !important;     // Horizontal centering
+	text-align: center !important;     // Fallback text centering
+	min-height: 50vh !important;       // Reasonable height for desktop two-column layout
+}
+
+// Override template's existing alignment constraints
+section.intro header > * {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	width: auto !important;
+}
+
+// Logo-specific styling with perfect centering
 section.intro header img {
-	max-width: 60vw !important; // 90% of viewport width
-	height: auto; // Maintain aspect ratio
-	width: auto; // Let it scale naturally within the max-width constraint
+	max-width: 90% !important;     // Never exceed container width
+	width: auto !important;         // Maintain aspect ratio
+	height: auto !important;
+	display: block !important;
+	margin: 0 auto !important;      // Extra horizontal centering
+	
+	// Limit size on very large screens (desktop two-column layout)
+	@include breakpoint('>=large') {
+		max-width: 90% !important;  // 90% of the left column width
+	}
 }
 
 // Apply accent color to intro paragraph
 section.intro header p {
 	color: _palette(accent);
+}
+
+// Responsive adjustments for smaller screens
+@include breakpoint('<=small') {
+	section.intro header {
+		padding: 2rem 1rem !important;
+		min-height: 50vh !important; // Full height only on mobile (no two-column layout)
+	}
+	
+	section.intro header img {
+		max-width: 70vw !important; // Slightly larger on mobile for better visibility
+	}
 }
 
 // H1 customization for smaller font size
