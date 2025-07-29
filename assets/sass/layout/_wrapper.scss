@@ -14,7 +14,7 @@
 				margin: ($pad * 1.5) 0 0 0;
 
 				> header {
-					padding: 0 ($pad * 2) 0 ($pad * 2);
+					padding: 2rem;
 					width: _size(header-width) + ($pad * 2);
 				}
 
@@ -145,7 +145,7 @@
 				// Intro.
 					&.intro {
 						> header {
-							padding: (($pad * 1.25) + 3rem) $pad ($pad * 1.25) $pad;
+							padding: 2rem;
 						}
 					}
 
@@ -305,7 +305,7 @@
 						align-items: center;
 
 						> header {
-							padding-top: 4rem;
+							//padding-top: 4rem;
 
 							// Hack: Chrome's grid implementation screws up absolute element placement within a static child element.
 								width: 100%;

@@ -2726,7 +2726,6 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
   align-items: center;
 }
 #wrapper > section.intro > header {
-  padding: 2rem;
   width: 100%;
 }
 #wrapper > section.intro > header > * {
@@ -2766,7 +2765,7 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
   margin: 7.5rem 0 0 0;
 }
 #wrapper section > header {
-  padding: 0 10rem 0 10rem;
+  padding: 2rem;
   width: 35rem;
 }
 #wrapper section > .content {
@@ -2820,7 +2819,7 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
     margin: 6rem 0 0 0;
   }
   #wrapper section > header {
-    padding: 0 8rem 0 8rem;
+    padding: 2rem;
     width: 33rem;
   }
   #wrapper section > .content {
@@ -2991,7 +2990,7 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
     padding: 0 4rem 4rem 4rem;
   }
   #wrapper > section.intro > header {
-    padding: 5rem 4rem 5rem 4rem;
+    padding: 2rem;
   }
   #wrapper .copyright {
     padding: 0 4rem 4rem 4rem;
@@ -3017,7 +3016,7 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
     padding: 0 2rem 3rem 2rem;
   }
   #wrapper > section.intro > header {
-    padding: 5.5rem 2rem 2.5rem 2rem;
+    padding: 2rem;
   }
   #wrapper .copyright {
     padding: 0 2rem 2rem 2rem;
@@ -3043,7 +3042,7 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
     padding: 0 1.5rem 2.25rem 1.5rem;
   }
   #wrapper > section.intro > header {
-    padding: 4.875rem 1.5rem 1.875rem 1.5rem;
+    padding: 2rem;
   }
   #wrapper .copyright {
     padding: 0 1.5rem 1.5rem 1.5rem;
@@ -3147,7 +3146,7 @@ section.intro header > * {
 }
 
 section.intro header img {
-  max-width: 90% !important;
+  max-width: 70% !important;
   width: auto !important;
   height: auto !important;
   display: block !important;
@@ -3155,7 +3154,7 @@ section.intro header img {
 }
 @media screen and (min-width: 1153px) {
   section.intro header img {
-    max-width: 90% !important;
+    max-width: 70% !important;
   }
 }
 
@@ -3165,7 +3164,7 @@ section.intro header p {
 
 @media screen and (max-width: 736px) {
   section.intro header {
-    padding: 2rem 1rem !important;
+    padding: 2rem !important;
     min-height: 50vh !important;
   }
   section.intro header img {
