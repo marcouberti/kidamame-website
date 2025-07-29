@@ -3137,6 +3137,10 @@ section.intro header img {
   width: auto;
 }
 
+section.intro header p {
+  color: #59acff;
+}
+
 h1 {
   font-size: 3.5rem;
 }

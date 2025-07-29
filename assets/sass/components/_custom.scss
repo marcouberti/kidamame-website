@@ -7,6 +7,11 @@ section.intro header img {
 	width: auto; // Let it scale naturally within the max-width constraint
 }
 
+// Apply accent color to intro paragraph
+section.intro header p {
+	color: _palette(accent);
+}
+
 // H1 customization for smaller font size
 h1 {
 	font-size: 3.5rem; // Ridotto da 5rem a 3.5rem
