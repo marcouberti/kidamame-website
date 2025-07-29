@@ -35,9 +35,9 @@ section.intro header img {
 }
 
 // Apply accent color to intro paragraph
-section.intro header p {
-	color: _palette(accent);
-}
+//section.intro header p {
+//	color: _palette(accent);
+//}
 
 // Responsive adjustments for smaller screens
 @include breakpoint('<=small') {

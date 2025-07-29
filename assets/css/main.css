@@ -3162,10 +3162,6 @@ section.intro header img {
   }
 }
 
-section.intro header p {
-  color: #59acff;
-}
-
 @media screen and (max-width: 736px) {
   section.intro header {
     padding: 2rem !important;
