@@ -45,11 +45,11 @@ section.intro header p {
 	
 	// Responsive font sizing for tagline
 	@include breakpoint('<=small') {
-		font-size: 1rem !important;  // Slightly smaller on tablets
+		font-size: 0.9rem !important;  // Slightly smaller on tablets
 	}
 	
 	@include breakpoint('<=xsmall') {
-		font-size: 1rem !important;  // Readable on small phones
+		font-size: 0.8rem !important;  // Readable on small phones
 	}
 }
 
