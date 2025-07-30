@@ -34,10 +34,24 @@ section.intro header img {
 	}
 }
 
-// Apply accent color to intro paragraph
-//section.intro header p {
-//	color: _palette(accent);
-//}
+// Tagline styling - larger font size and accent color
+section.intro header p {
+	//color: _palette(accent) !important;
+	font-size: 1rem !important;        // Increased tagline font size
+	color: #003f87;
+	//font-weight: 400 !important;       // Slightly bolder for impact
+	//line-height: 1.4 !important;       // Better line spacing
+	//letter-spacing: 0.02em !important; // Slight letter spacing for elegance
+	
+	// Responsive font sizing for tagline
+	@include breakpoint('<=small') {
+		font-size: 1rem !important;  // Slightly smaller on tablets
+	}
+	
+	@include breakpoint('<=xsmall') {
+		font-size: 1rem !important;  // Readable on small phones
+	}
+}
 
 // Responsive adjustments for smaller screens
 @include breakpoint('<=small') {
