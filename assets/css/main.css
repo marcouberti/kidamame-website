@@ -3197,10 +3197,11 @@ h1 {
   }
 }
 
-.icon.brands:before {
+ul.icons li .icon.brands:before {
   font-size: 1.5rem;
 }
-.icon.brands:not(:last-child) {
+
+ul.icons li:not(:last-child) {
   margin-right: 0.75rem;
 }
 

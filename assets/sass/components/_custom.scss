@@ -75,16 +75,16 @@ h1 {
 	}
 }
 
-// Larger social media icons
-.icon.brands {
+// Larger social media icons - updated for proper list structure
+ul.icons li .icon.brands {
 	&:before {
 		font-size: 1.5rem; // Ingrandito da 1.25rem default per tutte le icone social
 	}
-	
-	// Spaziatura tra icone (senza spazio agli estremi)
-	&:not(:last-child) {
-		margin-right: 0.75rem;
-	}
+}
+
+// Spaziatura tra icone (senza spazio agli estremi) - updated for li elements
+ul.icons li:not(:last-child) {
+	margin-right: 0.75rem;
 }
 
 // Fix copyright positioning to bottom of page
