@@ -2382,7 +2382,7 @@ a.arrow:before {
   margin: -1.25rem 0 0 -1.25rem;
   width: calc(100% + 1.25rem);
 }
-.gallery a {
+.gallery span {
   border-bottom: 0;
   display: block;
   margin: 1.25rem 0 0 1.25rem;
@@ -2390,7 +2390,7 @@ a.arrow:before {
   position: relative;
   width: calc(50% - 1.25rem);
 }
-.gallery a img {
+.gallery span img {
   display: block;
   height: 25vw;
   min-height: 18rem;
@@ -2398,13 +2398,13 @@ a.arrow:before {
   object-position: center;
   width: 100%;
 }
-.gallery a.landscape {
+.gallery span.landscape {
   width: 100%;
 }
-.gallery a.landscape img {
+.gallery span.landscape img {
   height: 30vw;
 }
-.gallery a.portrait img {
+.gallery span.portrait img {
   height: 30vw;
 }
 .gallery .modal {
@@ -2527,13 +2527,13 @@ a.arrow:before {
   opacity: 0;
 }
 @media screen and (max-width: 1152px) {
-  .gallery a img {
+  .gallery span img {
     height: 20rem;
   }
-  .gallery a.landscape img {
+  .gallery span.landscape img {
     height: 25rem;
   }
-  .gallery a.portrait img {
+  .gallery span.portrait img {
     height: 25rem;
   }
   .gallery .modal .inner img {
@@ -2545,29 +2545,29 @@ a.arrow:before {
     margin: -0.625rem 0 0 -0.625rem;
     width: calc(100% + 0.625rem);
   }
-  .gallery a {
+  .gallery span {
     margin: 0.625rem 0 0 0.625rem;
     width: calc(50% - 0.625rem);
   }
-  .gallery a img {
+  .gallery span img {
     height: 20rem;
   }
-  .gallery a.landscape img {
+  .gallery span.landscape img {
     height: 20rem;
   }
-  .gallery a.portrait img {
+  .gallery span.portrait img {
     height: 30rem;
   }
 }
 @media screen and (max-width: 480px) {
-  .gallery a img {
+  .gallery span img {
     height: 12rem;
     min-height: 0;
   }
-  .gallery a.landscape img {
+  .gallery span.landscape img {
     height: 12rem;
   }
-  .gallery a.portrait img {
+  .gallery span.portrait img {
     height: 14rem;
   }
 }
@@ -3224,6 +3224,18 @@ body {
   padding-top: 2rem !important;
   padding-bottom: 1rem !important;
   margin-bottom: 0 !important;
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 
 /*# sourceMappingURL=main.css.map */

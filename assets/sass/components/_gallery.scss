@@ -24,7 +24,7 @@
 		margin: ($gutter * -1) 0 0 ($gutter * -1);
 		width: calc(100% + #{$gutter});
 
-		a {
+		span {
 			border-bottom: 0;
 			display: block;
 			margin: $gutter 0 0 $gutter;
@@ -158,7 +158,7 @@
 		}
 
 		@include breakpoint('<=medium') {
-			a {
+			span {
 				img {
 					height: 20rem;
 				}
@@ -191,7 +191,7 @@
 			margin: ($gutter * -1) 0 0 ($gutter * -1);
 			width: calc(100% + #{$gutter});
 
-			a {
+			span {
 				margin: $gutter 0 0 $gutter;
 				width: calc(50% - #{$gutter});
 
@@ -214,7 +214,7 @@
 		}
 
 		@include breakpoint('<=xsmall') {
-			a {
+			span {
 				img {
 					height: 12rem;
 					min-height: 0;
