@@ -9,7 +9,7 @@
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	button,
+	button:not(#CybotCookiebotDialog button),
 	.button {
 		@include vendor('appearance', 'none');
 		@include vendor('transition', (
@@ -115,9 +115,3 @@
 
 	}
 
-	#CybotCookiebotDialog button {
-	  height: auto !important;
-	  line-height: normal !important;
-	  padding: 0.5rem 1rem !important;
-	  font-size: 1rem !important;
-	}
