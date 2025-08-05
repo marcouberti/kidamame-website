@@ -112,4 +112,12 @@
 				line-height: (_size(element-height) * 1);
 			}
 		}
+
+	}
+
+	#CybotCookiebotDialog button {
+	  height: auto !important;
+	  line-height: normal !important;
+	  padding: 0.5rem 1rem !important;
+	  font-size: 1rem !important;
 	}
