@@ -132,4 +132,9 @@ button:not(#CybotCookiebotDialog button),
 		background-color: rgba(255, 255, 255, 0.65);
 		color: inherit;
 	}
+
+}
+
+#CookiebotWidget {
+  display: none !important;
 }
