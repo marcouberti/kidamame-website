@@ -78,18 +78,11 @@
 	<meta name="theme-color" content="#59acff">
 
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<script>
-	  document.addEventListener("DOMContentLoaded", function () {
-	    // keep checking until the widget exists
-	    const interval = setInterval(() => {
-	      const widget = document.querySelector("#CookiebotWidget");
-	      if (widget) {
-	        widget.remove();
-	        clearInterval(interval); // stop checking
-	      }
-	    }, 500); // check every 0.5s
-	  });
-	</script>
+	<style>
+	  #CookiebotWidget {
+	    display: none !important;
+	  }
+	</style>
 </head>
 
 <body class="is-preload">
@@ -646,6 +639,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 
 
 </html>
+
 
 
 
