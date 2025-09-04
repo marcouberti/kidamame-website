@@ -1,4 +1,3 @@
-@import 'fontawesome-all.min.css';
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
 /*
 	Paradigm Shift by HTML5 UP
@@ -1445,7 +1444,7 @@ hr.major {
 input[type=submit],
 input[type=reset],
 input[type=button],
-button:not(#CybotCookiebotDialog button),
+button:not([id^=Cybot] *):not([id^=Cookiebot] *),
 .button {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -1477,7 +1476,7 @@ button:not(#CybotCookiebotDialog button),
 input[type=submit]:hover,
 input[type=reset]:hover,
 input[type=button]:hover,
-button:not(#CybotCookiebotDialog button):hover,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *):hover,
 .button:hover {
   box-shadow: inset 0 0 0 2px rgb(59.7, 146.5, 233.3);
   color: rgb(59.7, 146.5, 233.3) !important;
@@ -1485,7 +1484,7 @@ button:not(#CybotCookiebotDialog button):hover,
 input[type=submit]:active,
 input[type=reset]:active,
 input[type=button]:active,
-button:not(#CybotCookiebotDialog button):active,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *):active,
 .button:active {
   background-color: rgba(89, 172, 255, 0.25);
   box-shadow: inset 0 0 0 2px rgb(59.7, 146.5, 233.3);
@@ -1494,7 +1493,7 @@ button:not(#CybotCookiebotDialog button):active,
 input[type=submit].small,
 input[type=reset].small,
 input[type=button].small,
-button:not(#CybotCookiebotDialog button).small,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *).small,
 .button.small {
   font-size: 0.5rem;
   height: 2.25rem;
@@ -1504,7 +1503,7 @@ button:not(#CybotCookiebotDialog button).small,
 input[type=submit].large,
 input[type=reset].large,
 input[type=button].large,
-button:not(#CybotCookiebotDialog button).large,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *).large,
 .button.large {
   font-size: 0.7rem;
   height: 3.2625rem;
@@ -1514,21 +1513,21 @@ button:not(#CybotCookiebotDialog button).large,
 input[type=submit].wide,
 input[type=reset].wide,
 input[type=button].wide,
-button:not(#CybotCookiebotDialog button).wide,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *).wide,
 .button.wide {
   min-width: 13rem;
 }
 input[type=submit].icon:before,
 input[type=reset].icon:before,
 input[type=button].icon:before,
-button:not(#CybotCookiebotDialog button).icon:before,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *).icon:before,
 .button.icon:before {
   margin-right: 0.5rem;
 }
 input[type=submit].fit,
 input[type=reset].fit,
 input[type=button].fit,
-button:not(#CybotCookiebotDialog button).fit,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *).fit,
 .button.fit {
   width: 100%;
 }
@@ -1537,8 +1536,8 @@ input[type=reset].disabled,
 input[type=reset]:disabled,
 input[type=button].disabled,
 input[type=button]:disabled,
-button:not(#CybotCookiebotDialog button).disabled,
-button:not(#CybotCookiebotDialog button):disabled,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *).disabled,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *):disabled,
 .button.disabled,
 .button:disabled {
   pointer-events: none;
@@ -1547,7 +1546,7 @@ button:not(#CybotCookiebotDialog button):disabled,
 input[type=submit].primary,
 input[type=reset].primary,
 input[type=button].primary,
-button:not(#CybotCookiebotDialog button).primary,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *).primary,
 .button.primary {
   background-color: #59acff;
   box-shadow: none;
@@ -1556,14 +1555,14 @@ button:not(#CybotCookiebotDialog button).primary,
 input[type=submit].primary:hover,
 input[type=reset].primary:hover,
 input[type=button].primary:hover,
-button:not(#CybotCookiebotDialog button).primary:hover,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *).primary:hover,
 .button.primary:hover {
   background-color: rgb(165.5, 210.25, 255);
 }
 input[type=submit].primary:active,
 input[type=reset].primary:active,
 input[type=button].primary:active,
-button:not(#CybotCookiebotDialog button).primary:active,
+button:not([id^=Cybot] *):not([id^=Cookiebot] *).primary:active,
 .button.primary:active {
   background-color: rgb(82.765, 164.35, 245.935);
 }
@@ -1571,7 +1570,7 @@ button:not(#CybotCookiebotDialog button).primary:active,
   input[type=submit],
   input[type=reset],
   input[type=button],
-  button:not(#CybotCookiebotDialog button),
+  button:not([id^=Cybot] *):not([id^=Cookiebot] *),
   .button {
     font-size: 0.7rem;
     height: 3.3rem;
@@ -1580,7 +1579,7 @@ button:not(#CybotCookiebotDialog button).primary:active,
   input[type=submit].large,
   input[type=reset].large,
   input[type=button].large,
-  button:not(#CybotCookiebotDialog button).large,
+  button:not([id^=Cybot] *):not([id^=Cookiebot] *).large,
   .button.large {
     font-size: 0.8rem;
     height: 3.75rem;
@@ -1589,7 +1588,7 @@ button:not(#CybotCookiebotDialog button).primary:active,
   input[type=submit].small,
   input[type=reset].small,
   input[type=button].small,
-  button:not(#CybotCookiebotDialog button).small,
+  button:not([id^=Cybot] *):not([id^=Cookiebot] *).small,
   .button.small {
     font-size: 0.6rem;
     height: 3rem;
@@ -1780,17 +1779,6 @@ form.theme-form > .fields > .field.quarter {
 .theme-form input[type=checkbox] + label,
 .theme-form input[type=radio] + label {
   text-decoration: none;
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 0.0375em;
-  padding-left: 2.675rem;
-  padding-right: 0.875rem;
-  position: relative;
-  text-transform: none;
 }
 .theme-form input[type=checkbox] + label:before,
 .theme-form input[type=radio] + label:before {
@@ -1802,8 +1790,22 @@ form.theme-form > .fields > .field.quarter {
   text-rendering: auto;
   line-height: 1;
   text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
+}
+.theme-form input[type=checkbox] + label,
+.theme-form input[type=radio] + label {
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.0375em;
+  padding-left: 2.675rem;
+  padding-right: 0.875rem;
+  position: relative;
+  text-transform: none;
 }
 .theme-form input[type=checkbox] + label:before,
 .theme-form input[type=radio] + label:before {
@@ -1882,8 +1884,6 @@ form.theme-form > .fields > .field.quarter {
 /* Icon */
 .icon {
   text-decoration: none;
-  border-bottom: none;
-  position: relative;
 }
 .icon:before {
   -moz-osx-font-smoothing: grayscale;
@@ -1894,8 +1894,12 @@ form.theme-form > .fields > .field.quarter {
   text-rendering: auto;
   line-height: 1;
   text-transform: none !important;
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-weight: 400;
+}
+.icon {
+  border-bottom: none;
+  position: relative;
 }
 .icon > .label {
   display: none;
@@ -1904,7 +1908,7 @@ form.theme-form > .fields > .field.quarter {
   font-weight: 900;
 }
 .icon.brands:before {
-  font-family: "Font Awesome 5 Brands";
+  font-family: "Font Awesome 6 Brands";
 }
 
 /* Image */
@@ -2641,7 +2645,6 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
 #wrapper {
   position: relative;
   width: 100vw;
-  padding: 0 0 10rem 0;
 }
 #wrapper:before {
   background-attachment: fixed;
@@ -2777,6 +2780,9 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
 }
 #wrapper .copyright a {
   color: inherit;
+}
+#wrapper {
+  padding: 0 0 10rem 0;
 }
 #wrapper section {
   margin: 7.5rem 0 0 0;
