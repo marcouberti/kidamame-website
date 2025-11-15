@@ -20,8 +20,10 @@
 			xxsmall:   [null,       '360px'    ]
 		});
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
+	// Play initial animations on DOM ready (show content immediately).
+		// Use DOMContentLoaded instead of 'load' to show content as soon as HTML is parsed,
+		// without waiting for all images to load. Images will load progressively.
+		$(document).ready(function() {
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
