@@ -33,9 +33,10 @@
 			width: calc(50% - #{$gutter});
 
 			img {
+				aspect-ratio: 3 / 4;
 				display: block;
-				height: 25vw;
-				min-height: 18rem;
+				height: auto !important;
+				min-height: 0 !important;
 				object-fit: cover;
 				object-position: center;
 				width: 100%;
@@ -45,13 +46,19 @@
 				width: 100%;
 
 				img {
-					height: 30vw;
+					aspect-ratio: 16 / 9;
+					height: auto !important;
+					min-height: 0 !important;
+					width: 100%;
 				}
 			}
 
 			&.portrait {
 				img {
-					height: 30vw;
+					aspect-ratio: 3 / 4;
+					height: auto !important;
+					min-height: 0 !important;
+					width: 100%;
 				}
 			}
 		}
@@ -160,18 +167,24 @@
 		@include breakpoint('<=medium') {
 			span {
 				img {
-					height: 20rem;
+					aspect-ratio: 3 / 4;
+					height: auto !important;
+					min-height: 0 !important;
 				}
 
 				&.landscape {
 					img {
-						height: 25rem;
+						aspect-ratio: 16 / 9;
+						height: auto !important;
+						min-height: 0 !important;
 					}
 				}
 
 				&.portrait {
 					img {
-						height: 25rem;
+						aspect-ratio: 3 / 4;
+						height: auto !important;
+						min-height: 0 !important;
 					}
 				}
 			}
@@ -196,18 +209,24 @@
 				width: calc(50% - #{$gutter});
 
 				img {
-					height: 20rem;
+					aspect-ratio: 3 / 4;
+					height: auto !important;
+					min-height: 0 !important;
 				}
 
 				&.landscape {
 					img {
-						height: 20rem;
+						aspect-ratio: 16 / 9;
+						height: auto !important;
+						min-height: 0 !important;
 					}
 				}
 
 				&.portrait {
 					img {
-						height: 30rem;
+						aspect-ratio: 3 / 4;
+						height: auto !important;
+						min-height: 0 !important;
 					}
 				}
 			}
@@ -216,19 +235,24 @@
 		@include breakpoint('<=xsmall') {
 			span {
 				img {
-					height: 12rem;
-					min-height: 0;
+					aspect-ratio: 3 / 4;
+					height: auto !important;
+					min-height: 0 !important;
 				}
 
 				&.landscape {
 					img {
-						height: 12rem;
+						aspect-ratio: 16 / 9;
+						height: auto !important;
+						min-height: 0 !important;
 					}
 				}
 
 				&.portrait {
 					img {
-						height: 14rem;
+						aspect-ratio: 3 / 4;
+						height: auto !important;
+						min-height: 0 !important;
 					}
 				}
 			}

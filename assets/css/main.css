@@ -1779,6 +1779,17 @@ form.theme-form > .fields > .field.quarter {
 .theme-form input[type=checkbox] + label,
 .theme-form input[type=radio] + label {
   text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.0375em;
+  padding-left: 2.675rem;
+  padding-right: 0.875rem;
+  position: relative;
+  text-transform: none;
 }
 .theme-form input[type=checkbox] + label:before,
 .theme-form input[type=radio] + label:before {
@@ -1792,20 +1803,6 @@ form.theme-form > .fields > .field.quarter {
   text-transform: none !important;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-}
-.theme-form input[type=checkbox] + label,
-.theme-form input[type=radio] + label {
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  letter-spacing: 0.0375em;
-  padding-left: 2.675rem;
-  padding-right: 0.875rem;
-  position: relative;
-  text-transform: none;
 }
 .theme-form input[type=checkbox] + label:before,
 .theme-form input[type=radio] + label:before {
@@ -1884,6 +1881,8 @@ form.theme-form > .fields > .field.quarter {
 /* Icon */
 .icon {
   text-decoration: none;
+  border-bottom: none;
+  position: relative;
 }
 .icon:before {
   -moz-osx-font-smoothing: grayscale;
@@ -1896,10 +1895,6 @@ form.theme-form > .fields > .field.quarter {
   text-transform: none !important;
   font-family: "Font Awesome 6 Free";
   font-weight: 400;
-}
-.icon {
-  border-bottom: none;
-  position: relative;
 }
 .icon > .label {
   display: none;
@@ -2053,8 +2048,18 @@ form.theme-form > .fields > .field.quarter {
   width: 100%;
 }
 .image.fill img {
-  height: 100%;
+  -moz-object-fit: cover;
+  -webkit-object-fit: cover;
+  -ms-object-fit: cover;
+  object-fit: cover;
+  -moz-object-position: center;
+  -webkit-object-position: center;
+  -ms-object-position: center;
+  object-position: center;
+  aspect-ratio: 16/9;
+  height: auto;
   left: 0;
+  min-height: 100%;
   position: absolute;
   top: 0;
   width: 100%;
@@ -2412,9 +2417,10 @@ a.arrow:before {
   width: calc(50% - 1.25rem);
 }
 .gallery span img {
+  aspect-ratio: 3/4;
   display: block;
-  height: 25vw;
-  min-height: 18rem;
+  height: auto !important;
+  min-height: 0 !important;
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -2423,10 +2429,16 @@ a.arrow:before {
   width: 100%;
 }
 .gallery span.landscape img {
-  height: 30vw;
+  aspect-ratio: 16/9;
+  height: auto !important;
+  min-height: 0 !important;
+  width: 100%;
 }
 .gallery span.portrait img {
-  height: 30vw;
+  aspect-ratio: 3/4;
+  height: auto !important;
+  min-height: 0 !important;
+  width: 100%;
 }
 .gallery .modal {
   display: -moz-flex;
@@ -2549,13 +2561,19 @@ a.arrow:before {
 }
 @media screen and (max-width: 1152px) {
   .gallery span img {
-    height: 20rem;
+    aspect-ratio: 3/4;
+    height: auto !important;
+    min-height: 0 !important;
   }
   .gallery span.landscape img {
-    height: 25rem;
+    aspect-ratio: 16/9;
+    height: auto !important;
+    min-height: 0 !important;
   }
   .gallery span.portrait img {
-    height: 25rem;
+    aspect-ratio: 3/4;
+    height: auto !important;
+    min-height: 0 !important;
   }
   .gallery .modal .inner img {
     max-width: 100vw;
@@ -2571,25 +2589,36 @@ a.arrow:before {
     width: calc(50% - 0.625rem);
   }
   .gallery span img {
-    height: 20rem;
+    aspect-ratio: 3/4;
+    height: auto !important;
+    min-height: 0 !important;
   }
   .gallery span.landscape img {
-    height: 20rem;
+    aspect-ratio: 16/9;
+    height: auto !important;
+    min-height: 0 !important;
   }
   .gallery span.portrait img {
-    height: 30rem;
+    aspect-ratio: 3/4;
+    height: auto !important;
+    min-height: 0 !important;
   }
 }
 @media screen and (max-width: 480px) {
   .gallery span img {
-    height: 12rem;
-    min-height: 0;
+    aspect-ratio: 3/4;
+    height: auto !important;
+    min-height: 0 !important;
   }
   .gallery span.landscape img {
-    height: 12rem;
+    aspect-ratio: 16/9;
+    height: auto !important;
+    min-height: 0 !important;
   }
   .gallery span.portrait img {
-    height: 14rem;
+    aspect-ratio: 3/4;
+    height: auto !important;
+    min-height: 0 !important;
   }
 }
 
@@ -2645,6 +2674,7 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
 #wrapper {
   position: relative;
   width: 100vw;
+  padding: 0 0 10rem 0;
 }
 #wrapper:before {
   background-attachment: fixed;
@@ -2780,9 +2810,6 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
 }
 #wrapper .copyright a {
   color: inherit;
-}
-#wrapper {
-  padding: 0 0 10rem 0;
 }
 #wrapper section {
   margin: 7.5rem 0 0 0;
