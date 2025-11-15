@@ -151,6 +151,8 @@
 		}
 
 		&.fill {
+			$aspect-ratio-landscape: #{_size(gallery-aspect-ratio-landscape-width)} / #{_size(gallery-aspect-ratio-landscape-height)};
+			
 			height: 100%;
 			left: 0;
 			position: absolute;
@@ -160,7 +162,7 @@
 			img {
 				@include vendor('object-fit', 'cover');
 				@include vendor('object-position', 'center');
-				aspect-ratio: 16 / 9;
+				aspect-ratio: #{$aspect-ratio-landscape};
 				height: auto;
 				left: 0;
 				min-height: 100%;

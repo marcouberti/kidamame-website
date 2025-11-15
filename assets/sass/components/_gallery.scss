@@ -18,6 +18,8 @@
 
 	.gallery {
 		$gutter: _size(gallery-gutter);
+		$aspect-ratio-landscape: #{_size(gallery-aspect-ratio-landscape-width)} / #{_size(gallery-aspect-ratio-landscape-height)};
+		$aspect-ratio-portrait: #{_size(gallery-aspect-ratio-portrait-width)} / #{_size(gallery-aspect-ratio-portrait-height)};
 
 		display: flex;
 		flex-wrap: wrap;
@@ -33,7 +35,7 @@
 			width: calc(50% - #{$gutter});
 
 			img {
-				aspect-ratio: 3 / 4;
+				aspect-ratio: #{$aspect-ratio-portrait};
 				display: block;
 				height: auto !important;
 				min-height: 0 !important;
@@ -46,7 +48,7 @@
 				width: 100%;
 
 				img {
-					aspect-ratio: 16 / 9;
+					aspect-ratio: #{$aspect-ratio-landscape};
 					height: auto !important;
 					min-height: 0 !important;
 					width: 100%;
@@ -55,7 +57,7 @@
 
 			&.portrait {
 				img {
-					aspect-ratio: 3 / 4;
+					aspect-ratio: #{$aspect-ratio-portrait};
 					height: auto !important;
 					min-height: 0 !important;
 					width: 100%;
@@ -167,14 +169,14 @@
 		@include breakpoint('<=medium') {
 			span {
 				img {
-					aspect-ratio: 3 / 4;
+					aspect-ratio: #{$aspect-ratio-portrait};
 					height: auto !important;
 					min-height: 0 !important;
 				}
 
 				&.landscape {
 					img {
-						aspect-ratio: 16 / 9;
+						aspect-ratio: #{$aspect-ratio-landscape};
 						height: auto !important;
 						min-height: 0 !important;
 					}
@@ -182,7 +184,7 @@
 
 				&.portrait {
 					img {
-						aspect-ratio: 3 / 4;
+						aspect-ratio: #{$aspect-ratio-portrait};
 						height: auto !important;
 						min-height: 0 !important;
 					}
@@ -209,14 +211,14 @@
 				width: calc(50% - #{$gutter});
 
 				img {
-					aspect-ratio: 3 / 4;
+					aspect-ratio: #{$aspect-ratio-portrait};
 					height: auto !important;
 					min-height: 0 !important;
 				}
 
 				&.landscape {
 					img {
-						aspect-ratio: 16 / 9;
+						aspect-ratio: #{$aspect-ratio-landscape};
 						height: auto !important;
 						min-height: 0 !important;
 					}
@@ -224,7 +226,7 @@
 
 				&.portrait {
 					img {
-						aspect-ratio: 3 / 4;
+						aspect-ratio: #{$aspect-ratio-portrait};
 						height: auto !important;
 						min-height: 0 !important;
 					}
@@ -235,14 +237,14 @@
 		@include breakpoint('<=xsmall') {
 			span {
 				img {
-					aspect-ratio: 3 / 4;
+					aspect-ratio: #{$aspect-ratio-portrait};
 					height: auto !important;
 					min-height: 0 !important;
 				}
 
 				&.landscape {
 					img {
-						aspect-ratio: 16 / 9;
+						aspect-ratio: #{$aspect-ratio-landscape};
 						height: auto !important;
 						min-height: 0 !important;
 					}
@@ -250,7 +252,7 @@
 
 				&.portrait {
 					img {
-						aspect-ratio: 3 / 4;
+						aspect-ratio: #{$aspect-ratio-portrait};
 						height: auto !important;
 						min-height: 0 !important;
 					}
