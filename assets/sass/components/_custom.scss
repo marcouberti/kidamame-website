@@ -122,3 +122,18 @@ body {
 	white-space: nowrap !important;
 	border: 0 !important;
 }
+
+// Generic Page Fixes
+section.generic-section {
+	margin-top: 5rem !important;
+
+	@include breakpoint('<=medium') {
+		margin-top: 0 !important;
+		padding-top: 0 !important;
+
+		>header {
+			padding-top: 4rem !important;
+			padding-bottom: 2rem !important;
+		}
+	}
+}

@@ -3284,4 +3284,18 @@ body {
   border: 0 !important;
 }
 
+section.generic-section {
+  margin-top: 5rem !important;
+}
+@media screen and (max-width: 1152px) {
+  section.generic-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  section.generic-section > header {
+    padding-top: 4rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
