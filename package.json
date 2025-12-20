@@ -1,13 +1,16 @@
 {
   "name": "kidamame-website",
-  "version": "1.0.0", 
+  "version": "1.0.0",
   "description": "Website with SASS compilation",
   "scripts": {
     "sass": "sass assets/sass/main.scss assets/css/main.css",
     "sass:watch": "sass --watch assets/sass/main.scss:assets/css/main.css",
-    "sass:compressed": "sass assets/sass/main.scss assets/css/main.css --style compressed"
+    "sass:compressed": "sass assets/sass/main.scss assets/css/main.css --style compressed",
+    "build": "node build.js"
   },
   "devDependencies": {
+    "ejs": "^3.1.10",
+    "fs-extra": "^11.3.3",
     "sass": "^1.89.2"
   }
 }

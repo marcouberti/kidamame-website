@@ -5,13 +5,13 @@ section.intro header {
 	display: flex !important;
 	flex-direction: column !important;
 	justify-content: center !important; // Vertical centering
-	align-items: center !important;     // Horizontal centering
-	text-align: center !important;     // Fallback text centering
-	min-height: 50vh !important;       // Reasonable height for desktop two-column layout
+	align-items: center !important; // Horizontal centering
+	text-align: center !important; // Fallback text centering
+	min-height: 50vh !important; // Reasonable height for desktop two-column layout
 }
 
 // Override template's existing alignment constraints
-section.intro header > * {
+section.intro header>* {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
 	width: auto !important;
@@ -20,36 +20,37 @@ section.intro header > * {
 // Logo-specific styling with perfect centering
 section.intro header img {
 	//max-width: 90% !important;     // Never exceed container width
-	width: auto !important;         // Maintain aspect ratio
+	width: auto !important; // Maintain aspect ratio
 	height: auto !important;
 	display: block !important;
-	margin: 0 auto !important;      // Extra horizontal centering
-	
+	margin: 0 auto !important; // Extra horizontal centering
+
 	// Limit size on very large screens (desktop two-column layout)
 	@include breakpoint('>=large') {
-		max-width: 60% !important;  // 90% of the left column width
+		max-width: 60% !important; // 90% of the left column width
 	}
-	@include breakpoint('<=small') {
-		max-width: 70vw !important;
-	}
+
+	//@include breakpoint('<=small') {
+	//max-width: 70vw !important;
+	//}
 }
 
 // Tagline styling - larger font size and accent color
 section.intro header p {
 	//color: _palette(accent) !important;
-	font-size: 1rem !important;        // Increased tagline font size
+	font-size: 1rem !important; // Increased tagline font size
 	color: #003f87;
-	font-weight: 600 !important;       // Slightly bolder for impact
+	font-weight: 600 !important; // Slightly bolder for impact
 	//line-height: 1.4 !important;       // Better line spacing
 	//letter-spacing: 0.02em !important; // Slight letter spacing for elegance
-	
+
 	// Responsive font sizing for tagline
 	@include breakpoint('<=small') {
-		font-size: 0.9rem !important;  // Slightly smaller on tablets
+		font-size: 0.9rem !important; // Slightly smaller on tablets
 	}
-	
+
 	@include breakpoint('<=xsmall') {
-		font-size: 0.8rem !important;  // Readable on small phones
+		font-size: 0.8rem !important; // Readable on small phones
 	}
 }
 
@@ -65,7 +66,7 @@ section.intro header p {
 // H1 customization for smaller font size
 h1 {
 	font-size: 3.5rem; // Ridotto da 5rem a 3.5rem
-	
+
 	@include breakpoint('<=small') {
 		font-size: 3rem; // Ridotto da 4.5rem a 3rem
 	}
@@ -107,7 +108,7 @@ body {
 	padding-top: 2rem !important;
 	padding-bottom: 1rem !important;
 	margin-bottom: 0 !important;
-} 
+}
 
 // Screen reader only text (accessible but visually hidden)
 .sr-only {
@@ -120,4 +121,4 @@ body {
 	clip: rect(0, 0, 0, 0) !important;
 	white-space: nowrap !important;
 	border: 0 !important;
-} 
+}
