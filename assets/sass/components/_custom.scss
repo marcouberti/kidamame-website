@@ -137,3 +137,22 @@ section.generic-section {
 		}
 	}
 }
+
+// Store Badges (Google Play & Apple App Store)
+.store-badges a,
+section.intro header .store-badges a {
+	border-bottom: none !important;
+}
+
+.store-badges img,
+section.intro header .store-badges img {
+	height: 54px !important;
+	width: auto !important;
+	max-width: none !important;
+	display: block !important;
+
+	@include breakpoint('<=xsmall') {
+		height: auto !important;
+		width: 180px !important;
+	}
+}

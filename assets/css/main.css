@@ -3298,4 +3298,24 @@ section.generic-section {
   }
 }
 
+.store-badges a,
+section.intro header .store-badges a {
+  border-bottom: none !important;
+}
+
+.store-badges img,
+section.intro header .store-badges img {
+  height: 54px !important;
+  width: auto !important;
+  max-width: none !important;
+  display: block !important;
+}
+@media screen and (max-width: 480px) {
+  .store-badges img,
+  section.intro header .store-badges img {
+    height: auto !important;
+    width: 180px !important;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
