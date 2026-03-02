@@ -3221,6 +3221,16 @@ section.intro header img {
     max-width: 60% !important;
   }
 }
+@media screen and (max-width: 1152px) {
+  section.intro header img {
+    max-width: 50% !important;
+  }
+}
+@media screen and (max-width: 736px) {
+  section.intro header img {
+    max-width: 70% !important;
+  }
+}
 
 section.intro header p {
   font-size: 1rem !important;
@@ -3260,14 +3270,15 @@ h1 {
 
 section.intro header h1 {
   font-family: "Raleway", Helvetica, sans-serif;
-  font-size: clamp(0.4rem, 2.2vw, 0.9rem) !important;
+  font-size: clamp(0.4rem, (100vw - 4rem) / 42, 0.9rem) !important;
   font-weight: 600 !important;
   letter-spacing: 0.12em;
   line-height: 2.5;
   text-transform: uppercase;
   color: #003f87;
   white-space: nowrap;
-  max-width: 100%;
+  max-width: none !important;
+  width: 100% !important;
 }
 
 ul.icons li .icon.brands:before {
