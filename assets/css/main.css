@@ -3228,7 +3228,7 @@ section.intro header img {
 }
 @media screen and (max-width: 736px) {
   section.intro header img {
-    max-width: 70% !important;
+    max-width: 90% !important;
   }
 }
 
