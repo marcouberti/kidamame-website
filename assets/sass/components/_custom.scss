@@ -19,25 +19,11 @@ section.intro header>* {
 
 // Logo-specific styling with perfect centering
 section.intro header img {
-	//max-width: 90% !important;     // Never exceed container width
-	width: auto !important; // Maintain aspect ratio
+	width: 90% !important;
+	max-width: 500px !important;
 	height: auto !important;
 	display: block !important;
-	margin: 0 auto !important; // Extra horizontal centering
-
-	// Limit size on very large screens (desktop two-column layout)
-	@include breakpoint('>=large') {
-		max-width: 60% !important; // 90% of the left column width
-	}
-
-	// Limit size on tablet/portrait to keep tagline close
-	@include breakpoint('<=medium') {
-		max-width: 50% !important;
-	}
-
-	@include breakpoint('<=small') {
-		max-width: 90% !important;
-	}
+	margin: 0 auto !important; // Horizontal centering
 }
 
 // Tagline styling - larger font size and accent color
