@@ -94,6 +94,13 @@ section.intro header h1 {
 	white-space: nowrap;
 	max-width: none !important;
 	width: 100% !important;
+
+	// Phones: larger font, allow wrapping
+	@include breakpoint('<=small') {
+		font-size: 1rem !important;
+		white-space: normal;
+		text-align: center;
+	}
 }
 
 // Prevent inner scroll on hero image (especially landscape phones)

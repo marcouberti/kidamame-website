@@ -2754,16 +2754,19 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
   margin-top: 1rem;
   position: absolute;
 }
-#wrapper > section > header h1, #wrapper > section > header h2 {
+#wrapper > section > header h1,
+#wrapper > section > header h2 {
   position: relative;
 }
-#wrapper > section > header h1:before, #wrapper > section > header h2:before {
+#wrapper > section > header h1:before,
+#wrapper > section > header h2:before {
   content: "";
   display: block;
   position: absolute;
   top: 1rem;
 }
-#wrapper > section > header h1:after, #wrapper > section > header h2:after {
+#wrapper > section > header h1:after,
+#wrapper > section > header h2:after {
   border-radius: 0.5rem;
   content: "";
   display: block;
@@ -2771,9 +2774,6 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
   position: absolute;
   top: 0.75rem;
   width: 0.5rem;
-}
-#wrapper > section > header h1 {
-  margin-top: -2rem;
 }
 #wrapper > section > header h1:before {
   top: 3rem;
@@ -2843,11 +2843,13 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
   height: calc(100% + 10rem);
   left: calc(50vw - 5rem);
 }
-#wrapper > section > header h1:before, #wrapper > section > header h2:before {
+#wrapper > section > header h1:before,
+#wrapper > section > header h2:before {
   right: -5rem;
   width: 2.5rem;
 }
-#wrapper > section > header h1:after, #wrapper > section > header h2:after {
+#wrapper > section > header h1:after,
+#wrapper > section > header h2:after {
   right: -2.5rem;
 }
 #wrapper > section > .content > section {
@@ -2897,11 +2899,13 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
     height: calc(100% + 8rem);
     left: calc(50vw - 4rem);
   }
-  #wrapper > section > header h1:before, #wrapper > section > header h2:before {
+  #wrapper > section > header h1:before,
+  #wrapper > section > header h2:before {
     right: -4rem;
     width: 2rem;
   }
-  #wrapper > section > header h1:after, #wrapper > section > header h2:after {
+  #wrapper > section > header h1:after,
+  #wrapper > section > header h2:after {
     right: -2rem;
   }
   #wrapper > section > .content > section {
@@ -2985,10 +2989,12 @@ ul.feature-icons li:nth-child(1), ul.feature-icons li:nth-child(2) {
   #wrapper > section > header:before {
     display: none;
   }
-  #wrapper > section > header h1:before, #wrapper > section > header h2:before {
+  #wrapper > section > header h1:before,
+  #wrapper > section > header h2:before {
     display: none;
   }
-  #wrapper > section > header h1:after, #wrapper > section > header h2:after {
+  #wrapper > section > header h1:after,
+  #wrapper > section > header h2:after {
     display: none;
   }
   #wrapper > section > .content > :last-child {
@@ -3279,6 +3285,13 @@ section.intro header h1 {
   white-space: nowrap;
   max-width: none !important;
   width: 100% !important;
+}
+@media screen and (max-width: 736px) {
+  section.intro header h1 {
+    font-size: 1rem !important;
+    white-space: normal;
+    text-align: center;
+  }
 }
 
 section.intro > .content {
