@@ -3281,6 +3281,10 @@ section.intro header h1 {
   width: 100% !important;
 }
 
+section.intro > .content {
+  overflow: hidden;
+}
+
 ul.icons li .icon.brands:before {
   font-size: 1.5rem;
 }

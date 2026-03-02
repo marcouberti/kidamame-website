@@ -96,6 +96,11 @@ section.intro header h1 {
 	width: 100% !important;
 }
 
+// Prevent inner scroll on hero image (especially landscape phones)
+section.intro>.content {
+	overflow: hidden;
+}
+
 // Larger social media icons - updated for proper list structure
 ul.icons li .icon.brands {
 	&:before {
