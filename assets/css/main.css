@@ -79,7 +79,8 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-  html, body {
+  html,
+  body {
     min-width: 320px;
   }
 }
@@ -87,7 +88,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -98,8 +101,12 @@ html {
 body {
   background: #ffffff;
   overflow-x: hidden;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
-body.is-preload *, body.is-preload *:before, body.is-preload *:after {
+body.is-preload *,
+body.is-preload *:before,
+body.is-preload *:after {
   -moz-animation: none !important;
   -webkit-animation: none !important;
   -ms-animation: none !important;
