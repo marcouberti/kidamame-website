@@ -63,7 +63,7 @@ section.intro header p {
 
 }
 
-// H1 customization for smaller font size
+// H1 customization for smaller font size (all pages)
 h1 {
 	font-size: 3.5rem; // Ridotto da 5rem a 3.5rem
 
@@ -74,6 +74,20 @@ h1 {
 	@include breakpoint('<=xxsmall') {
 		font-size: 2.5rem; // Ridotto da 3.75rem a 2.5rem
 	}
+}
+
+// H1 intro hero: match the paragraph style (index page only)
+// Uses clamp() to auto-scale and stay on a single line
+section.intro header h1 {
+	font-family: _font(family-heading);
+	font-size: clamp(0.4rem, 2.2vw, 0.9rem) !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.12em;
+	line-height: 2.5;
+	text-transform: uppercase;
+	color: #003f87;
+	white-space: nowrap;
+	max-width: 100%;
 }
 
 // Larger social media icons - updated for proper list structure

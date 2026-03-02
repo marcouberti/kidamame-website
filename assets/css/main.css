@@ -140,7 +140,10 @@ body {
   color: #000000;
 }
 
-body, input, select, textarea {
+body,
+input,
+select,
+textarea {
   color: #000000;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-size: 1rem;
@@ -163,12 +166,14 @@ a:hover {
   border-bottom-color: transparent;
 }
 
-strong, b {
+strong,
+b {
   font-weight: 600;
   color: #000000;
 }
 
-em, i {
+em,
+i {
   font-style: italic;
 }
 
@@ -176,7 +181,12 @@ p {
   margin: 0 0 2rem 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #000000;
   font-family: "Raleway", Helvetica, sans-serif;
   font-weight: 600;
@@ -185,7 +195,12 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1.5rem 0;
   text-transform: uppercase;
 }
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
   color: inherit;
   text-decoration: none;
 }
@@ -3241,6 +3256,18 @@ h1 {
   h1 {
     font-size: 2.5rem;
   }
+}
+
+section.intro header h1 {
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: clamp(0.4rem, 2.2vw, 0.9rem) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em;
+  line-height: 2.5;
+  text-transform: uppercase;
+  color: #003f87;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 ul.icons li .icon.brands:before {
