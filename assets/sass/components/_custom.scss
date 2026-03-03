@@ -46,12 +46,16 @@ section.intro header p {
 }
 
 // Responsive adjustments for smaller screens
+@include breakpoint('<=medium') {
+	section.intro header {
+		min-height: 100vh !important; // Full height on tablet and mobile
+	}
+}
+
 @include breakpoint('<=small') {
 	section.intro header {
 		padding: 2rem !important;
-		min-height: 50vh !important; // Full height only on mobile (no two-column layout)
 	}
-
 }
 
 // H1 customization for smaller font size (all pages)

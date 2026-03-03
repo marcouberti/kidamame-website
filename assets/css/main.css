@@ -3247,10 +3247,14 @@ section.intro header p {
   }
 }
 
+@media screen and (max-width: 1152px) {
+  section.intro header {
+    min-height: 100vh !important;
+  }
+}
 @media screen and (max-width: 736px) {
   section.intro header {
     padding: 2rem !important;
-    min-height: 50vh !important;
   }
 }
 h1 {
