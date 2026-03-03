@@ -64,7 +64,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center right;
+            object-position: center center;
             display: block;
             z-index: 0;
         }
@@ -78,9 +78,8 @@
             pointer-events: none;
             background: linear-gradient(to right,
                     var(--blue) 0%,
-                    rgba(89, 172, 255, 1) 20%,
                     rgba(89, 172, 255, 0.5) 50%,
-                    rgba(89, 172, 255, 0) 80%);
+                    rgba(89, 172, 255, 0) 100%);
         }
 
         /* NAV BAR */
@@ -758,12 +757,14 @@
             transition-delay: .15s;
         }
 
+        /*
         @media (max-width: 1024px) {
             .hero-image {
                 display: block;
                 opacity: .55;
             }
 
+            
             .hero::before {
                 background: rgba(89, 172, 255, .8);
             }
@@ -773,6 +774,7 @@
                 padding-top: 1rem;
             }
         }
+            */
     </style>
 </head>
 
