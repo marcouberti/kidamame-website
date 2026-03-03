@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Kidamame | Calm, Safe &amp; Ad-Free Educational Apps for Kids</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --blue: #59acff;
+            --blue-dk: #003f87;
+            --blue-lt: rgba(89, 172, 255, .1);
+            --blue-mid: rgba(89, 172, 255, .22);
+            --white: #ffffff;
+            --bg: #ffffff;
+            --bg-soft: #f4f8ff;
+            --text: #0a0f1e;
+            --muted: #5a6575;
+            --border: rgba(89, 172, 255, .2);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Nunito', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* ================================================
+       HERO
+    ================================================ */
+        .hero {
+            min-height: 100vh;
+            background: var(--blue);
+            display: grid;
+            grid-template-rows: auto 1fr;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hero image: full bleed background on all screen sizes */
+        .hero-image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center right;
+            display: block;
+            z-index: 0;
+        }
+
+        /* Gradient overlay: sits on top of image, fades out fast so right half stays visible */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background: linear-gradient(to right,
+                    var(--blue) 0%,
+                    rgba(89, 172, 255, .9) 22%,
+                    rgba(89, 172, 255, .4) 36%,
+                    transparent 50%);
+        }
+
+        /* NAV BAR */
+        .hero-nav {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem) 0;
+        }
+
+        .logo-link {
+            display: block;
+            text-decoration: none;
+            border: none;
+            opacity: 0;
+            animation: fadeUp .5s .1s ease forwards;
+        }
+
+        .logo-img {
+            height: clamp(38px, 5vw, 52px);
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 2px 6px rgba(0, 63, 135, .2));
+        }
+
+        /* HERO CENTER CONTENT */
+        .hero-center {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+            max-width: 600px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .45rem;
+            background: rgba(0, 63, 135, .12);
+            border: 1px solid rgba(0, 63, 135, .25);
+            color: var(--blue-dk);
+            padding: .4rem 1.1rem;
+            border-radius: 100px;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp .5s .3s ease forwards;
+        }
+
+        .hero h1 {
+            font-family: 'Baloo 2', sans-serif;
+            font-size: clamp(2.4rem, 5.5vw, 4.6rem);
+            line-height: 1.1;
+            color: var(--blue-dk);
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            opacity: 0;
+            animation: fadeUp .6s .5s ease forwards;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: var(--white);
+            font-weight: 800;
+        }
+
+        .hero-sub {
+            font-size: clamp(.95rem, 1.5vw, 1.1rem);
+            color: rgba(0, 63, 135, .7);
+            max-width: 40ch;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeUp .6s .7s ease forwards;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeUp .5s .9s ease forwards;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .9rem 2rem;
+            border-radius: 100px;
+            font-family: 'Nunito', sans-serif;
+            font-size: .95rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--blue-dk);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 10px 28px -6px rgba(0, 63, 135, .4);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--blue-dk);
+            border: 1.5px solid rgba(0, 63, 135, .4);
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--blue-dk);
+            background: rgba(0, 63, 135, .06);
+        }
+
+        /* scroll hint bottom-left */
+        .scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            left: clamp(1.5rem, 5vw, 4rem);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: .72rem;
+            color: rgba(0, 63, 135, .4);
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: fadeUp .5s 1.1s ease forwards;
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 28px;
+            background: linear-gradient(to bottom, transparent, rgba(0, 63, 135, .3));
+        }
+
+        /* ================================================
+       SHARED SECTION STYLES
+    ================================================ */
+        .section-label {
+            display: inline-block;
+            font-size: .75rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--blue);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-family: 'Baloo 2', sans-serif;
+            font-size: clamp(1.9rem, 4vw, 3rem);
+            line-height: 1.15;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.2rem;
+        }
+
+        h2 em {
+            font-style: italic;
+            color: var(--blue);
+        }
+
+        p {
+            font-size: clamp(.9rem, 1.3vw, 1rem);
+            line-height: 1.85;
+            color: var(--muted);
+        }
+
+        /* ================================================
+       MISSION
+    ================================================ */
+        .mission-wrap {
+            background: var(--white);
+        }
+
+        .mission-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(2rem, 5vw, 5rem);
+            align-items: center;
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+        }
+
+        @media (max-width: 720px) {
+            .mission-inner {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .mission-text p {
+            max-width: 44ch;
+        }
+
+        .mission-text strong {
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .mission-img {
+            border-radius: 24px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background: var(--blue-lt);
+            position: relative;
+            box-shadow: 0 20px 60px -16px rgba(0, 63, 135, .2);
+        }
+
+        .mission-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .img-badge {
+            position: absolute;
+            bottom: 1.2rem;
+            left: 1.2rem;
+            background: rgba(0, 63, 135, .85);
+            backdrop-filter: blur(8px);
+            color: var(--blue);
+            font-size: .78rem;
+            font-weight: 700;
+            padding: .45rem 1rem;
+            border-radius: 100px;
+        }
+
+        /* ================================================
+       DISCOVERY
+    ================================================ */
+        .discovery-wrap {
+            background: var(--bg-soft);
+        }
+
+        .discovery-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+        }
+
+        .discovery-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 720px) {
+            .discovery-header {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .discovery-desc {
+            display: flex;
+            flex-direction: column;
+            gap: .9rem;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            margin-top: .4rem;
+        }
+
+        .pill {
+            background: var(--blue-lt);
+            color: var(--blue-dk);
+            border: 1px solid var(--border);
+            font-size: .78rem;
+            font-weight: 700;
+            letter-spacing: .05em;
+            padding: .3rem .9rem;
+            border-radius: 100px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 230px 230px;
+            gap: .9rem;
+        }
+
+        @media (max-width: 720px) {
+            .gallery {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+            }
+        }
+
+        .gal-item {
+            border-radius: 18px;
+            overflow: hidden;
+            background: var(--blue-lt);
+            position: relative;
+        }
+
+        .gal-item:first-child {
+            grid-column: span 2;
+        }
+
+        .gal-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform .5s ease;
+        }
+
+        .gal-item:hover img {
+            transform: scale(1.04);
+        }
+
+        /* ================================================
+       WHY PARENTS
+    ================================================ */
+        .why-wrap {
+            background: var(--blue-dk);
+        }
+
+        .why-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+        }
+
+        .why-inner .section-label {
+            color: var(--blue);
+        }
+
+        .why-inner h2 {
+            color: var(--white);
+        }
+
+        .why-inner h2 em {
+            color: var(--blue);
+            font-style: italic;
+        }
+
+        .why-intro-text {
+            color: rgba(255, 255, 255, .55);
+            max-width: 52ch;
+            margin-bottom: 3rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        @media (max-width: 720px) {
+            .features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .feat {
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(89, 172, 255, .15);
+            border-radius: 18px;
+            padding: 1.6rem;
+            transition: background .25s, border-color .25s;
+        }
+
+        .feat:hover {
+            background: rgba(89, 172, 255, .1);
+            border-color: rgba(89, 172, 255, .35);
+        }
+
+        .feat-icon {
+            font-size: 1.5rem;
+            color: var(--blue);
+            display: block;
+            margin-bottom: .8rem;
+        }
+
+        .feat-title {
+            font-weight: 800;
+            font-size: .95rem;
+            color: var(--white);
+            margin-bottom: .35rem;
+        }
+
+        .feat-desc {
+            font-size: .83rem;
+            line-height: 1.65;
+            color: rgba(255, 255, 255, .45);
+        }
+
+        .screens {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: .9rem;
+        }
+
+        @media (max-width: 720px) {
+            .screens {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .screen {
+            border-radius: 14px;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: rgba(89, 172, 255, .12);
+        }
+
+        .screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .why-quote {
+            margin-top: 3rem;
+            padding: 2rem 2.5rem;
+            background: rgba(89, 172, 255, .08);
+            border-left: 3px solid var(--blue);
+            border-radius: 0 16px 16px 0;
+        }
+
+        .why-quote p {
+            font-family: 'Baloo 2', sans-serif;
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: var(--white);
+            line-height: 1.65;
+            font-weight: 500;
+        }
+
+        /* ================================================
+       NEWSLETTER
+    ================================================ */
+        .nl-wrap {
+            background: var(--blue);
+        }
+
+        .nl-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .nl-text h3 {
+            font-family: 'Baloo 2', sans-serif;
+            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+            font-weight: 700;
+            color: var(--blue-dk);
+            margin-bottom: .5rem;
+        }
+
+        .nl-text p {
+            color: var(--blue-dk);
+            opacity: .7;
+            max-width: 36ch;
+        }
+
+        .btn-dark {
+            background: var(--blue-dk);
+            color: var(--blue);
+            padding: .9rem 2rem;
+            border-radius: 100px;
+            font-family: 'Nunito', sans-serif;
+            font-size: .95rem;
+            font-weight: 700;
+            text-decoration: none;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+        .btn-dark:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px -6px rgba(0, 63, 135, .4);
+        }
+
+        /* ================================================
+       CONTACT
+    ================================================ */
+        .contact-wrap {
+            background: var(--bg-soft);
+        }
+
+        .contact-inner {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        @media (max-width: 720px) {
+            .contact-inner {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        .email-card {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: 18px;
+            padding: 1.4rem 1.8rem;
+            margin-top: 2rem;
+            transition: border-color .25s, box-shadow .25s;
+            text-decoration: none;
+        }
+
+        .email-card:hover {
+            border-color: var(--blue);
+            box-shadow: 0 8px 24px -8px rgba(89, 172, 255, .25);
+        }
+
+        .email-icon {
+            width: 46px;
+            height: 46px;
+            background: var(--blue-dk);
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            font-size: 1.1rem;
+            color: var(--blue);
+            flex-shrink: 0;
+        }
+
+        .email-label {
+            font-size: .72rem;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: .25rem;
+        }
+
+        .email-value {
+            color: var(--text);
+            font-weight: 700;
+            font-size: .95rem;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: .6rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-btn {
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            padding: .8rem .5rem;
+            text-decoration: none;
+            color: var(--text);
+            font-size: .82rem;
+            font-weight: 700;
+            text-align: center;
+            transition: background .2s, border-color .2s, color .2s, transform .2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .35rem;
+        }
+
+        .social-btn:hover {
+            background: var(--blue-dk);
+            color: var(--blue);
+            border-color: var(--blue-dk);
+            transform: translateY(-2px);
+        }
+
+        /* ================================================
+       FOOTER
+    ================================================ */
+        footer {
+            background: var(--text);
+            padding: 2.5rem clamp(1.5rem, 5vw, 4rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-copy {
+            font-size: .75rem;
+            color: rgba(255, 255, 255, .3);
+            line-height: 1.8;
+            text-align: center;
+            max-width: 60ch;
+        }
+
+        /* ================================================
+       ANIMATIONS
+    ================================================ */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity .65s ease, transform .65s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-d {
+            transition-delay: .15s;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-image {
+                display: block;
+                opacity: .55;
+            }
+
+            .hero::before {
+                background: rgba(89, 172, 255, .72);
+            }
+
+            .hero-center {
+                max-width: 100%;
+                padding-top: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================================================
+     HERO
+================================================ -->
+    <div class="hero">
+
+        <img class="hero-image" src="images/hero_image.webp" alt="Kidamame Discovery app illustration" />
+
+        <!-- Nav -->
+        <nav class="hero-nav">
+            <a class="logo-link" href="#">
+                <img class="logo-img" src="images/weblogo.webp" alt="Kidamame" />
+            </a>
+        </nav>
+
+        <!-- Content -->
+        <div class="hero-center">
+            <span class="hero-badge">
+                <i class="fa-solid fa-star"></i> Educational Apps &middot; Ages 4&ndash;10
+            </span>
+
+            <h1>Calm, Safe &amp; Ad-Free <em>Educational Apps</em> for Kids</h1>
+
+            <p class="hero-sub">
+                We are a small independent studio, from parents to parents. We create offline,
+                nature-inspired apps that spark curiosity. No noise, no ads, just wonder.
+            </p>
+
+            <div class="cta-group">
+                <a class="btn btn-primary" href="https://kidamame.substack.com/subscribe" target="_blank"
+                    rel="noopener">
+                    <i class="fa-solid fa-paper-plane"></i> Join our newsletter
+                </a>
+                <a class="btn btn-ghost" href="#mission">
+                    Discover more <i class="fa-solid fa-arrow-down"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <div class="scroll-line"></div>
+            <span>scroll</span>
+        </div>
+
+    </div>
+
+    <!-- ================================================
+     MISSION
+================================================ -->
+    <div class="mission-wrap" id="mission">
+        <div class="mission-inner">
+            <div class="mission-text reveal">
+                <span class="section-label">Our Mission</span>
+                <h2>From <em>parents</em> to parents</h2>
+                <p>
+                    We are a small independent studio. We create <strong>calm, offline, and ad-free apps</strong>
+                    designed for primary school children (ages 4&ndash;10). Our goal is simple: to help families
+                    slow down and rediscover the joy of curiosity through <strong>nature and science</strong>.
+                    No noise, no addiction &mdash; just a safe space to explore together.
+                </p>
+            </div>
+            <div class="mission-img reveal reveal-d">
+                <img src="images/gallery/thumbs/08.webp" alt="Wildlife app screenshot in the Alps" />
+                <div class="img-badge">
+                    <i class="fa-solid fa-paw"></i> Wildlife &amp; Nature
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================
+     DISCOVERY
+================================================ -->
+    <div class="discovery-wrap">
+        <div class="discovery-inner">
+            <div class="discovery-header">
+                <div class="reveal">
+                    <span class="section-label">Our App</span>
+                    <h2>Kidamame <em>Discovery</em></h2>
+                </div>
+                <div class="discovery-desc reveal reveal-d">
+                    <p>
+                        A calm, interactive world designed for families. Rooted in <strong
+                            style="color:var(--text)">Montessori principles</strong>,
+                        offering <strong style="color:var(--text)">meaningful screen time</strong> for children ages
+                        4&ndash;10.
+                    </p>
+                    <p>
+                        We replace fast-paced goals with <strong style="color:var(--text)">child-led
+                            exploration</strong>.
+                        Each sensory-rich scene is an illustrated storybook come to life &mdash; tapping an animal
+                        or plant reveals beautiful &ldquo;Did You Know?&rdquo; cards.
+                    </p>
+                    <div class="pill-row">
+                        <span class="pill">Montessori</span>
+                        <span class="pill">Sensory-Rich</span>
+                        <span class="pill">Child-Led</span>
+                        <span class="pill">Ad-Free</span>
+                        <span class="pill">100% Offline</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery reveal">
+                <div class="gal-item">
+                    <img src="images/gallery/thumbs/11.webp" alt="African Savannah scene" loading="lazy" />
+                </div>
+                <div class="gal-item">
+                    <img src="images/gallery/thumbs/13.webp" alt="Australian Red Center scene" loading="lazy" />
+                </div>
+                <div class="gal-item">
+                    <img src="images/gallery/thumbs/05.webp" alt="Alps bear facts card" loading="lazy" />
+                </div>
+                <div class="gal-item">
+                    <img src="images/gallery/thumbs/amazon_forest.webp" alt="Amazon forest scene" loading="lazy" />
+                </div>
+                <div class="gal-item">
+                    <img src="images/gallery/thumbs/artic_card.webp" alt="Arctic polar bear scene" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================
+     WHY PARENTS
+================================================ -->
+    <div class="why-wrap">
+        <div class="why-inner">
+            <span class="section-label">Why Parents Choose Kidamame</span>
+            <h2>Built with <em>care</em>, for curious minds</h2>
+            <p class="why-intro-text">
+                We believe in curiosity, wonder, and the magic of learning something new &mdash; together.
+                Every interaction is crafted to spark curiosity and create lasting memories.
+            </p>
+
+            <div class="features reveal">
+                <div class="feat">
+                    <span class="feat-icon"><i class="fa-solid fa-download"></i></span>
+                    <div class="feat-title">100% Offline</div>
+                    <div class="feat-desc">Works anywhere &mdash; no Wi-Fi required. Perfect for travel and quiet time
+                        at home.</div>
+                </div>
+                <div class="feat">
+                    <span class="feat-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                    <div class="feat-title">Ad-Free &amp; Safe</div>
+                    <div class="feat-desc">Zero ads, zero trackers. A completely safe environment for young minds.</div>
+                </div>
+                <div class="feat">
+                    <span class="feat-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <div class="feat-title">Educational Content</div>
+                    <div class="feat-desc">Real science, real nature facts &mdash; presented beautifully for curious
+                        children.</div>
+                </div>
+                <div class="feat">
+                    <span class="feat-icon"><i class="fa-solid fa-leaf"></i></span>
+                    <div class="feat-title">Nature &amp; Science</div>
+                    <div class="feat-desc">From forest sounds to animal secrets &mdash; explore the natural world
+                        together.</div>
+                </div>
+                <div class="feat">
+                    <span class="feat-icon"><i class="fa-solid fa-users"></i></span>
+                    <div class="feat-title">Family Together</div>
+                    <div class="feat-desc">Designed to be enjoyed side by side &mdash; a shared experience, not a
+                        distraction.</div>
+                </div>
+                <div class="feat">
+                    <span class="feat-icon"><i class="fa-solid fa-heart"></i></span>
+                    <div class="feat-title">Designed with Care</div>
+                    <div class="feat-desc">A small studio run by parents &mdash; every detail crafted with intention and
+                        love.</div>
+                </div>
+            </div>
+
+            <div class="screens reveal">
+                <div class="screen">
+                    <img src="images/gallery/thumbs/01.webp" alt="App screenshot" loading="lazy" />
+                </div>
+                <div class="screen">
+                    <img src="images/gallery/thumbs/02.webp" alt="Nature exploration" loading="lazy" />
+                </div>
+                <div class="screen">
+                    <img src="images/gallery/thumbs/03.webp" alt="Animal sounds" loading="lazy" />
+                </div>
+                <div class="screen">
+                    <img src="images/gallery/thumbs/04.webp" alt="Family together" loading="lazy" />
+                </div>
+            </div>
+
+            <div class="why-quote reveal">
+                <p>&ldquo;From the sounds of the forest to the secrets of the animal kingdom, our experiences
+                    help kids explore nature, science, and the outdoors through imaginative play.&rdquo;</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================
+     NEWSLETTER
+================================================ -->
+    <div class="nl-wrap">
+        <div class="nl-inner">
+            <div class="nl-text reveal">
+                <h3><i class="fa-solid fa-bell"></i> Stay in the loop!</h3>
+                <p>
+                    Want to be the first to know when our apps launch on the Google Play Store
+                    and the Apple App Store? Sign up for updates, behind-the-scenes content,
+                    and early access opportunities.
+                </p>
+            </div>
+            <a class="btn-dark reveal" href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener">
+                <i class="fa-solid fa-paper-plane"></i> Join our newsletter
+            </a>
+        </div>
+    </div>
+
+    <!-- ================================================
+     CONTACT
+================================================ -->
+    <div class="contact-wrap">
+        <div class="contact-inner">
+            <div class="reveal">
+                <span class="section-label">Get in Touch</span>
+                <h2>We&rsquo;d love to <em>hear</em> from you</h2>
+                <p>
+                    Have questions or want to learn more? Drop us a message and we&rsquo;ll get
+                    back to you about our educational apps for kids.
+                </p>
+                <a class="email-card" href="/cdn-cgi/l/email-protection#066f686069466d6f62676b676b632865696b">
+                    <div class="email-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div>
+                        <div class="email-label">Email</div>
+                        <div class="email-value"><span class="__cf_email__"
+                                data-cfemail="9ef7f0f8f1def5f7fafff3fff3fbb0fdf1f3">[email&#160;protected]</span></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="reveal reveal-d">
+                <span class="section-label">Follow Us</span>
+                <h2>Find us on <em>social</em></h2>
+                <p>Follow our journey for updates and behind-the-scenes content.</p>
+                <div class="social-grid">
+                    <a class="social-btn" href="https://www.instagram.com/kidamame.official" target="_blank"
+                        rel="noopener">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a class="social-btn" href="https://pinterest.com/kidamame/" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-pinterest"></i> Pinterest
+                    </a>
+                    <a class="social-btn" href="https://x.com/KidamameKids" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-x-twitter"></i> Twitter
+                    </a>
+                    <a class="social-btn" href="https://www.facebook.com/profile.php?id=61579039664314" target="_blank"
+                        rel="noopener">
+                        <i class="fa-brands fa-facebook"></i> Facebook
+                    </a>
+                    <a class="social-btn" href="https://www.tiktok.com/@kidamame" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-tiktok"></i> TikTok
+                    </a>
+                    <a class="social-btn" href="https://www.linkedin.com/company/kidamame" target="_blank"
+                        rel="noopener">
+                        <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================
+     FOOTER
+================================================ -->
+    <footer>
+        <div class="footer-copy">
+            &copy; 2025 KIDAMAME&reg;. All rights reserved.<br>
+            KIDAMAME&reg; is a trademark of Marco Uberti.<br>
+            Via Casarola 13, 24032 Torre de' Busi (BG), Italy.<br>
+            VAT 04896640168 | REA BG 497369
+        </div>
+    </footer>
+
+    <script>
+        const obs = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry, i) {
+                if (entry.isIntersecting) {
+                    setTimeout(function () {
+                        entry.target.classList.add('visible');
+                    }, i * 80);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
+    </script>
+
+</body>
+
+</html>
