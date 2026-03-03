@@ -178,3 +178,46 @@ section.intro header .store-badges img {
 		width: 180px !important;
 	}
 }
+// Safe Area Notch Fix for Landscape
+@supports (padding: env(safe-area-inset-left)) {
+	@include breakpoint('<=medium') {
+		#wrapper > section > header,
+		#wrapper > section > .content {
+			padding-left: calc(4rem + env(safe-area-inset-left)) !important;
+			padding-right: calc(4rem + env(safe-area-inset-right)) !important;
+		}
+		#wrapper > section > footer,
+		#wrapper .copyright {
+			padding-left: calc(4rem + env(safe-area-inset-left));
+			padding-right: calc(4rem + env(safe-area-inset-right));
+		}
+		#wrapper > section.intro > header {
+			padding-left: calc(2rem + env(safe-area-inset-left)) !important;
+			padding-right: calc(2rem + env(safe-area-inset-right)) !important;
+		}
+	}
+
+	@include breakpoint('<=small') {
+		#wrapper > section > header,
+		#wrapper > section > .content {
+			padding-left: calc(2rem + env(safe-area-inset-left)) !important;
+			padding-right: calc(2rem + env(safe-area-inset-right)) !important;
+		}
+		#wrapper > section > footer,
+		#wrapper .copyright {
+			padding-left: calc(2rem + env(safe-area-inset-left));
+			padding-right: calc(2rem + env(safe-area-inset-right));
+		}
+	}
+
+	@include breakpoint('<=xxsmall') {
+		#wrapper > section > header,
+		#wrapper > section > .content,
+		#wrapper > section > footer,
+		#wrapper .copyright,
+		#wrapper > section.intro > header {
+			padding-left: calc(1.5rem + env(safe-area-inset-left)) !important;
+			padding-right: calc(1.5rem + env(safe-area-inset-right)) !important;
+		}
+	}
+}
