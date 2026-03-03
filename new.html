@@ -69,25 +69,14 @@
             z-index: 0;
         }
 
-        /* Gradient overlay: sits on top of image, fades out fast so right half stays visible */
+        /* Dark overlay mask: covers the entire image */
         .hero::before {
             content: '';
             position: absolute;
             inset: 0;
             z-index: 1;
             pointer-events: none;
-            background: linear-gradient(to right,
-                    var(--blue) 40%,
-                    rgba(89, 172, 255, 0) 70%,
-                    rgba(89, 172, 255, 0) 100%);
-        }
-
-        @media (max-width: 1024px) {
-            .hero::before {
-                background: linear-gradient(to bottom,
-                        var(--blue) 40%,
-                        rgba(89, 172, 255, 0) 100%);
-            }
+            background: rgba(0, 0, 0, 0.65);
         }
 
         /* NAV BAR */
@@ -111,7 +100,6 @@
             height: clamp(52px, 6vw, 70px);
             width: auto;
             display: block;
-            /*filter: drop-shadow(0 2px 6px rgba(0, 63, 135, .2));*/
         }
 
         /* HERO CENTER CONTENT */
@@ -130,9 +118,9 @@
             display: inline-flex;
             align-items: center;
             gap: .45rem;
-            background: rgba(0, 63, 135, .12);
-            border: 1px solid rgba(0, 63, 135, .25);
-            color: var(--blue-dk);
+            background: rgba(255, 255, 255, .1);
+            border: 1px solid rgba(255, 255, 255, .3);
+            color: var(--white);
             padding: .4rem 1.1rem;
             border-radius: 100px;
             font-size: .8rem;
@@ -148,7 +136,7 @@
             font-family: 'Baloo 2', sans-serif;
             font-size: clamp(2.4rem, 5.5vw, 4.6rem);
             line-height: 1.1;
-            color: var(--blue-dk);
+            color: var(--white);
             font-weight: 700;
             margin-bottom: 1.2rem;
             opacity: 0;
@@ -157,13 +145,13 @@
 
         .hero h1 em {
             font-style: normal;
-            color: var(--white);
+            color: var(--blue);
             font-weight: 800;
         }
 
         .hero-sub {
             font-size: clamp(.95rem, 1.5vw, 1.1rem);
-            color: rgba(0, 63, 135, .7);
+            color: rgba(255, 255, 255, .85);
             max-width: 40ch;
             line-height: 1.8;
             margin-bottom: 2rem;
@@ -199,23 +187,23 @@
         }
 
         .btn-primary {
-            background: var(--blue-dk);
-            color: var(--white);
+            background: var(--blue);
+            color: var(--blue-dk);
         }
 
         .btn-primary:hover {
-            box-shadow: 0 10px 28px -6px rgba(0, 63, 135, .4);
+            box-shadow: 0 10px 28px -6px rgba(0, 0, 0, .5);
         }
 
         .btn-ghost {
-            background: transparent;
-            color: var(--blue-dk);
-            border: 1.5px solid rgba(0, 63, 135, .4);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            border: 1.5px solid rgba(255, 255, 255, .6);
         }
 
         .btn-ghost:hover {
-            border-color: var(--blue-dk);
-            background: rgba(0, 63, 135, .06);
+            border-color: var(--white);
+            background: rgba(255, 255, 255, .15);
         }
 
         /* scroll hint bottom-left */
@@ -228,7 +216,7 @@
             align-items: center;
             gap: .5rem;
             font-size: .72rem;
-            color: rgba(0, 63, 135, .4);
+            color: rgba(255, 255, 255, .6);
             letter-spacing: .12em;
             text-transform: uppercase;
             opacity: 0;
@@ -238,7 +226,7 @@
         .scroll-line {
             width: 1px;
             height: 28px;
-            background: linear-gradient(to bottom, transparent, rgba(0, 63, 135, .3));
+            background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, .6));
         }
 
         /* ================================================
