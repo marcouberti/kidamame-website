@@ -78,9 +78,9 @@
             pointer-events: none;
             background: linear-gradient(to right,
                     var(--blue) 0%,
-                    rgba(89, 172, 255, .9) 22%,
-                    rgba(89, 172, 255, .4) 36%,
-                    transparent 50%);
+                    rgba(89, 172, 255, 1) 20%,
+                    rgba(89, 172, 255, 0.5) 50%,
+                    rgba(89, 172, 255, 0) 80%);
         }
 
         /* NAV BAR */
@@ -571,7 +571,7 @@
 
         .btn-dark {
             background: var(--blue-dk);
-            color: var(--blue);
+            color: var(--white);
             padding: .9rem 2rem;
             border-radius: 100px;
             font-family: 'Nunito', sans-serif;
@@ -693,11 +693,13 @@
        FOOTER
     ================================================ */
         footer {
-            background: var(--text);
+            background: #0d1b33;
             padding: 2.5rem clamp(1.5rem, 5vw, 4rem);
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 1rem;
         }
 
         .footer-copy {
@@ -706,6 +708,24 @@
             line-height: 1.8;
             text-align: center;
             max-width: 60ch;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            font-size: .75rem;
+            color: rgba(255, 255, 255, .35);
+            text-decoration: none;
+            transition: color .2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--blue);
         }
 
         /* ================================================
@@ -745,7 +765,7 @@
             }
 
             .hero::before {
-                background: rgba(89, 172, 255, .72);
+                background: rgba(89, 172, 255, .8);
             }
 
             .hero-center {
@@ -774,9 +794,6 @@
 
         <!-- Content -->
         <div class="hero-center">
-            <span class="hero-badge">
-                <i class="fa-solid fa-star"></i> Educational Apps &middot; Ages 4&ndash;10
-            </span>
 
             <h1>Calm, Safe &amp; Ad-Free <em>Educational Apps</em> for Kids</h1>
 
@@ -796,10 +813,12 @@
             </div>
         </div>
 
+        <!-- Scroll hint 
         <div class="scroll-hint">
             <div class="scroll-line"></div>
             <span>scroll</span>
         </div>
+        -->
 
     </div>
 
@@ -958,7 +977,7 @@
     <div class="nl-wrap">
         <div class="nl-inner">
             <div class="nl-text reveal">
-                <h3><i class="fa-solid fa-bell"></i> Stay in the loop!</h3>
+                <h3>Stay in the loop!</h3>
                 <p>
                     Want to be the first to know when our apps launch on the Google Play Store
                     and the Apple App Store? Sign up for updates, behind-the-scenes content,
@@ -1033,6 +1052,10 @@
             KIDAMAME&reg; is a trademark of Marco Uberti.<br>
             Via Casarola 13, 24032 Torre de' Busi (BG), Italy.<br>
             VAT 04896640168 | REA BG 497369
+        </div>
+        <div class="footer-links">
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/terms-of-service">Terms of Service</a>
         </div>
     </footer>
 
