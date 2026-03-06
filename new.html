@@ -563,167 +563,40 @@
       background: var(--white);
     }
 
-    .product-card {
-      border-radius: 32px;
-      overflow: hidden;
-      border: 1.5px solid rgba(58, 158, 228, 0.14);
-      box-shadow: 0 12px 48px rgba(58, 158, 228, 0.07);
-      margin-top: 3rem;
+    .product-simple-content {
+      margin-top: 2.5rem;
     }
 
-    .product-card-top {
-      display: grid;
-      grid-template-columns: 1fr 1.6fr;
-    }
-
-    .product-info {
-      background: var(--blue-light);
-      padding: 3.2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .app-icon {
-      width: 68px;
-      height: 68px;
-      border-radius: 20px;
-      background: var(--blue);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.7rem;
-      color: white;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 6px 20px rgba(58, 158, 228, 0.3);
-    }
-
-    .product-info h3 {
-      font-family: var(--font-display);
-      font-size: 1.75rem;
-      font-weight: 800;
-      margin-bottom: 0.8rem;
-      line-height: 1.2;
-    }
-
-    .product-info p {
-      font-size: 0.93rem;
+    .product-simple-content p {
+      font-size: 1.05rem;
       color: var(--ink-soft);
-      line-height: 1.72;
-      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      max-width: 860px;
+      margin-bottom: 2.5rem;
     }
 
-    .product-info p strong {
+    .product-simple-content p strong {
       color: var(--ink);
       font-weight: 700;
     }
 
-    .product-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .chip {
-      font-family: var(--font-body);
-      font-size: 0.74rem;
-      font-weight: 700;
-      padding: 0.3rem 0.85rem;
-      border-radius: var(--r-pill);
-      background: white;
-      color: var(--blue-deep);
-      border: 1.5px solid var(--blue-mid);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .chip i {
-      font-size: 0.7rem;
-    }
-
-    .btn-blue {
-      font-family: var(--font-body);
-      font-weight: 800;
-      font-size: 0.88rem;
-      padding: 0.75rem 1.8rem;
-      background: var(--blue);
-      color: white;
-      border-radius: var(--r-pill);
-      text-decoration: none;
-      box-shadow: 0 4px 14px rgba(58, 158, 228, 0.3);
-      transition: transform 0.15s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      align-self: flex-start;
-    }
-
-    .btn-blue:hover {
-      transform: translateY(-1px);
-    }
-
-    .product-screenshot {
-      background: linear-gradient(145deg, #FDDBA0 0%, #F4A85B 50%, #E87A3A 100%);
-      min-height: 360px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .screenshot-gallery {
-      display: flex;
-      gap: 1rem;
-      padding: 2rem;
-      overflow-x: auto;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .screenshot-gallery img {
-      height: 220px;
-      width: auto;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-      object-fit: cover;
-      transition: transform 0.2s;
-    }
-
-    .screenshot-gallery img:hover {
-      transform: scale(1.04);
-    }
-
-    .product-stats {
+    .simple-gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-top: 1.5px solid rgba(58, 158, 228, 0.1);
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
     }
 
-    .product-stat {
-      padding: 1.8rem;
-      text-align: center;
-      border-right: 1.5px solid rgba(58, 158, 228, 0.1);
+    .simple-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .product-stat:last-child {
-      border-right: none;
-    }
-
-    .product-stat .num {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--blue);
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-
-    .product-stat .lbl {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--ink-soft);
+    .simple-gallery img:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
     }
 
     /* ── VALUES ── */
@@ -1014,24 +887,6 @@
         gap: 2rem;
       }
 
-      .product-card-top {
-        grid-template-columns: 1fr;
-      }
-
-      .product-screenshot {
-        min-height: 240px;
-      }
-
-      .product-stats {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .product-stat:nth-child(3) {
-        border-right: none;
-        border-top: 1.5px solid rgba(58, 158, 228, 0.1);
-        grid-column: 1/-1;
-      }
-
       .values-grid {
         grid-template-columns: 1fr 1fr;
       }
@@ -1048,6 +903,7 @@
         display: none;
       }
 
+      .simple-gallery,
       .values-grid {
         grid-template-columns: 1fr;
       }
@@ -1200,68 +1056,33 @@
     <div class="container">
       <p class="section-label reveal"><i class="fa-solid fa-mobile-screen"></i> &nbsp;Our apps</p>
       <h2 class="section-title reveal">Meet <em>Kidamame Discovery</em></h2>
-      <p class="section-sub reveal">A calm, interactive world of animals, nature, and wonder — designed for curious
-        minds.</p>
 
-      <div class="product-card reveal">
-        <div class="product-card-top">
-          <div class="product-info">
-            <div class="app-icon"><i class="fa-solid fa-earth-africa"></i></div>
-            <h3>Kidamame Discovery</h3>
-            <p>
-              Welcome to <strong>Kidamame Discovery</strong>, our calm, interactive world designed for families. Rooted
-              in <strong>Montessori principles</strong>, this experience offers <strong>meaningful screen time</strong>
-              for children ages 4-10. We replace fast-paced goals and instructions with <strong>child-led
-                exploration</strong>, inviting kids to touch, play, and learn at their own pace. Each
-              <strong>sensory-rich</strong> scene is an illustrated storybook come to life, where tapping an animal or
-              plant reveals beautiful "Did You Know?" cards. It’s a magical, ad-free space for families to slow down,
-              spark <strong>curiosity</strong>, and share moments of wonder together.
-            </p>
-            <div class="product-chips">
-              <span class="chip"><i class="fa-brands fa-apple"></i> iOS</span>
-              <span class="chip"><i class="fa-brands fa-android"></i> Android</span>
-              <span class="chip"><i class="fa-solid fa-child"></i> Ages 4–10</span>
-              <span class="chip"><i class="fa-solid fa-ban"></i> Ad-free</span>
-            </div>
-            <!--
-            <a href="#" class="btn-blue">
-              <i class="fa-solid fa-download"></i> Download free
-            </a>
-            -->
-          </div>
-          <div class="product-screenshot">
-            <div class="screenshot-gallery">
-              <img src="images/gallery/thumbs/11.webp"
-                alt="A wildlife educational app screenshot in the African Savannah with mount Kilimanjaro"
-                loading="lazy" />
-              <img src="images/gallery/thumbs/13.webp"
-                alt="A wildlife educational app screenshot in the Australian Red Center with Uluru and a kangaroo"
-                loading="lazy" />
-              <img src="images/gallery/thumbs/05.webp"
-                alt="A wildlife educational app screenshot in the Alps featuring a bear and interesting facts about the bear"
-                loading="lazy" />
-              <img src="images/gallery/thumbs/amazon_forest.webp"
-                alt="A wildlife educational app screenshot in the Amazon forest featuring a tucan and a macaw parrot"
-                loading="lazy" />
-              <img src="images/gallery/thumbs/artic_card.webp"
-                alt="A wildlife educational app screenshot in the Artic featuring a polar bear with its cub"
-                loading="lazy" />
-            </div>
-          </div>
-        </div>
-        <div class="product-stats">
-          <div class="product-stat">
-            <div class="num">4.8 <i class="fa-solid fa-star" style="font-size: 1.2rem; color: var(--amber);"></i></div>
-            <div class="lbl">App Store rating</div>
-          </div>
-          <div class="product-stat">
-            <div class="num">50K+</div>
-            <div class="lbl">Families using it</div>
-          </div>
-          <div class="product-stat">
-            <div class="num">100%</div>
-            <div class="lbl">Ad &amp; purchase free</div>
-          </div>
+      <div class="product-simple-content reveal">
+        <p>
+          Welcome to <strong>Kidamame Discovery</strong>, our calm, interactive world designed for families. Rooted
+          in <strong>Montessori principles</strong>, this experience offers <strong>meaningful screen time</strong>
+          for children ages 4-10. We replace fast-paced goals and instructions with <strong>child-led
+            exploration</strong>, inviting kids to touch, play, and learn at their own pace. Each
+          <strong>sensory-rich</strong> scene is an illustrated storybook come to life, where tapping an animal or
+          plant reveals beautiful "Did You Know?" cards. It’s a magical, ad-free space for families to slow down,
+          spark <strong>curiosity</strong>, and share moments of wonder together.
+        </p>
+
+        <div class="simple-gallery">
+          <img src="images/gallery/thumbs/11.webp"
+            alt="A wildlife educational app screenshot in the African Savannah with mount Kilimanjaro" loading="lazy" />
+          <img src="images/gallery/thumbs/13.webp"
+            alt="A wildlife educational app screenshot in the Australian Red Center with Uluru and a kangaroo"
+            loading="lazy" />
+          <img src="images/gallery/thumbs/05.webp"
+            alt="A wildlife educational app screenshot in the Alps featuring a bear and interesting facts about the bear"
+            loading="lazy" />
+          <img src="images/gallery/thumbs/amazon_forest.webp"
+            alt="A wildlife educational app screenshot in the Amazon forest featuring a tucan and a macaw parrot"
+            loading="lazy" />
+          <img src="images/gallery/thumbs/artic_card.webp"
+            alt="A wildlife educational app screenshot in the Artic featuring a polar bear with its cub"
+            loading="lazy" />
         </div>
       </div>
     </div>
