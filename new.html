@@ -599,6 +599,39 @@
       box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
     }
 
+    .store-badges {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+    }
+
+    .store-badges a {
+      display: inline-block;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+
+    .store-badges a:hover {
+      transform: translateY(-2px);
+    }
+
+    .store-badges img {
+      height: 54px;
+      width: auto;
+      display: block;
+    }
+
+    /*
+    @media (max-width: 480px) {
+      .store-badges img {
+        height: auto;
+        width: 180px;
+      }
+    }
+    */
+
     /* ── VALUES ── */
     .values {
       background: var(--amber-soft);
@@ -939,8 +972,8 @@
       <li><a href="#apps">Apps</a></li>
       <li><a href="#values">Values</a></li>
     </ul>
-    <a href="#newsletter" class="nav-cta"><i class="fa-regular fa-envelope"></i> <span
-        class="nav-cta-text">Newsletter</span></a>
+    <a href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="nav-cta"><i
+        class="fa-regular fa-envelope"></i> <span class="nav-cta-text">Newsletter</span></a>
   </nav>
 
   <!-- HERO — full width -->
@@ -959,21 +992,24 @@
           We are a small independent studio, from parents to parents. We create calm, offline, and ad-free apps designed
           for primary school children (ages 4-10).
         </p>
+
         <div class="hero-actions">
-          <a href="#apps" class="btn-white">
-            <i class="fa-solid fa-rocket"></i> Explore our apps
-          </a>
-          <a href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+          <a href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-white">
             ✨ Join our newsletter
+          </a>
+          <a href="#apps" class="btn-ghost">
+            <i class="fa-solid fa-rocket"></i> Explore our apps
           </a>
         </div>
         <!--
-        <div class="hero-stores">
-          <span class="hero-stores-label">Available on</span>
-          <a href="#" class="store-badge"><i class="fa-brands fa-apple"></i> App Store</a>
-          <a href="#" class="store-badge"><i class="fa-brands fa-google-play"></i> Google Play</a>
-        </div>
-        -->
+        <div class="store-badges">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="images/google_play_badge.webp" alt="Get it on Google Play" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="images/apple_store_badge.webp" alt="Download on the App Store" />
+          </a>
+        </div>-->
       </div>
 
       <div class="hero-visual">
@@ -985,7 +1021,7 @@
     </div>
   </section>
 
-  <!-- TRUST BAR -->
+  <!-- TRUST BAR 
   <div class="trust-bar">
     <div class="trust-item">
       <div class="trust-icon"><i class="fa-solid fa-download"></i></div>
@@ -1007,7 +1043,7 @@
       <div class="trust-icon"><i class="fa-solid fa-users"></i></div>
       Family Together
     </div>
-  </div>
+  </div>-->
 
   <!-- MISSION -->
   <section class="mission" id="about">
@@ -1074,9 +1110,9 @@
           <img src="images/gallery/thumbs/13.webp"
             alt="A wildlife educational app screenshot in the Australian Red Center with Uluru and a kangaroo"
             loading="lazy" />
-          <img src="images/gallery/thumbs/05.webp"
+          <!--<img src="images/gallery/thumbs/05.webp"
             alt="A wildlife educational app screenshot in the Alps featuring a bear and interesting facts about the bear"
-            loading="lazy" />
+            loading="lazy" />-->
           <img src="images/gallery/thumbs/amazon_forest.webp"
             alt="A wildlife educational app screenshot in the Amazon forest featuring a tucan and a macaw parrot"
             loading="lazy" />
@@ -1084,6 +1120,16 @@
             alt="A wildlife educational app screenshot in the Artic featuring a polar bear with its cub"
             loading="lazy" />
         </div>
+        <!--
+        <div class="store-badges">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="images/google_play_badge.webp" alt="Get it on Google Play" />
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <img src="images/apple_store_badge.webp" alt="Download on the App Store" />
+          </a>
+        </div>
+        -->
       </div>
     </div>
   </section>
@@ -1140,8 +1186,7 @@
         <p class="reveal">Sign up to our newsletter to know when our apps launch on the stores, for updates,
           behind-the-scenes content, and early access opportunities!</p>
         <div class="newsletter-form reveal" style="margin-top: 1.5rem;">
-          <a href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-blue"
-            style="background: var(--amber); box-shadow: 0 4px 14px rgba(245, 165, 42, 0.4); padding: 0.9rem 2.2rem; font-size: 1rem; border-radius: 999px; text-decoration: none;">
+          <a href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-white">
             ✨ Join our newsletter
           </a>
         </div>
