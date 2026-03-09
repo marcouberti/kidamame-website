@@ -453,6 +453,9 @@
 
     .footer-legal-links a {
       white-space: nowrap;
+      font-size: 0.95rem;
+      text-decoration: underline;
+      text-underline-offset: 4px;
     }
 
     /* ── SHARED ── */
@@ -817,7 +820,7 @@
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 3rem;
       padding-bottom: 3rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.07);
@@ -838,7 +841,7 @@
 
     .footer-col h5 {
       font-family: var(--font-body);
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       font-weight: 800;
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -850,7 +853,7 @@
       display: flex;
       align-items: center;
       gap: 0.45rem;
-      font-size: 0.87rem;
+      font-size: 1rem;
       color: rgba(255, 255, 255, 0.58);
       text-decoration: none;
       margin-bottom: 0.5rem;
@@ -858,7 +861,7 @@
     }
 
     .footer-col a i {
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       color: rgba(255, 255, 255, 0.28);
     }
 
@@ -874,7 +877,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.77rem;
+      font-size: 0.85rem;
       color: rgba(255, 255, 255, 0.26);
       flex-wrap: wrap;
       gap: 0.5rem;
@@ -882,7 +885,6 @@
 
     .footer-bottom a {
       color: rgba(255, 255, 255, 0.26);
-      text-decoration: none;
     }
 
     .footer-bottom a:hover {
@@ -1013,6 +1015,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#apps">Apps</a></li>
       <li><a href="#values">Values</a></li>
+      <li><a href="#footer">Contacts</a></li>
     </ul>
     <a href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="nav-cta"><i
         class="fa-regular fa-envelope"></i> <span class="nav-cta-text">Newsletter</span></a>
@@ -1113,7 +1116,7 @@
             </div>
             <div class="pillar-text">
               <h4>Illustrated, sensory-rich worlds</h4>
-              <p>Every scene is a hand-crafted storybook that comes alive when touched.</p>
+              <p>Every detail is thoughtfully curated. Kids and parents deserve beautiful spaces to explore.</p>
             </div>
           </div>
           <div class="pillar reveal d3">
@@ -1193,8 +1196,9 @@
         </div>
         <div class="value-card reveal d1">
           <div class="value-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <h4>Safe & private</h4>
-          <p>No accounts, no data collection, no ads. Your child's privacy is never negotiable.</p>
+          <h4>Safe & offline</h4>
+          <p>Truly offline. No accounts, no data collection, no ads. Just a private, independent space to explore
+            anywhere.</p>
         </div>
         <div class="value-card reveal d2">
           <div class="value-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
@@ -1204,7 +1208,7 @@
         <div class="value-card reveal">
           <div class="value-card-icon"><i class="fa-solid fa-palette"></i></div>
           <h4>Beautiful craft</h4>
-          <p>Every illustration is hand-crafted with love. Kids and parents deserve beautiful things.</p>
+          <p>Every detail is thoughtfully curated. Kids and parents deserve beautiful spaces to explore.</p>
         </div>
         <div class="value-card reveal d1">
           <div class="value-card-icon"><i class="fa-solid fa-heart"></i></div>
@@ -1214,7 +1218,7 @@
         <div class="value-card reveal d2">
           <div class="value-card-icon"><i class="fa-solid fa-infinity"></i></div>
           <h4>No subscriptions</h4>
-          <p>Pay once or never. Great tools for children shouldn't come with recurring bills.</p>
+          <p>Start your journey for free. If you love it, a single purchase unlocks a world of wonder forever.</p>
         </div>
       </div>
     </div>
@@ -1239,16 +1243,9 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
+  <footer id="footer">
     <div class="footer-grid">
-      <div class="footer-col">
-        <h5>Contacts</h5>
-        <a href="mailto:info@kidamame.com"><i class="fa-regular fa-envelope"></i>info@kidamame.com</a>
-      </div>
-      <div class="footer-col">
-        <h5>Apps</h5>
-        <a href="#apps"><i class="fa-solid fa-earth-africa"></i> Kidamame Discovery</a>
-      </div>
+
       <div class="footer-col">
         <h5>Follow Us</h5>
         <a href="https://www.instagram.com/kidamame.official" target="_blank" rel="noopener noreferrer"><i
@@ -1263,6 +1260,10 @@
             class="fa-brands fa-tiktok"></i> TikTok</a>
         <a href="https://www.linkedin.com/company/kidamame" target="_blank" rel="noopener noreferrer"><i
             class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contacts</h5>
+        <a href="mailto:info@kidamame.com"><i class="fa-regular fa-envelope"></i>info@kidamame.com</a>
       </div>
     </div>
     <div class="footer-bottom">
