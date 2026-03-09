@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, viewport-fit=cover" />
@@ -11,8 +8,9 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.kidamame.com/" />
-  <meta property="og:title" content="Kidamame | Calm, Safe & Ad-Free Educational Apps for Kids" />
+  <meta property="og:url" content="<%= locals.url || 'https://www.kidamame.com/' %>" />
+  <meta property="og:title"
+    content="<%= locals.title || 'Kidamame | Safe, quiet spaces that inspire kids to explore the world beyond the screen.' %>" />
   <meta property="og:description"
     content="Kidamame creates calm, ad-free apps for kids 4-10. Fostering curiosity through art, nature & storytelling. 100% offline: no noise, no manipulative mechanics." />
   <meta property="og:image" content="https://www.kidamame.com/images/main_image.webp" />
@@ -23,15 +21,16 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://www.kidamame.com/" />
-  <meta name="twitter:title" content="Kidamame | Calm, Safe & Ad-Free Educational Apps for Kids" />
+  <meta name="twitter:url" content="<%= locals.url || 'https://www.kidamame.com/' %>" />
+  <meta name="twitter:title"
+    content="<%= locals.title || 'Kidamame | Safe, quiet spaces that inspire kids to explore the world beyond the screen.' %>" />
   <meta name="twitter:description"
     content="Kidamame creates calm, ad-free apps for kids 4-10. Fostering curiosity through art, nature & storytelling. 100% offline: no noise, no manipulative mechanics." />
   <meta name="twitter:image" content="https://www.kidamame.com/images/main_image.webp" />
   <meta name="twitter:image:alt" content="Kidamame Discovery - A calm, interactive world designed for families" />
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://www.kidamame.com/">
+  <link rel="canonical" href="<%= locals.url || 'https://www.kidamame.com/' %>">
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -90,7 +89,9 @@
   <meta name="msapplication-TileColor" content="#59acff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#59acff">
-  <title>Kidamame | Safe, quiet spaces that inspire kids to explore the world beyond the screen.</title>
+  <title>
+    <%= locals.title || 'Kidamame | Safe, quiet spaces that inspire kids to explore the world beyond the screen.' %>
+  </title>
   <link
     href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
@@ -1100,319 +1101,81 @@
         padding: 1.2rem 1rem;
       }
     }
+
+    /* ── LEGAL CONTENT ── */
+    .legal-content {
+      background: var(--cream);
+      padding: 10rem 2rem 6rem;
+      min-height: 50vh;
+    }
+
+    .legal-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--white);
+      padding: 3rem 4rem;
+      border-radius: 28px;
+      box-shadow: 0 10px 40px rgba(58, 158, 228, 0.08);
+      border: 1px solid rgba(58, 158, 228, 0.1);
+    }
+
+    .legal-container h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .last-updated {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 3rem;
+      display: block;
+    }
+
+    .legal-container h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .legal-container p {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .legal-container ul {
+      margin-bottom: 1.2rem;
+      padding-left: 1.5rem;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    .legal-container li {
+      margin-bottom: 0.5rem;
+    }
+
+    .legal-container a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .legal-container a:hover {
+      color: var(--blue-deep);
+      text-decoration: underline;
+    }
   </style>
 </head>
-
-<body>
-
-  <!-- NAV -->
-  <nav id="nav">
-    <a href="#" class="nav-logo">
-      <img src="images/k.png" alt="Kidamame" />
-      <span class="nav-logo-text">Kidamame<sup>®</sup></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#mission">Our Mission</a></li>
-      <li><a href="#apps">Apps</a></li>
-      <li><a href="#values">Values</a></li>
-      <li><a href="#footer">Contacts</a></li>
-    </ul>
-    <a href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="nav-cta"><i
-        class="fa-regular fa-envelope"></i> <span class="nav-cta-text">Newsletter</span></a>
-  </nav>
-
-  <!-- HERO — full width -->
-  <section class="hero">
-
-    <div class="hero-bubble hero-bubble-1"></div>
-    <div class="hero-bubble hero-bubble-2"></div>
-    <div class="hero-bubble hero-bubble-3"></div>
-
-    <div class="hero-inner">
-      <div class="hero-text">
-        <!--<img src="images/weblogo.webp" alt="Kidamame" class="hero-logo-img" style="width: 200px;" />-->
-        <p class="hero-tagline">Calm &nbsp;·&nbsp; Safe &nbsp;·&nbsp; Ad-Free &nbsp;·&nbsp; Offline</p>
-
-        <h1>Safe, quiet spaces for kids to <span>explore and learn.</span></h1>
-        <p class="hero-desc">
-          We are a small independent studio, from parents to parents. We create educational apps that spark a love for
-          nature, science, and the world beyond the screen.
-        </p>
-
-        <div class="hero-actions">
-          <a href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-white">
-            ✨ Join our newsletter
-          </a>
-          <a href="#apps" class="btn-ghost">
-            <i class="fa-solid fa-star"></i> Explore our apps
-          </a>
-        </div>
-        <!--
-        <div class="store-badges reveal">
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img src="images/google_play_badge.webp" alt="Get it on Google Play" />
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img src="images/apple_store_badge.webp" alt="Download on the App Store" />
-          </a>
-        </div>-->
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-visual-box">
-          <img src="images/hero_image.webp"
-            alt="Kidamame Discovery - A calm, interactive world designed for families" />
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRUST BAR 
-  <div class="trust-bar">
-    <div class="trust-item">
-      <div class="trust-icon"><i class="fa-solid fa-download"></i></div>
-      100% Offline
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon"><i class="fa-solid fa-shield-halved"></i></div>
-      Ad-Free & Safe
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-      Educational Content
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon"><i class="fa-solid fa-leaf"></i></div>
-      Nature & Science
-    </div>
-    <div class="trust-item">
-      <div class="trust-icon"><i class="fa-solid fa-users"></i></div>
-      Family Together
-    </div>
-  </div>-->
-
-  <!-- MISSION -->
-  <section class="mission" id="mission">
-    <div class="container">
-      <p class="section-label reveal"><i class="fa-solid fa-mobile-screen"></i> &nbsp;Our mission</p>
-      <h2 class="section-title reveal">Meaningful <em>screen time</em> for families</h2>
-      <!--
-      <div class="mission-quote reveal">
-        <p>"We believe in curiosity, wonder, and the magic of learning something new—together. We're building apps
-          that will create meaningful experiences to bring families closer while exploring the natural world."</p>
-        <p class="quote-source">— The Kidamame team</p>
-      </div>
-      -->
-      <div class="product-simple-content reveal">
-        <p>
-          <strong>We are a small independent studio, from parents to parents</strong>. We create calm, offline,
-          and ad-free <strong>apps</strong> designed
-          for primary school children (ages 4-10). Our goal is simple: to help families slow down and rediscover the joy
-          of curiosity through nature and science. No noise, no addiction, just a safe space to explore together.
-        </p>
-
-        <div class="simple-gallery">
-          <img src="images/gallery/thumbs/08.webp" alt="A wildlife educational app screenshot in the Alps."
-            loading="lazy" />
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- PRODUCT -->
-  <section class="product" id="apps">
-    <div class="container">
-      <p class="section-label reveal"><i class="fa-solid fa-mobile-screen"></i> &nbsp;Our apps</p>
-      <h2 class="section-title reveal">Meet <em>Kidamame Discovery</em></h2>
-
-      <div class="product-simple-content reveal">
-        <p>
-          Welcome to <strong>Kidamame Discovery</strong>, our calm, interactive world designed for families. Rooted
-          in <strong>Montessori principles</strong>, this experience offers <strong>meaningful screen time</strong>
-          for children ages 4-10. We replace fast-paced goals and instructions with <strong>child-led
-            exploration</strong>, inviting kids to touch, play, and learn at their own pace. Each
-          <strong>sensory-rich</strong> scene is an illustrated storybook come to life, where tapping an animal or
-          plant reveals beautiful "Did You Know?" cards. It’s a magical, ad-free space for families to slow down,
-          spark <strong>curiosity</strong>, and share moments of wonder together.
-        </p>
-
-        <div class="simple-gallery">
-          <img src="images/gallery/thumbs/artic_card.webp"
-            alt="A wildlife educational app screenshot in the Artic featuring a polar bear with its cub"
-            loading="lazy" />
-          <img src="images/gallery/thumbs/11.webp"
-            alt="A wildlife educational app screenshot in the African Savannah with mount Kilimanjaro" loading="lazy" />
-          <img src="images/gallery/thumbs/13.webp"
-            alt="A wildlife educational app screenshot in the Australian Red Center with Uluru and a kangaroo"
-            loading="lazy" />
-          <img src="images/gallery/thumbs/amazon_forest.webp"
-            alt="A wildlife educational app screenshot in the Amazon forest featuring a tucan and a macaw parrot"
-            loading="lazy" />
-          <img src="images/gallery/thumbs/05.webp"
-            alt="A wildlife educational app screenshot in the Alps featuring a bear and interesting facts about the bear"
-            loading="lazy" />
-        </div>
-        <!--
-        <div class="store-badges reveal">
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img src="images/google_play_badge.webp" alt="Get it on Google Play" />
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
-            <img src="images/apple_store_badge.webp" alt="Download on the App Store" />
-          </a>
-        </div>
-        -->
-        <div class="reveal"
-          style="text-align: center; margin-top: 3.5rem; background: var(--blue-light); padding: 2.5rem 2rem; border-radius: 20px;">
-          <h4
-            style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--blue); margin-bottom: 0.8rem;">
-            Stay in the loop!
-          </h4>
-          <p
-            style="font-size: 0.95rem; color: var(--ink-soft); max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.6;">
-            Want to be the first to know when our apps launch on the Google Play Store and the Apple App Store? Sign up
-            to our newsletter for updates, behind-the-scenes content, and early access opportunities!
-          </p>
-          <a href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener noreferrer"
-            class="btn-primary">
-            ✨ Join our newsletter
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VALUES -->
-  <section class="values" id="values">
-    <div class="container">
-      <p class="section-label reveal"><i class="fa-solid fa-heart"></i> &nbsp;What we stand for</p>
-      <h2 class="section-title reveal">Built on principles<br /><em>parents care about.</em></h2>
-      <p class="section-sub reveal">We believe in curiosity, wonder, and the magic of learning something new—together.
-        We're building apps that will create meaningful experiences to bring families closer while exploring the natural
-        world. From the sounds of the forest to the secrets of the animal kingdom, our experiences
-        help kids explore nature, science, and the outdoors through imaginative play. Every interaction is crafted to
-        spark curiosity and create lasting memories.</p>
-      <div class="values-grid">
-        <div class="value-card reveal">
-          <div class="value-card-icon"><i class="fa-solid fa-spa"></i></div>
-          <h4>Calm by design</h4>
-          <p>No flashing lights, no urgency loops, no addictive mechanics. Just gentle, peaceful play.</p>
-        </div>
-        <div class="value-card reveal d1">
-          <div class="value-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <h4>Safe & offline</h4>
-          <p>Truly offline. No accounts, no data collection, no ads. Just a private, independent space to explore
-            anywhere.</p>
-        </div>
-        <div class="value-card reveal d2">
-          <div class="value-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-          <h4>Genuinely educational</h4>
-          <p>Inspired by Montessori: discovery over instruction, curiosity over competition.</p>
-        </div>
-        <div class="value-card reveal">
-          <div class="value-card-icon"><i class="fa-solid fa-palette"></i></div>
-          <h4>Beautiful craft</h4>
-          <p>Every detail is thoughtfully curated. Kids and parents deserve beautiful spaces to explore.</p>
-        </div>
-        <div class="value-card reveal d1">
-          <div class="value-card-icon"><i class="fa-solid fa-heart"></i></div>
-          <h4>Shared wonder</h4>
-          <p>Our apps are built for quality time. They are designed for side-by-side discovery, sparking the kind of
-            curiosity that families enjoy together.</p>
-        </div>
-        <div class="value-card reveal d2">
-          <div class="value-card-icon"><i class="fa-solid fa-infinity"></i></div>
-          <h4>No subscriptions</h4>
-          <p>Start your journey for free. If you love it, a single purchase unlocks a world of wonder forever.</p>
-        </div>
-      </div>
-
-      <div class="simple-gallery reveal" style="margin-top: 3.5rem;">
-        <img src="images/gallery/thumbs/01.webp" class="landscape" loading="lazy"
-          alt="A wildlife educational app screenshot" />
-      </div>
-
-    </div>
-  </section>
-
-  <!-- NEWSLETTER -->
-  <section class="cta-section" id="newsletter">
-    <div class="container">
-      <div class="cta-inner">
-        <p class="section-label reveal"><i class="fa-regular fa-bell"></i> &nbsp;Stay in the loop</p>
-        <h2 class="reveal">Want to be the first to know?</h2>
-        <p class="reveal">Sign up to our newsletter to know when our apps launch on the stores, for updates,
-          behind-the-scenes content, and early access opportunities!</p>
-        <div class="newsletter-form reveal" style="margin-top: 1.5rem;">
-          <a href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener noreferrer" class="btn-white">
-            ✨ Join our newsletter
-          </a>
-        </div>
-        <p class="form-note reveal">No spam. Unsubscribe any time.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer id="footer">
-    <div class="footer-grid">
-
-      <div class="footer-col">
-        <h5>Follow Us</h5>
-        <a href="https://www.instagram.com/kidamame.official" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-instagram"></i> Instagram</a>
-        <a href="https://pinterest.com/kidamame/" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-pinterest"></i> Pinterest</a>
-        <a href="https://x.com/KidamameKids" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-x-twitter"></i> Twitter</a>
-        <a href="https://www.facebook.com/profile.php?id=61579039664314" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-facebook"></i> Facebook</a>
-        <a href="https://www.tiktok.com/@kidamame" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-tiktok"></i> TikTok</a>
-        <a href="https://www.linkedin.com/company/kidamame" target="_blank" rel="noopener noreferrer"><i
-            class="fa-brands fa-linkedin"></i> LinkedIn</a>
-      </div>
-      <div class="footer-col">
-        <h5>Contacts</h5>
-        <a href="mailto:info@kidamame.com"><i class="fa-regular fa-envelope"></i>info@kidamame.com</a>
-      </div>
-      <div class="footer-col">
-        <h5>Legal</h5>
-        <a href="#" style="text-decoration: underline; text-underline-offset: 4px;">Privacy
-          Policy</a>
-        <a href="terms.html" style="text-decoration: underline; text-underline-offset: 4px;">Terms of
-          Service</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="copyright">
-        &copy; <span id="dynamic-year">2026</span> KIDAMAME<sup>&reg;</sup> a trademark of Marco Uberti. All rights
-        reserved.<br />Registered office:
-        Via Casarola 13, 24032 Torre de' Busi (BG), Italy. VAT number
-        04896640168 | REA number BG 497369.
-      </p>
-    </div>
-  </footer>
-
-  <script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60));
-
-    const reveals = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => io.observe(el));
-
-    // Dynamic copyright year update
-    const dynamicYearEl = document.getElementById('dynamic-year');
-    if (dynamicYearEl) {
-      const currentYear = new Date().getFullYear();
-      const startYear = 2025;
-      dynamicYearEl.textContent = currentYear > startYear ? startYear + ' - ' + currentYear : startYear;
-    }
-  </script>
-</body>
-
-</html>

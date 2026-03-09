@@ -6,7 +6,5 @@ Sitemap: https://www.kidamame.com/sitemap.xml
 Disallow: /admin/
 Disallow: /private/
 
-# Allow crawling of CSS and JS for better rendering
-Allow: /assets/css/
-Allow: /assets/js/
+
 Allow: /images/ 
