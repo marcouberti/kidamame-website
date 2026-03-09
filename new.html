@@ -485,7 +485,6 @@
     .section-sub {
       font-size: 1rem;
       color: var(--ink-soft);
-      max-width: 520px;
       line-height: 1.78;
     }
 
@@ -602,7 +601,6 @@
       font-size: 1.05rem;
       color: var(--ink-soft);
       line-height: 1.8;
-      max-width: 860px;
       margin-bottom: 2.5rem;
     }
 
@@ -615,6 +613,10 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
+    }
+
+    .mission .simple-gallery {
+      grid-template-columns: 1fr;
     }
 
     .simple-gallery img {
@@ -994,7 +996,7 @@
       <span class="nav-logo-text">Kidamame<sup>®</sup></span>
     </a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
+      <li><a href="#mission">Our Mission</a></li>
       <li><a href="#apps">Apps</a></li>
       <li><a href="#values">Values</a></li>
       <li><a href="#footer">Contacts</a></li>
@@ -1015,10 +1017,10 @@
         <!--<img src="images/weblogo.webp" alt="Kidamame" class="hero-logo-img" style="width: 200px;" />-->
         <p class="hero-tagline">Calm &nbsp;·&nbsp; Safe &nbsp;·&nbsp; Ad-Free &nbsp;·&nbsp; Offline</p>
 
-        <h1>Safe, quiet spaces that inspire kids to explore the <span>world beyond the screen.</span></h1>
+        <h1>Safe, quiet spaces for kids to <span>explore and learn.</span></h1>
         <p class="hero-desc">
-          We are a small independent studio, from parents to parents. We create educational apps that inspire a love for
-          nature, science, and the tiny wonders all around us.
+          We are a small independent studio, from parents to parents. We create educational apps that spark a love for
+          nature, science, and the world beyond the screen.
         </p>
 
         <div class="hero-actions">
@@ -1074,45 +1076,32 @@
   </div>-->
 
   <!-- MISSION -->
-  <section class="mission" id="about">
+  <section class="mission" id="mission">
     <div class="container">
-      <div class="mission-inner">
-        <div class="mission-quote reveal">
-          <p>"We believe in curiosity, wonder, and the magic of learning something new—together. We're building apps
-            that will create meaningful experiences to bring families closer while exploring the natural world."</p>
-          <p class="quote-source">— The Kidamame team</p>
-        </div>
-        <div class="mission-pillars">
-          <div class="pillar reveal d1">
-            <div class="pillar-icon" style="background: var(--blue-light); color: var(--blue);">
-              <i class="fa-solid fa-compass"></i>
-            </div>
-            <div class="pillar-text">
-              <h4>Child-led exploration</h4>
-              <p>No levels, no scores. Kids follow their curiosity at their own pace.</p>
-            </div>
-          </div>
-          <div class="pillar reveal d2">
-            <div class="pillar-icon" style="background: #FFF3DC; color: var(--amber);">
-              <i class="fa-solid fa-book-open"></i>
-            </div>
-            <div class="pillar-text">
-              <h4>Illustrated, sensory-rich worlds</h4>
-              <p>Every detail is thoughtfully curated. Kids and parents deserve beautiful spaces to explore.</p>
-            </div>
-          </div>
-          <div class="pillar reveal d3">
-            <div class="pillar-icon" style="background: #E8F9EC; color: #4CAF6A;">
-              <i class="fa-solid fa-people-group"></i>
-            </div>
-            <div class="pillar-text">
-              <h4>Made for families</h4>
-              <p>Designed to be enjoyed together — a space to share wonder.</p>
-            </div>
-          </div>
+      <p class="section-label reveal"><i class="fa-solid fa-mobile-screen"></i> &nbsp;Our mission</p>
+      <h2 class="section-title reveal">Meaningful <em>screen time</em> for families</h2>
+      <!--
+      <div class="mission-quote reveal">
+        <p>"We believe in curiosity, wonder, and the magic of learning something new—together. We're building apps
+          that will create meaningful experiences to bring families closer while exploring the natural world."</p>
+        <p class="quote-source">— The Kidamame team</p>
+      </div>
+      -->
+      <div class="product-simple-content reveal">
+        <p>
+          <strong>We are a small independent studio, from parents to parents</strong>. We create calm, offline,
+          and ad-free <strong>apps</strong> designed
+          for primary school children (ages 4-10). Our goal is simple: to help families slow down and rediscover the joy
+          of curiosity through nature and science. No noise, no addiction, just a safe space to explore together.
+        </p>
+
+        <div class="simple-gallery">
+          <img src="images/gallery/thumbs/08.webp" alt="A wildlife educational app screenshot in the Alps."
+            loading="lazy" />
         </div>
       </div>
     </div>
+
   </section>
 
   <!-- PRODUCT -->
@@ -1138,9 +1127,9 @@
           <img src="images/gallery/thumbs/13.webp"
             alt="A wildlife educational app screenshot in the Australian Red Center with Uluru and a kangaroo"
             loading="lazy" />
-          <!--<img src="images/gallery/thumbs/05.webp"
+          <img src="images/gallery/thumbs/05.webp"
             alt="A wildlife educational app screenshot in the Alps featuring a bear and interesting facts about the bear"
-            loading="lazy" />-->
+            loading="lazy" />
           <img src="images/gallery/thumbs/amazon_forest.webp"
             alt="A wildlife educational app screenshot in the Amazon forest featuring a tucan and a macaw parrot"
             loading="lazy" />
@@ -1167,7 +1156,9 @@
     <div class="container">
       <p class="section-label reveal"><i class="fa-solid fa-heart"></i> &nbsp;What we stand for</p>
       <h2 class="section-title reveal">Built on principles<br /><em>parents care about.</em></h2>
-      <p class="section-sub reveal">From the sounds of the forest to the secrets of the animal kingdom, our experiences
+      <p class="section-sub reveal">We believe in curiosity, wonder, and the magic of learning something new—together.
+        We're building apps that will create meaningful experiences to bring families closer while exploring the natural
+        world. From the sounds of the forest to the secrets of the animal kingdom, our experiences
         help kids explore nature, science, and the outdoors through imaginative play. Every interaction is crafted to
         spark curiosity and create lasting memories.</p>
       <div class="values-grid">
@@ -1194,8 +1185,9 @@
         </div>
         <div class="value-card reveal d1">
           <div class="value-card-icon"><i class="fa-solid fa-heart"></i></div>
-          <h4>Family-first</h4>
-          <p>Our apps bring families together, not pull kids away into their own world.</p>
+          <h4>Shared wonder</h4>
+          <p>Our apps are built for quality time. They are designed for side-by-side discovery, sparking the kind of
+            curiosity that families enjoy together.</p>
         </div>
         <div class="value-card reveal d2">
           <div class="value-card-icon"><i class="fa-solid fa-infinity"></i></div>
