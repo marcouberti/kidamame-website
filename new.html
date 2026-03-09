@@ -444,19 +444,7 @@
       font-size: 0.9rem;
     }
 
-    /* Legal links — inline con separatore */
-    .footer-legal-links {
-      display: flex;
-      gap: 1.2rem;
-      align-items: center;
-    }
-
-    .footer-legal-links a {
-      white-space: nowrap;
-      font-size: 0.95rem;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
+    /* Shared styles */
 
     /* ── SHARED ── */
     section {
@@ -820,7 +808,7 @@
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 3rem;
       padding-bottom: 3rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.07);
@@ -992,12 +980,6 @@
       .trust-bar {
         gap: 1.2rem;
         padding: 1.2rem 1rem;
-      }
-
-      .footer-legal-links {
-        flex-direction: column;
-        gap: 0.3rem;
-        align-items: flex-start;
       }
     }
   </style>
@@ -1265,16 +1247,19 @@
         <h5>Contacts</h5>
         <a href="mailto:info@kidamame.com"><i class="fa-regular fa-envelope"></i>info@kidamame.com</a>
       </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <a href="/privacy-policy.html" style="text-decoration: underline; text-underline-offset: 4px;">Privacy
+          Policy</a>
+        <a href="/terms-of-service.html" style="text-decoration: underline; text-underline-offset: 4px;">Terms of
+          Service</a>
+      </div>
     </div>
     <div class="footer-bottom">
       <span style="max-width: 600px;">© 2026 Kidamame<sup>®</sup>. All rights reserved. <br />Kidamame<sup>®</sup> is a
         trademark of Marco Uberti. Registered office: Via Casarola 13, 24032 Torre de' Busi (BG), Italy. VAT number
         04896640168 | REA
         number BG 497369.</span>
-      <span class="footer-legal-links">
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms-of-service.html">Terms of Service</a>
-      </span>
     </div>
   </footer>
 
