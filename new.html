@@ -328,6 +328,27 @@
       transition: background 0.2s, border-color 0.2s;
     }
 
+    .btn-primary {
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 0.8rem 1.9rem;
+      background: var(--blue);
+      color: white;
+      border-radius: var(--r-pill);
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(89, 172, 255, 0.4);
+      transition: transform 0.15s, box-shadow 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 22px rgba(89, 172, 255, 0.5);
+    }
+
     .btn-ghost:hover {
       background: rgba(255, 255, 255, 0.12);
       border-color: white;
@@ -613,6 +634,12 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
+    }
+
+    .simple-gallery .landscape {
+      grid-column: 1 / -1;
+      width: 100%;
+      height: auto;
     }
 
     .mission .simple-gallery {
@@ -1122,19 +1149,19 @@
         </p>
 
         <div class="simple-gallery">
+          <img src="images/gallery/thumbs/artic_card.webp"
+            alt="A wildlife educational app screenshot in the Artic featuring a polar bear with its cub"
+            loading="lazy" />
           <img src="images/gallery/thumbs/11.webp"
             alt="A wildlife educational app screenshot in the African Savannah with mount Kilimanjaro" loading="lazy" />
           <img src="images/gallery/thumbs/13.webp"
             alt="A wildlife educational app screenshot in the Australian Red Center with Uluru and a kangaroo"
             loading="lazy" />
-          <img src="images/gallery/thumbs/05.webp"
-            alt="A wildlife educational app screenshot in the Alps featuring a bear and interesting facts about the bear"
-            loading="lazy" />
           <img src="images/gallery/thumbs/amazon_forest.webp"
             alt="A wildlife educational app screenshot in the Amazon forest featuring a tucan and a macaw parrot"
             loading="lazy" />
-          <img src="images/gallery/thumbs/artic_card.webp"
-            alt="A wildlife educational app screenshot in the Artic featuring a polar bear with its cub"
+          <img src="images/gallery/thumbs/05.webp"
+            alt="A wildlife educational app screenshot in the Alps featuring a bear and interesting facts about the bear"
             loading="lazy" />
         </div>
         <!--
@@ -1147,6 +1174,22 @@
           </a>
         </div>
         -->
+        <div class="reveal"
+          style="text-align: center; margin-top: 3.5rem; background: var(--blue-light); padding: 2.5rem 2rem; border-radius: 20px;">
+          <h4
+            style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--blue); margin-bottom: 0.8rem;">
+            Stay in the loop!
+          </h4>
+          <p
+            style="font-size: 0.95rem; color: var(--ink-soft); max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.6;">
+            Want to be the first to know when our apps launch on the Google Play Store and the Apple App Store? Sign up
+            to our newsletter for updates, behind-the-scenes content, and early access opportunities!
+          </p>
+          <a href="https://kidamame.substack.com/subscribe" target="_blank" rel="noopener noreferrer"
+            class="btn-primary">
+            ✨ Join our newsletter
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -1195,6 +1238,16 @@
           <p>Start your journey for free. If you love it, a single purchase unlocks a world of wonder forever.</p>
         </div>
       </div>
+
+      <div class="simple-gallery reveal" style="margin-top: 3.5rem;">
+        <img src="images/gallery/thumbs/01.webp" loading="lazy" alt="A wildlife educational app screenshot" />
+        <img src="images/gallery/thumbs/04.webp" loading="lazy"
+          alt="Parent and child playing together and educational app on a tablet" />
+        <img src="images/gallery/thumbs/02.webp" loading="lazy" alt="Nature exploration game" />
+        <img src="images/gallery/thumbs/03.webp" loading="lazy" alt="Animal sound identification" />
+
+      </div>
+
     </div>
   </section>
 
@@ -1241,9 +1294,9 @@
       </div>
       <div class="footer-col">
         <h5>Legal</h5>
-        <a href="/privacy-policy.html" style="text-decoration: underline; text-underline-offset: 4px;">Privacy
+        <a href="#" style="text-decoration: underline; text-underline-offset: 4px;">Privacy
           Policy</a>
-        <a href="/terms-of-service.html" style="text-decoration: underline; text-underline-offset: 4px;">Terms of
+        <a href="#" style="text-decoration: underline; text-underline-offset: 4px;">Terms of
           Service</a>
       </div>
     </div>
