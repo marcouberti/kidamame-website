@@ -1178,9 +1178,50 @@
       text-decoration: underline;
     }
 
+    .legal-highlight {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 1.8rem 2.2rem;
+      margin: 1.5rem 0 2.5rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      box-shadow: 0 10px 30px rgba(58, 158, 228, 0.08);
+      border: 1px solid rgba(89, 172, 255, 0.15);
+    }
+
+    .legal-highlight-icon {
+      font-size: 1.6rem;
+      color: var(--blue);
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+
+    .legal-highlight-content p {
+      margin-bottom: 0 !important;
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .legal-highlight-content p strong {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
     @media (max-width: 768px) {
       .legal-content {
         padding: 6rem 1.5rem 4rem;
+      }
+
+      .legal-highlight {
+        padding: 1.4rem;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .legal-highlight-icon {
+        margin-top: 0;
       }
     }
   </style>
@@ -1211,8 +1252,22 @@
                     <h1>Privacy Policy</h1>
                     <span class="last-updated">Last updated: March 9, 2026</span>
 
-                    <p>At Kidamame, your privacy and the privacy of your children are extremely important to us. We
-                        build our applications with the highest regard for security and safety.</p>
+                    <div class="legal-highlight">
+                        <div class="legal-highlight-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="legal-highlight-content">
+                            <p><strong>Our Promise to Parents:</strong> Your child's privacy is our absolute priority.
+                                We built Kidamame Discovery to be a safe, enclosed environment. We <strong>do not
+                                    collect</strong> any personal data from children, and the minimal information we
+                                process is strictly necessary for the app to function correctly. Your kids are safe to
+                                explore here!</p>
+                        </div>
+                    </div>
+
+                    <p>At Kidamame, your privacy and the privacy of your children are extremely important to us. Please
+                        read this Privacy Policy to understand exactly how we handle data when you use our website and
+                        applications.</p>
 
                     <h2>1. Our Apps Do Not Collect Child Data</h2>
                     <p>Our educational apps designed for children (such as <strong>Kidamame Discovery</strong>) are 100%
@@ -1301,6 +1356,8 @@
         Policy</a>
       <a href="terms.html" style="text-decoration: underline; text-underline-offset: 4px;">Terms of
         Service</a>
+      <a href="javascript:Cookiebot.show()" style="text-decoration: underline; text-underline-offset: 4px;">Customize
+        Cookies</a>
     </div>
   </div>
   <div class="footer-bottom">

@@ -1176,9 +1176,50 @@
       text-decoration: underline;
     }
 
+    .legal-highlight {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 1.8rem 2.2rem;
+      margin: 1.5rem 0 2.5rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      box-shadow: 0 10px 30px rgba(58, 158, 228, 0.08);
+      border: 1px solid rgba(89, 172, 255, 0.15);
+    }
+
+    .legal-highlight-icon {
+      font-size: 1.6rem;
+      color: var(--blue);
+      flex-shrink: 0;
+      margin-top: 0.2rem;
+    }
+
+    .legal-highlight-content p {
+      margin-bottom: 0 !important;
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .legal-highlight-content p strong {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
     @media (max-width: 768px) {
       .legal-content {
         padding: 6rem 1.5rem 4rem;
+      }
+
+      .legal-highlight {
+        padding: 1.4rem;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .legal-highlight-icon {
+        margin-top: 0;
       }
     }
   </style>
