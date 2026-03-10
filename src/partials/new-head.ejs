@@ -1213,6 +1213,13 @@
       display: none !important;
     }
 
+    /* Rende la tabella dei cookie scrollabile su mobile */
+    #CookieDeclaration {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
     @media (max-width: 768px) {
       .legal-content {
         padding: 6rem 1.5rem 4rem;
