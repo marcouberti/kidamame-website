@@ -1164,14 +1164,14 @@
       margin-bottom: 0.5rem;
     }
 
-    .legal-container a {
+    .legal-container a:not([class*="btn-"]) {
       color: var(--blue);
       text-decoration: none;
       font-weight: 600;
       transition: color 0.2s;
     }
 
-    .legal-container a:hover {
+    .legal-container a:not([class*="btn-"]):hover {
       color: var(--blue-deep);
       text-decoration: underline;
     }

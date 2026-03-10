@@ -1166,14 +1166,14 @@
       margin-bottom: 0.5rem;
     }
 
-    .legal-container a {
+    .legal-container a:not([class*="btn-"]) {
       color: var(--blue);
       text-decoration: none;
       font-weight: 600;
       transition: color 0.2s;
     }
 
-    .legal-container a:hover {
+    .legal-container a:not([class*="btn-"]):hover {
       color: var(--blue-deep);
       text-decoration: underline;
     }
@@ -1340,8 +1340,9 @@
           class="fa-regular fa-envelope"></i> Newsletter</a>
     </div>
     <div class="footer-col">
-      <h5>Contacts</h5>
+      <h5>Contacts & Media</h5>
       <a href="mailto:info@kidamame.com"><i class="fa-regular fa-envelope"></i>info@kidamame.com</a>
+      <a href="press-kit.html"><i class="fa-regular fa-folder-open"></i>Press Kit</a>
     </div>
     <div class="footer-col">
       <h5>Legal</h5>
