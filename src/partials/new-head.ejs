@@ -125,6 +125,19 @@
       --font-display: 'Baloo 2', cursive;
       --font-body: 'Nunito', sans-serif;
       --r-pill: 999px;
+      --pad-x: 2.5rem;
+    }
+
+    @media (max-width: 960px) {
+      :root {
+        --pad-x: 2rem;
+      }
+    }
+
+    @media (max-width: 560px) {
+      :root {
+        --pad-x: 1.6rem;
+      }
     }
 
     html {
@@ -151,7 +164,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.85rem 3rem;
+      padding: 0.85rem var(--pad-x);
       background: transparent;
       transition: background 0.3s, box-shadow 0.3s;
     }
@@ -316,7 +329,7 @@
       width: 100%;
       max-width: 1440px;
       margin: 0 auto;
-      padding: 8rem 5rem 6rem;
+      padding: 8rem var(--pad-x) 6rem;
       display: grid;
       grid-template-columns: 1fr 1.5fr;
       gap: 4rem;
@@ -528,7 +541,7 @@
     .trust-bar {
       background: var(--white);
       border-bottom: 1px solid rgba(58, 158, 228, 0.1);
-      padding: 1.2rem 3rem;
+      padding: 1.2rem var(--pad-x);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -562,7 +575,7 @@
 
     /* ── SHARED ── */
     section {
-      padding: 6rem 2rem;
+      padding: 6rem var(--pad-x);
     }
 
     .container {
@@ -925,7 +938,7 @@
     footer {
       background: var(--ink);
       color: white;
-      padding: 4rem 3rem 2.5rem;
+      padding: 4rem var(--pad-x) 2.5rem;
     }
 
     .footer-grid {
@@ -1028,7 +1041,7 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 960px) {
       nav {
-        padding: 0.85rem 1.5rem;
+        padding: 0.85rem var(--pad-x);
       }
 
       .nav-links {
@@ -1066,7 +1079,7 @@
       }
 
       .hero-text {
-        padding: 2.5rem 2rem 4rem;
+        padding: 2.5rem var(--pad-x) 4rem;
       }
 
       .mission-inner {
@@ -1101,14 +1114,14 @@
 
       .trust-bar {
         gap: 1.2rem;
-        padding: 1.2rem 1rem;
+        padding: 1.2rem var(--pad-x);
       }
     }
 
     /* ── LEGAL CONTENT ── */
     .legal-content {
       background: var(--blue-light);
-      padding: 8rem 2rem 6rem;
+      padding: 8rem var(--pad-x) 6rem;
       min-height: 50vh;
     }
 
@@ -1224,7 +1237,7 @@
 
     @media (max-width: 768px) {
       .legal-content {
-        padding: 6rem 1.5rem 4rem;
+        padding: 6rem var(--pad-x) 4rem;
       }
 
       .legal-highlight {
