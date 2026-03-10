@@ -1110,7 +1110,7 @@
     /* ── LEGAL CONTENT ── */
     .legal-content {
       background: var(--cream);
-      padding: 10rem 2rem 6rem;
+      padding: 7rem 2rem 6rem;
       min-height: 50vh;
     }
 
@@ -1182,6 +1182,17 @@
       color: var(--blue-deep);
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      .legal-content {
+        padding: 6rem 1rem 4rem;
+      }
+
+      .legal-container {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+      }
+    }
   </style>
 </head>
 
@@ -1219,9 +1230,11 @@
                     <p>When you visit our website (<strong>kidamame.com</strong>), we may collect the following
                         information:</p>
                     <ul>
-                        <li><strong>Newsletter Subscriptions:</strong> If an adult chooses to subscribe to our
-                            newsletter, we collect their email address. This is processed securely via Substack and is
-                            used solely to provide updates regarding Kidamame apps and announcements.</li>
+                        <li><strong>Newsletter Subscriptions:</strong> We do not directly collect or process email
+                            addresses for our newsletter on our website. Instead, users who wish to subscribe click a
+                            link that redirects them to our page on Substack. Your registration and email data are
+                            handled entirely by Substack according to their privacy policy, and we do not have direct
+                            control over this data.</li>
                         <li><strong>Cookies & Analytics:</strong> We use minimal analytics to understand website
                             traffic. However, our website employs a cookie consent mechanism (Cookiebot) to respect your
                             tracking preferences. At this time, no profiling cookies are active on our site unless
@@ -1231,20 +1244,18 @@
                     </ul>
 
                     <h2>3. Data Sharing</h2>
-                    <p>We do not sell, trade, or rent your personal identification information to others. We may use
-                        third-party service providers (like Substack for email newsletters) to help us operate our
-                        business. We may share your information with these third parties for those limited purposes
-                        provided that you have given us your permission.</p>
+                    <p>We do not sell, trade, or rent your personal identification information to others. Since we do
+                        not collect personal data such as email addresses directly through our site or apps, we do not
+                        share such information with third parties.</p>
 
                     <h2>4. Your Rights</h2>
-                    <p>You have the right to:</p>
+                    <p>Regarding our newsletter on Substack, you have the right to:</p>
                     <ul>
-                        <li>Opt-out of any email communications at any time (via an unsubscribe link at the bottom of
-                            each email).</li>
-                        <li>Request access to, correction, or deletion of any personal data you have provided to us
-                            (e.g., your email address).</li>
+                        <li>Opt-out of any email communications at any time via the unsubscribe link at the bottom of
+                            each Substack email.</li>
+                        <li>Manage your subscription and data directly through your Substack account.</li>
                     </ul>
-                    <p>If you wish to act on these rights, please email us directly.</p>
+                    <p>If you wish to act on any other privacy-related rights, please email us directly.</p>
 
                     <h2>5. Changes to This Policy</h2>
                     <p>We may update this Privacy Policy from time to time as our apps evolve or to reflect changes in

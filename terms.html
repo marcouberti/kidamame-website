@@ -1110,7 +1110,7 @@
     /* ── LEGAL CONTENT ── */
     .legal-content {
       background: var(--cream);
-      padding: 10rem 2rem 6rem;
+      padding: 7rem 2rem 6rem;
       min-height: 50vh;
     }
 
@@ -1181,6 +1181,17 @@
     .legal-container a:hover {
       color: var(--blue-deep);
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .legal-content {
+        padding: 6rem 1rem 4rem;
+      }
+
+      .legal-container {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+      }
     }
   </style>
 </head>
