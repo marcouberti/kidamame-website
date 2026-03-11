@@ -127,7 +127,7 @@
       --font-display: 'Baloo 2', cursive;
       --font-body: 'Nunito', sans-serif;
       --r-pill: 999px;
-      --pad-x: 2.5rem;
+      --pad-x: 3rem;
     }
 
     @media (max-width: 960px) {
@@ -138,7 +138,7 @@
 
     @media (max-width: 560px) {
       :root {
-        --pad-x: 1.6rem;
+        --pad-x: 1.25rem;
       }
     }
 
@@ -188,6 +188,8 @@
       height: 42px;
       width: auto;
       display: block;
+      margin-left: -0.45rem;
+      /* Compensate for internal image transparency */
     }
 
     .nav-logo-text {
@@ -706,13 +708,13 @@
 
     .pillar-text h4 {
       font-family: var(--font-display);
-      font-size: 0.97rem;
+      font-size: 1.05rem;
       font-weight: 700;
       margin-bottom: 0.2rem;
     }
 
     .pillar-text p {
-      font-size: 0.84rem;
+      font-size: 0.95rem;
       color: var(--ink-soft);
       line-height: 1.55;
     }
@@ -840,13 +842,13 @@
 
     .value-card h4 {
       font-family: var(--font-display);
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 800;
       margin-bottom: 0.45rem;
     }
 
     .value-card p {
-      font-size: 0.86rem;
+      font-size: 0.95rem;
       color: var(--ink-soft);
       line-height: 1.65;
     }
@@ -958,7 +960,7 @@
     }
 
     .footer-brand p {
-      font-size: 0.87rem;
+      font-size: 0.95rem;
       color: rgba(255, 255, 255, 0.42);
       line-height: 1.72;
       max-width: 250px;
@@ -978,7 +980,7 @@
       display: flex;
       align-items: center;
       gap: 0.45rem;
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: rgba(255, 255, 255, 0.58);
       text-decoration: none;
       margin-bottom: 0.5rem;
@@ -1280,6 +1282,10 @@
                     <h1>Privacy Policy</h1>
                     <span class="last-updated">Last updated: March 9, 2026</span>
 
+                    <p>At Kidamame, your privacy and the privacy of your children are extremely important to us. Please
+                        read this Privacy Policy to understand exactly how we handle data when you use our website and
+                        applications.</p>
+
                     <div class="legal-highlight">
                         <div class="legal-highlight-icon">
                             <i class="fa-solid fa-shield-halved"></i>
@@ -1292,11 +1298,6 @@
                                 explore here!</p>
                         </div>
                     </div>
-
-                    <p>At Kidamame, your privacy and the privacy of your children are extremely important to us. Please
-                        read this Privacy Policy to understand exactly how we handle data when you use our website and
-                        applications.</p>
-
                     <h2>1. Our Apps Do Not Collect Child Data</h2>
                     <p>Our educational apps designed for children (such as <strong>Kidamame Discovery</strong>) are 100%
                         offline once downloaded. We <strong>do not</strong>:</p>

@@ -127,7 +127,7 @@
       --font-display: 'Baloo 2', cursive;
       --font-body: 'Nunito', sans-serif;
       --r-pill: 999px;
-      --pad-x: 2.5rem;
+      --pad-x: 3rem;
     }
 
     @media (max-width: 960px) {
@@ -138,7 +138,7 @@
 
     @media (max-width: 560px) {
       :root {
-        --pad-x: 1.6rem;
+        --pad-x: 1.25rem;
       }
     }
 
@@ -188,6 +188,8 @@
       height: 42px;
       width: auto;
       display: block;
+      margin-left: -0.45rem;
+      /* Compensate for internal image transparency */
     }
 
     .nav-logo-text {
@@ -706,13 +708,13 @@
 
     .pillar-text h4 {
       font-family: var(--font-display);
-      font-size: 0.97rem;
+      font-size: 1.05rem;
       font-weight: 700;
       margin-bottom: 0.2rem;
     }
 
     .pillar-text p {
-      font-size: 0.84rem;
+      font-size: 0.95rem;
       color: var(--ink-soft);
       line-height: 1.55;
     }
@@ -840,13 +842,13 @@
 
     .value-card h4 {
       font-family: var(--font-display);
-      font-size: 1rem;
+      font-size: 1.1rem;
       font-weight: 800;
       margin-bottom: 0.45rem;
     }
 
     .value-card p {
-      font-size: 0.86rem;
+      font-size: 0.95rem;
       color: var(--ink-soft);
       line-height: 1.65;
     }
@@ -958,7 +960,7 @@
     }
 
     .footer-brand p {
-      font-size: 0.87rem;
+      font-size: 0.95rem;
       color: rgba(255, 255, 255, 0.42);
       line-height: 1.72;
       max-width: 250px;
@@ -978,7 +980,7 @@
       display: flex;
       align-items: center;
       gap: 0.45rem;
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: rgba(255, 255, 255, 0.58);
       text-decoration: none;
       margin-bottom: 0.5rem;
@@ -1295,13 +1297,11 @@
                         a safe environment:</p>
                     <ul>
                         <li>Our Apps are entirely ad-free and do not contain third-party advertising.</li>
+                        <li>We prioritize child-led exploration over addictive mechanics or fast-paced rewards.</li>
                         <li>No internet connection is required to use the Apps once they are fully
                             downloaded. An internet connection is only temporarily required if you choose to make the
                             one-time in-app purchase.</li>
-                        <li>We prioritize child-led exploration over addictive mechanics or fast-paced rewards.</li>
                     </ul>
-
-                    <h2>3. In-App Purchases</h2>
                     <div class="legal-highlight">
                         <div class="legal-highlight-icon">
                             <i class="fa-regular fa-lightbulb"></i>
@@ -1315,6 +1315,8 @@
                                 play!</p>
                         </div>
                     </div>
+                    <h2>3. In-App Purchases</h2>
+
                     <p>All purchases are processed securely through the respective app store (Apple App Store or Google
                         Play) and are subject to their terms and payment processing rules.</p>
 
