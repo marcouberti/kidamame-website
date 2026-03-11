@@ -10,7 +10,38 @@
       <li><a href="/#values">Values</a></li>
       <li><a href="/#footer">Contacts</a></li>
     </ul>
+    <!-- VECCHIO BOTTONE NEWSLETTER (commentato come richiesto):
     <a href="https://kidamame.substack.com" target="_blank" rel="noopener noreferrer" class="nav-cta"><i
         class="fa-regular fa-envelope"></i> <span class="nav-cta-text">Newsletter</span></a>
+    -->
+
+    <!-- NUOVO BOTTONE DOWNLOAD -->
+    <a href="/#apps" id="nav-download-btn" class="nav-cta" onclick="handleDownloadNavClick(event)">
+      <i class="fa-solid fa-download"></i> <span class="nav-cta-text">Download</span>
+    </a>
+
+    <script>
+      function handleDownloadNavClick(event) {
+        // 1. Check for Android
+        const isAndroid = /android/i.test(navigator.userAgent);
+
+        // 2. Check for iOS (iPhone, iPod) 
+        // + iPad (Legacy and Modern with Desktop Mode)
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+          (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
+        if (isAndroid) {
+          event.preventDefault();
+          // Replace with your Play Store URL
+          window.location.href = "https://play.google.com/store/apps/details?id=YOUR_ANDROID_ID";
+        }
+        else if (isIOS) {
+          event.preventDefault();
+          // Replace with your App Store URL
+          window.location.href = "https://apps.apple.com/app/idYOUR_APPLE_ID";
+        }
+        // Desktop users will simply follow the href="/#ourapps"
+      }
+    </script>
     <% } %>
 </nav>
