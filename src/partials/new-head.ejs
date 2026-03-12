@@ -1242,19 +1242,120 @@
       font-weight: 800;
     }
 
-    /* Nasconde il testo descrittivo generico in alto di Cookiebot */
-    .CookieDeclarationDialogText,
-    .CookieDeclarationIntro {
+    /* Nasconde tutto il contenuto Cookiebot tranne la tabella */
+    .CookieDeclaration > *,
+    .CookieDeclarationType > * {
       display: none !important;
     }
 
-    /* Rende le tabelle dei cookie scrollabili su mobile */
+    /* Mostra solo le tabelle dei cookie */
+    .CookieDeclarationType {
+      display: block !important;
+      border: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+
     .CookieDeclarationTable {
-      display: block;
+      display: table !important;
       width: 100%;
       max-width: 100%;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .CookieDeclarationTable * {
+      display: revert !important;
+    }
+
+    .CookieDeclarationTableHeader {
+      font-family: var(--font-display) !important;
+      font-weight: 700 !important;
+      color: var(--ink) !important;
+    }
+
+    .CookieDeclarationTableCell {
+      font-family: var(--font-body) !important;
+      color: var(--ink-soft) !important;
+    }
+
+    .CookieDeclarationTableCell a {
+      color: var(--blue) !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+    }
+
+    .CookieDeclarationTableCell a:hover {
+      text-decoration: underline !important;
+    }
+
+    /* Mostra il pannello Consent ID */
+    #CookieDeclarationUserStatusPanel {
+      display: block !important;
+      margin-top: 1.5rem;
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      line-height: 1.8;
+    }
+
+    #CookieDeclarationUserStatusLabel {
+      display: block !important;
+    }
+
+    /* Mostra lo stato corrente */
+    #CookieDeclarationUserStatusLabelOff,
+    #CookieDeclarationUserStatusLabelMulti,
+    #CookieDeclarationUserStatusLabelOn {
+      font-family: var(--font-body) !important;
+      font-size: 1.05rem !important;
+      color: var(--ink-soft) !important;
+      line-height: 1.8 !important;
+    }
+
+    /* Nasconde solo le varianti non rilevanti */
+    #CookieDeclarationUserStatusLabelOffDoNotSell,
+    #CookieDeclarationDoNotSell {
+      display: none !important;
+    }
+
+    /* Stile link "Change your consent" */
+    #CookieDeclarationChangeConsent {
+      display: block !important;
+      margin-top: 0.5rem;
+    }
+
+    #CookieDeclarationChangeConsent a {
+      font-family: var(--font-body) !important;
+      font-size: 1.05rem !important;
+      color: var(--blue) !important;
+      text-decoration: none !important;
+      font-weight: 600 !important;
+    }
+
+    #CookieDeclarationChangeConsent a:hover {
+      text-decoration: underline !important;
+      color: var(--blue-deep) !important;
+    }
+
+    #CookieDeclarationConsentIdAndDate {
+      display: block !important;
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      line-height: 1.8;
+    }
+
+    #CookieDeclarationConsentIdAndDate span {
+      display: block !important;
+    }
+
+    #CookieDeclarationUserStatusLabelConsentId {
+      word-break: break-all;
     }
 
     @media (max-width: 768px) {
