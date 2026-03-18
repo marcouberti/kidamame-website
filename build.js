@@ -20,9 +20,19 @@ async function build() {
         for (const template of templates) {
             const filePath = path.join(srcDir, template);
             const fileName = path.basename(template, '.ejs');
-            const outFile = path.join(outDir, `${fileName}.html`);
 
-            console.log(`Compiling ${template} to ${fileName}.html...`);
+            let outFile;
+            if (fileName === 'index') {
+                // Home page stays at root
+                outFile = path.join(outDir, 'index.html');
+                console.log(`Compiling ${template} to index.html...`);
+            } else {
+                // Inner pages go into subfolders: pagename/index.html
+                const subDir = path.join(outDir, fileName);
+                await fs.ensureDir(subDir);
+                outFile = path.join(subDir, 'index.html');
+                console.log(`Compiling ${template} to ${fileName}/index.html...`);
+            }
 
             const data = {
                 // Common data can go here
