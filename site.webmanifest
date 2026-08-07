@@ -47,7 +47,7 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone",
+    "display": "browser",
     "start_url": "/",
     "orientation": "portrait-primary",
     "lang": "en-US"
