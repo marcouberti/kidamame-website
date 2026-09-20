@@ -370,6 +370,17 @@
           backdrop-filter: blur(8px);
           animation: fadeUp 0.7s 0.1s ease both;
           align-self: flex-start;
+          white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+          .hero-tagline {
+            white-space: normal;
+            border-radius: 16px;
+            text-align: center;
+            line-height: 1.8;
+            letter-spacing: 0.15em;
+          }
         }
 
         .hero-text h1 {
