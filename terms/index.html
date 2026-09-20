@@ -271,7 +271,7 @@
         .hero {
           width: 100%;
           min-height: 100vh;
-          background: var(--blue);
+          background: radial-gradient(circle at 30% 20%, #7dc3ff 0%, var(--blue) 50%, #308ceb 100%);
           position: relative;
           overflow: hidden;
           display: flex;
@@ -335,13 +335,13 @@
           position: relative;
           z-index: 2;
           width: 100%;
-          max-width: 1440px;
+          max-width: 1300px;
           margin: 0 auto;
           padding: 8rem var(--pad-x) 6rem;
           display: grid;
-          grid-template-columns: 1fr 1.5fr;
+          grid-template-columns: 1.15fr 1fr;
           gap: 4rem;
-          align-items: stretch;
+          align-items: center;
         }
 
         .hero-text {
@@ -357,23 +357,31 @@
         }
 
         .hero-tagline {
+          display: inline-block;
           font-family: var(--font-body);
           font-size: 0.75rem;
           font-weight: 800;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: rgba(255, 255, 255, 0.65);
-          margin-bottom: 1.1rem;
+          color: white;
+          background: rgba(255, 255, 255, 0.15);
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          padding: 0.5rem 1.2rem;
+          border-radius: 100px;
+          margin-bottom: 1.5rem;
+          backdrop-filter: blur(8px);
           animation: fadeUp 0.7s 0.1s ease both;
+          align-self: flex-start;
         }
 
         .hero-text h1 {
           font-family: var(--font-display);
-          font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+          font-size: clamp(2.8rem, 4.5vw, 4.2rem);
           font-weight: 800;
-          line-height: 1.2;
+          line-height: 1.1;
           color: white;
           animation: fadeUp 0.7s 0.2s ease both;
+          text-shadow: 0 4px 16px rgba(0,0,0,0.08);
         }
 
         .hero-text h1 span {
@@ -383,11 +391,11 @@
 
         .hero-desc {
           margin-top: 1.4rem;
-          font-size: 1rem;
+          font-size: 1.1rem;
           font-weight: 500;
-          color: rgba(255, 255, 255, 0.8);
-          max-width: 420px;
-          line-height: 1.8;
+          color: rgba(255, 255, 255, 0.95);
+          max-width: 480px;
+          line-height: 1.7;
           animation: fadeUp 0.7s 0.3s ease both;
         }
 
@@ -417,7 +425,7 @@
           color: var(--blue-deep);
           border-radius: var(--r-pill);
           text-decoration: none;
-          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14), 0 0 0 0 rgba(255,255,255,0);
           transition: transform 0.15s, box-shadow 0.15s;
           display: inline-flex;
           align-items: center;
@@ -426,7 +434,7 @@
 
         .btn-white:hover {
           transform: translateY(-2px);
-          box-shadow: 0 7px 22px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 7px 22px rgba(0, 0, 0, 0.2), 0 0 0 6px rgba(255,255,255,0.25);
         }
 
         .btn-ghost {
