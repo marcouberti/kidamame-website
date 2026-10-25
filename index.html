@@ -1304,6 +1304,101 @@
           font-weight: 800;
         }
 
+        .legal-container h2[id] {
+          scroll-margin-top: 7rem;
+        }
+
+        .legal-container code {
+          font-size: 0.9em;
+          background: rgba(89, 172, 255, 0.12);
+          color: var(--ink);
+          padding: 0.1em 0.4em;
+          border-radius: 6px;
+        }
+
+        /* At a glance cards */
+        .legal-container ul.legal-glance {
+          list-style: none;
+          padding: 0;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 1rem;
+          margin: 0 0 2.5rem;
+        }
+
+        .legal-glance li {
+          background: var(--white);
+          border-radius: 20px;
+          padding: 1.2rem 1.3rem;
+          margin: 0;
+          display: flex;
+          gap: 0.9rem;
+          align-items: flex-start;
+          border: 1px solid rgba(89, 172, 255, 0.15);
+          box-shadow: 0 6px 20px rgba(58, 158, 228, 0.06);
+          font-size: 0.95rem;
+          line-height: 1.5;
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .legal-glance li:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 28px rgba(58, 158, 228, 0.12);
+        }
+
+        .legal-glance li i {
+          color: var(--blue);
+          font-size: 1.2rem;
+          margin-top: 0.2rem;
+          width: 1.4rem;
+          text-align: center;
+          flex-shrink: 0;
+        }
+
+        .legal-glance li strong {
+          display: block;
+          color: var(--ink);
+          font-family: var(--font-display);
+          font-weight: 700;
+          margin-bottom: 0.15rem;
+        }
+
+        /* Third-party table */
+        .legal-table-wrap {
+          overflow-x: auto;
+          margin-bottom: 1.2rem;
+          border-radius: 20px;
+          border: 1px solid rgba(89, 172, 255, 0.15);
+          background: var(--white);
+        }
+
+        .legal-table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 0.97rem;
+          color: var(--ink-soft);
+          line-height: 1.5;
+        }
+
+        .legal-table th,
+        .legal-table td {
+          text-align: left;
+          padding: 0.9rem 1.1rem;
+          border-bottom: 1px solid rgba(89, 172, 255, 0.12);
+          vertical-align: top;
+        }
+
+        .legal-table th {
+          font-family: var(--font-display);
+          font-weight: 700;
+          color: var(--ink);
+          background: rgba(89, 172, 255, 0.08);
+        }
+
+        .legal-table tbody tr:last-child td {
+          border-bottom: none;
+        }
+
         /* Nasconde tutto il contenuto Cookiebot tranne la tabella */
         .CookieDeclaration>*,
         .CookieDeclarationType>* {
