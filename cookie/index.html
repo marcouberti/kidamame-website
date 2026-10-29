@@ -1797,6 +1797,17 @@
   </div>
 </footer>
 
+<!-- LIGHTBOX MODAL -->
+<div id="simple-lightbox" class="lightbox-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
+  <button type="button" class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Chiudi visualizzazione ingrandita">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+  <img id="lightbox-img" class="lightbox-content-img" src="" alt="" />
+</div>
+
 <script>
   const nav = document.getElementById('nav');
   if (nav && !nav.classList.contains('always-scrolled')) {
@@ -1817,8 +1828,8 @@
     dynamicYearEl.textContent = currentYear > startYear ? startYear + ' - ' + currentYear : startYear;
   }
 
-  // Lightbox for small images in groups of 2 or 4 (excluding single full-width images)
-  (function initLightbox() {
+  // Lightbox for small images in groups (excluding full-width/landscape or single images)
+  function initLightbox() {
     const lightbox = document.getElementById('simple-lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const closeBtn = document.getElementById('lightbox-close-btn');
@@ -1881,19 +1892,14 @@
         });
       }
     });
-  })();
-</script>
+  }
 
-<!-- LIGHTBOX MODAL -->
-<div id="simple-lightbox" class="lightbox-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image preview">
-  <button type="button" class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Chiudi visualizzazione ingrandita">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="18" y1="6" x2="6" y2="18"></line>
-      <line x1="6" y1="6" x2="18" y2="18"></line>
-    </svg>
-  </button>
-  <img id="lightbox-img" class="lightbox-content-img" src="" alt="" />
-</div>
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLightbox);
+  } else {
+    initLightbox();
+  }
+</script>
     </body>
 
 </html>
