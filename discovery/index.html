@@ -670,6 +670,19 @@
           margin-bottom: 0.9rem;
         }
 
+        .section-label a {
+          color: var(--blue) !important;
+          text-decoration: none !important;
+          font-weight: 800 !important;
+          transition: color 0.2s;
+        }
+
+        .section-label a:hover {
+          color: var(--blue-deep) !important;
+          text-decoration: underline !important;
+          text-underline-offset: 3px;
+        }
+
         .section-title {
           font-family: var(--font-display);
           font-size: clamp(1.9rem, 3vw, 2.7rem);
@@ -1304,7 +1317,7 @@
         /* ── LEGAL CONTENT ── */
         .legal-content {
           background: var(--blue-light);
-          padding: 10rem var(--pad-x) 6rem;
+          padding: 8rem var(--pad-x) 6rem;
           min-height: 50vh;
         }
 
@@ -1315,10 +1328,10 @@
 
         .legal-container h1 {
           font-family: var(--font-display);
-          font-size: clamp(2rem, 3vw, 2.8rem);
+          font-size: clamp(1.9rem, 3vw, 2.7rem);
           font-weight: 800;
           color: var(--ink);
-          margin-bottom: 0.5rem;
+          margin-bottom: 1.1rem;
           line-height: 1.2;
         }
 
@@ -1341,7 +1354,7 @@
           margin-bottom: 1rem;
         }
 
-        .legal-container p {
+        .legal-container p:not(.section-label) {
           font-size: 1.05rem;
           color: var(--ink-soft);
           line-height: 1.8;
@@ -1423,6 +1436,16 @@
           grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
           gap: 1rem;
           margin: 0 0 2.5rem;
+        }
+
+        .legal-container ul.legal-glance.legal-glance-2x2 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 560px) {
+          .legal-container ul.legal-glance.legal-glance-2x2 {
+            grid-template-columns: 1fr;
+          }
         }
 
         .legal-glance li {
@@ -1629,6 +1652,496 @@
             margin-top: 0;
           }
         }
+
+        /* ── GUIDES HUB & ARTICLES ── */
+        .guides-hero {
+          background: linear-gradient(180deg, var(--blue-light) 0%, var(--cream) 100%);
+          padding: 9.5rem var(--pad-x) 4rem;
+          border-bottom: 1px solid rgba(58, 158, 228, 0.12);
+        }
+
+        .guides-breadcrumb {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+          margin-bottom: 1.4rem;
+          list-style: none;
+        }
+
+        .guides-breadcrumb a {
+          color: var(--blue);
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+
+        .guides-breadcrumb a:hover {
+          color: var(--blue-deep);
+          text-decoration: underline;
+        }
+
+        .guides-breadcrumb .sep {
+          color: rgba(90, 106, 122, 0.45);
+          font-size: 0.75rem;
+        }
+
+        .guides-meta-row {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+          margin-bottom: 1.2rem;
+        }
+
+        .guide-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-size: 0.74rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+          padding: 0.35rem 0.9rem;
+          border-radius: var(--r-pill);
+          background: var(--white);
+          color: var(--blue-deep);
+          border: 1.5px solid rgba(58, 158, 228, 0.22);
+        }
+
+        .guide-badge.amber {
+          background: var(--amber-soft);
+          color: #B26B00;
+          border-color: rgba(245, 165, 42, 0.35);
+        }
+
+        .guide-read-time {
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+          display: inline-flex;
+          align-items: center;
+          gap: 0.35rem;
+        }
+
+        .guides-hero h1 {
+          font-family: var(--font-display);
+          font-size: clamp(2.1rem, 1.5rem + 2.5vw, 3.2rem);
+          font-weight: 800;
+          line-height: 1.15;
+          color: var(--ink);
+          margin-bottom: 1.2rem;
+          max-width: 860px;
+        }
+
+        .guides-hero h1 em {
+          font-style: italic;
+          color: var(--blue);
+        }
+
+        .guides-lead {
+          font-size: 1.12rem;
+          color: var(--ink-soft);
+          line-height: 1.78;
+          max-width: 780px;
+          margin-bottom: 1.8rem;
+        }
+
+        .guide-trust-note {
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.18);
+          border-radius: 20px;
+          padding: 1.35rem 1.6rem;
+          display: flex;
+          align-items: flex-start;
+          gap: 1rem;
+          max-width: 820px;
+          box-shadow: 0 8px 24px rgba(58, 158, 228, 0.06);
+        }
+
+        .guide-trust-note-icon {
+          width: 42px;
+          height: 42px;
+          border-radius: 12px;
+          background: var(--blue-light);
+          color: var(--blue);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.1rem;
+          flex-shrink: 0;
+          margin-top: 0.1rem;
+        }
+
+        .guide-trust-note p {
+          margin: 0;
+          font-size: 0.93rem;
+          color: var(--ink-soft);
+          line-height: 1.65;
+        }
+
+        .guide-trust-note p strong {
+          color: var(--ink);
+        }
+
+        /* ── GUIDES HUB GRID ── */
+        .guides-section {
+          padding: 4.5rem var(--pad-x);
+          background: var(--cream);
+        }
+
+        .guides-section.alt-bg {
+          background: var(--white);
+          border-top: 1px solid rgba(58, 158, 228, 0.1);
+          border-bottom: 1px solid rgba(58, 158, 228, 0.1);
+        }
+
+        .guides-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+          gap: 1.6rem;
+          margin-top: 2.2rem;
+        }
+
+        .guide-card {
+          background: var(--white) !important;
+          border-radius: 20px;
+          padding: 1.7rem;
+          border: 1px solid rgba(89, 172, 255, 0.15);
+          box-shadow: 0 6px 20px rgba(58, 158, 228, 0.06);
+          display: flex;
+          flex-direction: column;
+          text-decoration: none;
+          color: inherit;
+          transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .guides-section.alt-bg .guide-card {
+          background: var(--white) !important;
+        }
+
+        .guide-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 28px rgba(58, 158, 228, 0.12);
+          border-color: rgba(89, 172, 255, 0.35);
+        }
+
+        .guide-card-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0.75rem;
+          margin-bottom: 1.1rem;
+        }
+
+        .guide-card-icon {
+          width: 46px;
+          height: 46px;
+          border-radius: 14px;
+          background: var(--blue-light);
+          color: var(--blue);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.15rem;
+          flex-shrink: 0;
+        }
+
+        .guide-card h3 {
+          font-family: var(--font-display);
+          font-size: 1.3rem;
+          font-weight: 800;
+          line-height: 1.28;
+          color: var(--ink);
+          margin-bottom: 0.7rem;
+        }
+
+        .guide-card p {
+          font-size: 0.95rem;
+          color: var(--ink-soft);
+          line-height: 1.65;
+          margin-bottom: 1.4rem;
+          flex-grow: 1;
+        }
+
+        .guide-card-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.45rem;
+          margin-bottom: 1.2rem;
+        }
+
+        .guide-tag {
+          font-size: 0.75rem;
+          font-weight: 700;
+          padding: 0.22rem 0.65rem;
+          border-radius: 8px;
+          background: rgba(58, 158, 228, 0.09);
+          color: var(--blue-deep);
+        }
+
+        .guide-card-link {
+          font-size: 0.9rem;
+          font-weight: 800;
+          color: var(--blue);
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+        }
+
+        /* ── ARTICLE BODY ── */
+        .guide-article-section {
+          padding: 8rem var(--pad-x) 6rem;
+          background: var(--white);
+        }
+
+        .guide-article-container {
+          max-width: 1040px;
+          margin: 0 auto;
+        }
+
+        .guide-article-container h2 {
+          font-family: var(--font-display);
+          font-size: clamp(1.55rem, 1.2rem + 1.2vw, 2rem);
+          font-weight: 800;
+          color: var(--ink);
+          margin-top: 3.2rem;
+          margin-bottom: 1rem;
+          line-height: 1.25;
+        }
+
+        .guide-article-container h3 {
+          font-family: var(--font-display);
+          font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.5rem);
+          font-weight: 800;
+          color: var(--ink);
+          margin-top: 2rem;
+          margin-bottom: 0.75rem;
+          line-height: 1.3;
+        }
+
+        .guide-article-container p:not(.section-label) {
+          font-size: 1.05rem;
+          color: var(--ink-soft);
+          line-height: 1.8;
+          margin-bottom: 1.3rem;
+        }
+
+        .guide-article-container p strong,
+        .guide-article-container li strong {
+          color: var(--ink);
+          font-weight: 700;
+        }
+
+        .guide-article-container ul,
+        .guide-article-container ol {
+          margin-bottom: 1.5rem;
+          padding-left: 1.4rem;
+          color: var(--ink-soft);
+          font-size: 1.03rem;
+          line-height: 1.78;
+        }
+
+        .guide-article-container li {
+          margin-bottom: 0.55rem;
+        }
+
+        .guide-article-container a:not([class*="btn-"]):not(.guide-card) {
+          color: var(--blue-deep);
+          font-weight: 700;
+          text-decoration: underline;
+          text-underline-offset: 3px;
+          transition: color 0.2s;
+        }
+
+        .guide-article-container a:not([class*="btn-"]):not(.guide-card):hover {
+          color: var(--blue);
+        }
+
+        /* ── RESPONSIVE COMPARISON TABLE (Modern Web Guidance) ── */
+        .guide-table-wrap {
+          overflow: auto;
+          max-inline-size: 100%;
+          container-type: inline-size;
+          margin: 2rem 0 2.8rem;
+          border-radius: 20px;
+          border: 1.5px solid rgba(58, 158, 228, 0.18);
+          background: var(--white);
+          box-shadow: 0 8px 28px rgba(27, 42, 59, 0.05);
+        }
+
+        .guide-table-wrap:focus-visible {
+          outline: 3px solid var(--blue);
+          outline-offset: 2px;
+        }
+
+        .guide-table {
+          width: 100%;
+          border-collapse: separate;
+          border-spacing: 0;
+          font-size: 0.94rem;
+          color: var(--ink-soft);
+          line-height: 1.5;
+        }
+
+        .guide-table caption {
+          text-align: left;
+          padding: 1rem 1.25rem;
+          font-family: var(--font-display);
+          font-weight: 800;
+          font-size: 1.05rem;
+          color: var(--ink);
+          background: var(--blue-light);
+          border-bottom: 1px solid rgba(58, 158, 228, 0.15);
+        }
+
+        .guide-table thead {
+          position: sticky;
+          inset-block-start: 0;
+          z-index: 1;
+        }
+
+        .guide-table th,
+        .guide-table td {
+          text-align: left;
+          padding: 0.95rem 1.15rem;
+          border-bottom: 1px solid rgba(58, 158, 228, 0.12);
+          vertical-align: top;
+        }
+
+        .guide-table thead th {
+          font-family: var(--font-display);
+          font-weight: 800;
+          color: var(--ink);
+          background: #F4FAFF;
+          white-space: nowrap;
+        }
+
+        .guide-table tbody th {
+          position: sticky;
+          inset-inline-start: 0;
+          background: var(--white);
+          font-family: var(--font-display);
+          font-weight: 800;
+          color: var(--ink);
+          border-right: 1px solid rgba(58, 158, 228, 0.1);
+        }
+
+        .guide-table tbody tr.highlight-row th,
+        .guide-table tbody tr.highlight-row td {
+          background: #F7FBFF;
+        }
+
+        .guide-table tbody tr:last-child th,
+        .guide-table tbody tr:last-child td {
+          border-bottom: none;
+        }
+
+        @container (width < 600px) {
+          .guide-table,
+          .guide-table thead,
+          .guide-table tbody,
+          .guide-table tr,
+          .guide-table th,
+          .guide-table td {
+            display: block;
+          }
+
+          .guide-table thead {
+            display: none;
+          }
+
+          .guide-table tbody tr {
+            margin: 0.85rem;
+            border: 1.5px solid rgba(58, 158, 228, 0.18);
+            border-radius: 16px;
+            overflow: hidden;
+          }
+
+          .guide-table tbody th {
+            position: sticky;
+            inset-block-start: 0;
+            z-index: 2;
+            background: var(--blue-light);
+            border-right: none;
+            border-bottom: 1px solid rgba(58, 158, 228, 0.18);
+          }
+
+          .guide-table td {
+            padding: 0.7rem 1rem;
+          }
+
+          .guide-table td:nth-child(2)::before {
+            content: var(--label-2) ": ";
+            font-weight: 800;
+            color: var(--ink);
+          }
+
+          .guide-table td:nth-child(3)::before {
+            content: var(--label-3) ": ";
+            font-weight: 800;
+            color: var(--ink);
+          }
+
+          .guide-table td:nth-child(4)::before {
+            content: var(--label-4) ": ";
+            font-weight: 800;
+            color: var(--ink);
+          }
+
+          .guide-table td:nth-child(5)::before {
+            content: var(--label-5) ": ";
+            font-weight: 800;
+            color: var(--ink);
+          }
+        }
+
+        /* ── APP REVIEW CARDS IN GUIDES ── */
+        .app-review-card {
+          background: var(--white);
+          border: 1px solid rgba(89, 172, 255, 0.15);
+          border-radius: 24px;
+          padding: 2.2rem;
+          margin: 2.2rem 0;
+          box-shadow: 0 10px 30px rgba(58, 158, 228, 0.08);
+          transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .app-review-card.kidamame-pick {
+          background: var(--white);
+          border: 2px solid rgba(89, 172, 255, 0.45);
+          box-shadow: 0 12px 34px rgba(58, 158, 228, 0.12);
+        }
+
+        .guide-article-container .faq-list details {
+          background: var(--white) !important;
+          border: 1px solid rgba(89, 172, 255, 0.15) !important;
+          border-radius: 16px !important;
+          box-shadow: 0 6px 20px rgba(58, 158, 228, 0.06);
+        }
+
+        .app-review-header {
+          margin-bottom: 0.5rem;
+        }
+
+        .app-review-header h3,
+        .app-review-card h3 {
+          margin-top: 0 !important;
+          margin-bottom: 0.75rem !important;
+        }
+
+        .app-pick-pill,
+        .app-specs-bar {
+          display: none !important;
+        }
+
+        @media (max-width: 600px) {
+          .app-review-card {
+            padding: 1.4rem;
+          }
+        }
       </style>
 </head>
 
@@ -1643,6 +2156,7 @@
       
         <li><a href="/">Home</a></li>
         <li><a href="/discovery/">Apps</a></li>
+        <li><a href="/guides/">Guides</a></li>
         <li><a href="#footer">Contacts</a></li>
         
     </ul>
@@ -1686,7 +2200,7 @@
         <!-- PRODUCT -->
         <section class="product" id="apps" style="padding-top: 8rem;">
           <div class="container">
-            <p class="section-label reveal"><i class="fa-solid fa-mobile-screen"></i> &nbsp;Our Apps</p>
+            <p class="section-label reveal"><i class="fa-solid fa-mobile-screen"></i> &nbsp;<a href="/">Home</a> &gt; Discovery</p>
             <h2 class="section-title reveal d1">Kidamame <em>Discovery</em></h2>
 
             <div class="product-simple-content">
@@ -2070,6 +2584,8 @@
     <div class="footer-col">
       <h5>Our Apps</h5>
       <a href="/discovery/"><i class="fa-solid fa-mobile-screen"></i>Kidamame Discovery</a>
+      <h5 style="margin-top: 1.6rem;">Resources</h5>
+      <a href="/guides/"><i class="fa-solid fa-book-open"></i>Parenting Guides</a>
     </div>
     <div class="footer-col">
       <h5>Contacts & Media</h5>
