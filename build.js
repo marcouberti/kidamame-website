@@ -1,9 +1,25 @@
 const ejs = require('ejs');
 const fs = require('fs-extra');
 const path = require('path');
+const guidesMeta = require('./src/data/guides-meta');
 
 const srcDir = path.join(__dirname, 'src', 'pages');
 const outDir = __dirname; // Output to root
+
+async function getEjsFiles(dir, baseDir = dir) {
+    const entries = await fs.readdir(dir, { withFileTypes: true });
+    let results = [];
+    for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        if (entry.isDirectory()) {
+            const nested = await getEjsFiles(fullPath, baseDir);
+            results = results.concat(nested);
+        } else if (entry.isFile() && entry.name.endsWith('.ejs')) {
+            results.push(path.relative(baseDir, fullPath));
+        }
+    }
+    return results;
+}
 
 async function build() {
     try {
@@ -13,34 +29,36 @@ async function build() {
             return;
         }
 
-        // Get all .ejs files in src/pages
-        const files = await fs.readdir(srcDir);
-        const templates = files.filter(file => file.endsWith('.ejs'));
+        // Get all .ejs files in src/pages (including subdirectories like guides/)
+        const templates = await getEjsFiles(srcDir);
 
-        for (const template of templates) {
-            const filePath = path.join(srcDir, template);
-            const fileName = path.basename(template, '.ejs');
+        for (const relTemplate of templates) {
+            const filePath = path.join(srcDir, relTemplate);
+            const relDir = path.dirname(relTemplate);
+            const fileName = path.basename(relTemplate, '.ejs');
 
             let outFile;
             if (fileName === 'index') {
-                // Home page stays at root
-                outFile = path.join(outDir, 'index.html');
-                console.log(`Compiling ${template} to index.html...`);
+                const targetDir = relDir === '.' ? outDir : path.join(outDir, relDir);
+                await fs.ensureDir(targetDir);
+                outFile = path.join(targetDir, 'index.html');
+                console.log(`Compiling ${relTemplate} to ${path.relative(outDir, outFile)}...`);
             } else {
-                // Inner pages go into subfolders: pagename/index.html
-                const subDir = path.join(outDir, fileName);
+                const subDir = relDir === '.'
+                    ? path.join(outDir, fileName)
+                    : path.join(outDir, relDir, fileName);
                 await fs.ensureDir(subDir);
                 outFile = path.join(subDir, 'index.html');
-                console.log(`Compiling ${template} to ${fileName}/index.html...`);
+                console.log(`Compiling ${relTemplate} to ${path.relative(outDir, outFile)}...`);
             }
 
             const data = {
-                // Common data can go here
-                year: new Date().getFullYear()
+                year: new Date().getFullYear(),
+                guides: guidesMeta
             };
 
             const html = await ejs.renderFile(filePath, data, {
-                root: path.join(__dirname, 'src') // Allow absolute include paths like /partials/head
+                root: path.join(__dirname, 'src')
             });
 
             await fs.writeFile(outFile, html);
