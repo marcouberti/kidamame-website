@@ -7,7 +7,7 @@
       <meta name="description"
         content="<%= locals.description || 'Calm, ad-free apps for kids 4-10. No subscription. No ads. No tracking. We inspire kids to explore the world beyond the screen through art and nature. 100% offline. Start the adventure!' %>" />
       <meta name="keywords"
-        content="<%= locals.keywords || 'kids apps, educational apps, offline apps, ad-free, nature learning, science for kids, family learning, safe apps, children education, outdoor exploration, guilt-free screen time, serious games for kids' %>" />
+        content="<%= locals.keywords || 'kids apps, educational apps, offline apps, ad-free, nature learning, science for kids, family learning, safe apps, children education, outdoor exploration, mindful screen time, calm apps for kids' %>" />
       <!-- Pinterest verify domain -->
       <meta name="p:domain_verify" content="af5562d3d262d4099286f9876db719f9" />
       <!-- Open Graph / Facebook -->
@@ -34,32 +34,48 @@
       <!-- Canonical URL -->
       <link rel="canonical" href="<%= locals.url || 'https://www.kidamame.com/' %>">
 
+      <!-- iOS Smart App Banner (uncomment when live on the App Store):
+      <meta name="apple-itunes-app" content="app-id=6770446769, app-argument=<%= locals.url || 'https://www.kidamame.com/' %>" />
+      -->
+
       <!-- Structured Data -->
       <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "KIDAMAME",
-    "description": "Calm, ad-free apps for kids 4-10. We inspire kids to explore the world beyond the screen through art and nature. 100% offline. Start the adventure!",
+    "legalName": "KIDAMAME® — Marco Uberti",
+    "description": "Independent family studio creating calm, ad-free, Montessori-inspired educational apps for kids ages 4–10. No subscriptions, no ads, no tracking, 100% offline.",
     "url": "https://www.kidamame.com/",
     "logo": "https://www.kidamame.com/images/weblogo.webp",
+    "founder": {
+      "@type": "Person",
+      "name": "Marco Uberti"
+    },
     "sameAs": [
+      "https://www.instagram.com/kidamame.official",
+      "https://pinterest.com/kidamame/",
+      "https://youtube.com/@Kidamame",
+      "https://x.com/KidamameKids",
+      "https://www.facebook.com/profile.php?id=61579039664314",
+      "https://www.tiktok.com/@kidamame",
       "https://www.linkedin.com/company/kidamame/",
-      "https://youtube.com/@Kidamame"
+      "https://kidamame.substack.com"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "info@kidamame.com",
-      "contactType": "Customer Service"
+      "contactType": "Customer Service & Press"
     },
     "makesOffer": {
       "@type": "Offer",
       "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "Educational Apps for Kids",
-        "applicationCategory": "Educational",
-        "operatingSystem": "iOS, Android",
-        "description": "Calm, ad-free apps for kids 4-10. We inspire kids to explore the world beyond the screen through art and nature. 100% offline. Start the adventure!"
+        "@type": "MobileApplication",
+        "name": "Kidamame Discovery",
+        "url": "https://www.kidamame.com/discovery/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "iOS, iPadOS, Android",
+        "description": "Calm, Montessori-inspired nature and science exploration app for kids ages 4–10. 100% offline, no ads, no tracking, and no subscriptions."
       }
     }
   }
@@ -544,7 +560,7 @@
           box-shadow: 0 30px 100px rgba(13, 61, 96, 0.45), 0 0 0 10px rgba(255, 255, 255, 0.12);
           overflow: hidden;
           position: relative;
-          background: #000;
+          background: transparent;
         }
 
         @keyframes floatImage {
@@ -566,8 +582,9 @@
 
         .hero-visual-box img,
         .hero-visual-box video {
-          width: 100%;
-          height: 100%;
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          margin: -1px;
           object-fit: cover;
           object-position: center;
           display: block;
@@ -1023,6 +1040,7 @@
           margin-bottom: 1rem;
         }
 
+        .value-card h3,
         .value-card h4 {
           font-family: var(--font-display);
           font-size: 1.1rem;
@@ -1254,14 +1272,6 @@
             box-shadow: 0 16px 40px rgba(13, 61, 96, 0.25);
             animation: none;
             transform: none;
-          }
-
-          .hero-visual-box img,
-          .hero-visual-box video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
           }
 
           .hero-text {
@@ -2109,12 +2119,6 @@
           transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .app-review-card.kidamame-pick {
-          background: var(--white);
-          border: 2px solid rgba(89, 172, 255, 0.45);
-          box-shadow: 0 12px 34px rgba(58, 158, 228, 0.12);
-        }
-
         .guide-article-container .faq-list details {
           background: var(--white) !important;
           border: 1px solid rgba(89, 172, 255, 0.15) !important;
@@ -2141,6 +2145,205 @@
           .app-review-card {
             padding: 1.4rem;
           }
+        }
+
+        /* ── AT-A-GLANCE SPECS & CRO BLOCKS ── */
+        .specs-glance-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          margin: 2rem 0 2.5rem;
+          list-style: none;
+          padding: 0;
+        }
+
+        @media (max-width: 860px) {
+          .specs-glance-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 560px) {
+          .specs-glance-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .spec-pill-card {
+          background: var(--blue-light);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 16px;
+          padding: 1rem 1.2rem;
+          display: flex;
+          align-items: flex-start;
+          gap: 0.85rem;
+        }
+
+        .spec-pill-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
+          background: var(--white);
+          color: var(--blue);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.95rem;
+          flex-shrink: 0;
+          box-shadow: 0 2px 8px rgba(58, 158, 228, 0.12);
+        }
+
+        .spec-pill-text strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 0.95rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.25;
+          margin-bottom: 0.15rem;
+        }
+
+        .spec-pill-text span {
+          display: block;
+          font-size: 0.84rem;
+          color: var(--ink-soft);
+          line-height: 1.4;
+        }
+
+        .founder-note {
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.18);
+          border-radius: 22px;
+          padding: 2rem 2.2rem;
+          margin-top: 2.2rem;
+          box-shadow: 0 10px 30px rgba(27, 42, 59, 0.04);
+          position: relative;
+        }
+
+        .founder-note-header {
+          display: flex;
+          align-items: center;
+          gap: 0.85rem;
+          margin-bottom: 0.85rem;
+        }
+
+        .founder-badge-icon {
+          width: 42px;
+          height: 42px;
+          border-radius: 12px;
+          background: var(--amber-soft);
+          color: var(--amber);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.15rem;
+          flex-shrink: 0;
+        }
+
+        .founder-note-title {
+          font-family: var(--font-display);
+          font-size: 1.15rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.2;
+        }
+
+        .founder-note-sub {
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+        }
+
+        .founder-signature {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 1.4rem;
+          padding-top: 1.2rem;
+          border-top: 1px solid rgba(58, 158, 228, 0.14);
+        }
+
+        .founder-avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2.5px solid var(--blue-mid);
+          box-shadow: 0 4px 12px rgba(27, 42, 59, 0.08);
+          flex-shrink: 0;
+        }
+
+        .founder-signature-text strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 1.05rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.2;
+        }
+
+        .founder-signature-text span {
+          display: block;
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+          margin-top: 0.15rem;
+        }
+
+        .press-facts-dl {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 0.9rem 1.25rem;
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 20px;
+          padding: 1.6rem 1.8rem;
+          margin: 1.25rem 0 2.2rem;
+        }
+
+        .press-fact-item {
+          padding-bottom: 0.65rem;
+          border-bottom: 1px solid rgba(58, 158, 228, 0.1);
+        }
+
+        .press-fact-item dt {
+          font-size: 0.74rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: var(--blue-deep);
+          margin-bottom: 0.2rem;
+        }
+
+        .press-fact-item dd {
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: var(--ink);
+          margin: 0;
+          line-height: 1.4;
+        }
+
+        .press-copy-card {
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 16px;
+          padding: 1.25rem 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .press-copy-card strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 0.95rem;
+          color: var(--blue-deep);
+          margin-bottom: 0.35rem;
+        }
+
+        .press-copy-card p {
+          margin: 0 !important;
+          font-size: 0.94rem !important;
+          color: var(--ink-soft);
+          line-height: 1.6;
         }
       </style>
 </head>

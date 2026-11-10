@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, viewport-fit=cover" />
   
       <meta name="description"
-        content="Honest, respectful guides to the best calm, Montessori, offline, and privacy-first apps for kids ages 4–10, written by the parents behind Kidamame." />
+        content="Practical guides to the best calm, Montessori, offline, and privacy-first apps for toddlers, preschoolers, and older kids, written by the parents behind Kidamame." />
       <meta name="keywords"
-        content="kids apps, educational apps, offline apps, ad-free, nature learning, science for kids, family learning, safe apps, children education, outdoor exploration, guilt-free screen time, serious games for kids" />
+        content="kids apps, educational apps, offline apps, ad-free, nature learning, science for kids, family learning, safe apps, children education, outdoor exploration, mindful screen time, calm apps for kids" />
       <!-- Pinterest verify domain -->
       <meta name="p:domain_verify" content="af5562d3d262d4099286f9876db719f9" />
       <!-- Open Graph / Facebook -->
@@ -15,7 +15,7 @@
       <meta property="og:url" content="https://www.kidamame.com/guides/" />
       <meta property="og:title" content="Parenting &amp; Mindful Screen Time Guides | Kidamame" />
       <meta property="og:description"
-        content="Honest, respectful guides to the best calm, Montessori, offline, and privacy-first apps for kids ages 4–10, written by the parents behind Kidamame." />
+        content="Practical guides to the best calm, Montessori, offline, and privacy-first apps for toddlers, preschoolers, and older kids, written by the parents behind Kidamame." />
       <meta property="og:image" content="https://www.kidamame.com/images/hero_image.webp" />
       <meta property="og:image:width" content="2048" />
       <meta property="og:image:height" content="1684" />
@@ -27,12 +27,16 @@
       <meta name="twitter:url" content="https://www.kidamame.com/guides/" />
       <meta name="twitter:title" content="Parenting &amp; Mindful Screen Time Guides | Kidamame" />
       <meta name="twitter:description"
-        content="Honest, respectful guides to the best calm, Montessori, offline, and privacy-first apps for kids ages 4–10, written by the parents behind Kidamame." />
+        content="Practical guides to the best calm, Montessori, offline, and privacy-first apps for toddlers, preschoolers, and older kids, written by the parents behind Kidamame." />
       <meta name="twitter:image" content="https://www.kidamame.com/images/hero_image.webp" />
       <meta name="twitter:image:alt" content="Kidamame Discovery - A calm, interactive world designed for families" />
 
       <!-- Canonical URL -->
       <link rel="canonical" href="https://www.kidamame.com/guides/">
+
+      <!-- iOS Smart App Banner (uncomment when live on the App Store):
+      <meta name="apple-itunes-app" content="app-id=6770446769, app-argument=https://www.kidamame.com/guides/" />
+      -->
 
       <!-- Structured Data -->
       <script type="application/ld+json">
@@ -40,26 +44,38 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "KIDAMAME",
-    "description": "Calm, ad-free apps for kids 4-10. We inspire kids to explore the world beyond the screen through art and nature. 100% offline. Start the adventure!",
+    "legalName": "KIDAMAME® — Marco Uberti",
+    "description": "Independent family studio creating calm, ad-free, Montessori-inspired educational apps for kids ages 4–10. No subscriptions, no ads, no tracking, 100% offline.",
     "url": "https://www.kidamame.com/",
     "logo": "https://www.kidamame.com/images/weblogo.webp",
+    "founder": {
+      "@type": "Person",
+      "name": "Marco Uberti"
+    },
     "sameAs": [
+      "https://www.instagram.com/kidamame.official",
+      "https://pinterest.com/kidamame/",
+      "https://youtube.com/@Kidamame",
+      "https://x.com/KidamameKids",
+      "https://www.facebook.com/profile.php?id=61579039664314",
+      "https://www.tiktok.com/@kidamame",
       "https://www.linkedin.com/company/kidamame/",
-      "https://youtube.com/@Kidamame"
+      "https://kidamame.substack.com"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "info@kidamame.com",
-      "contactType": "Customer Service"
+      "contactType": "Customer Service & Press"
     },
     "makesOffer": {
       "@type": "Offer",
       "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "Educational Apps for Kids",
-        "applicationCategory": "Educational",
-        "operatingSystem": "iOS, Android",
-        "description": "Calm, ad-free apps for kids 4-10. We inspire kids to explore the world beyond the screen through art and nature. 100% offline. Start the adventure!"
+        "@type": "MobileApplication",
+        "name": "Kidamame Discovery",
+        "url": "https://www.kidamame.com/discovery/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "iOS, iPadOS, Android",
+        "description": "Calm, Montessori-inspired nature and science exploration app for kids ages 4–10. 100% offline, no ads, no tracking, and no subscriptions."
       }
     }
   }
@@ -544,7 +560,7 @@
           box-shadow: 0 30px 100px rgba(13, 61, 96, 0.45), 0 0 0 10px rgba(255, 255, 255, 0.12);
           overflow: hidden;
           position: relative;
-          background: #000;
+          background: transparent;
         }
 
         @keyframes floatImage {
@@ -566,8 +582,9 @@
 
         .hero-visual-box img,
         .hero-visual-box video {
-          width: 100%;
-          height: 100%;
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          margin: -1px;
           object-fit: cover;
           object-position: center;
           display: block;
@@ -1023,6 +1040,7 @@
           margin-bottom: 1rem;
         }
 
+        .value-card h3,
         .value-card h4 {
           font-family: var(--font-display);
           font-size: 1.1rem;
@@ -1254,14 +1272,6 @@
             box-shadow: 0 16px 40px rgba(13, 61, 96, 0.25);
             animation: none;
             transform: none;
-          }
-
-          .hero-visual-box img,
-          .hero-visual-box video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
           }
 
           .hero-text {
@@ -2109,12 +2119,6 @@
           transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .app-review-card.kidamame-pick {
-          background: var(--white);
-          border: 2px solid rgba(89, 172, 255, 0.45);
-          box-shadow: 0 12px 34px rgba(58, 158, 228, 0.12);
-        }
-
         .guide-article-container .faq-list details {
           background: var(--white) !important;
           border: 1px solid rgba(89, 172, 255, 0.15) !important;
@@ -2142,11 +2146,210 @@
             padding: 1.4rem;
           }
         }
+
+        /* ── AT-A-GLANCE SPECS & CRO BLOCKS ── */
+        .specs-glance-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          margin: 2rem 0 2.5rem;
+          list-style: none;
+          padding: 0;
+        }
+
+        @media (max-width: 860px) {
+          .specs-glance-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 560px) {
+          .specs-glance-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .spec-pill-card {
+          background: var(--blue-light);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 16px;
+          padding: 1rem 1.2rem;
+          display: flex;
+          align-items: flex-start;
+          gap: 0.85rem;
+        }
+
+        .spec-pill-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
+          background: var(--white);
+          color: var(--blue);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.95rem;
+          flex-shrink: 0;
+          box-shadow: 0 2px 8px rgba(58, 158, 228, 0.12);
+        }
+
+        .spec-pill-text strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 0.95rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.25;
+          margin-bottom: 0.15rem;
+        }
+
+        .spec-pill-text span {
+          display: block;
+          font-size: 0.84rem;
+          color: var(--ink-soft);
+          line-height: 1.4;
+        }
+
+        .founder-note {
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.18);
+          border-radius: 22px;
+          padding: 2rem 2.2rem;
+          margin-top: 2.2rem;
+          box-shadow: 0 10px 30px rgba(27, 42, 59, 0.04);
+          position: relative;
+        }
+
+        .founder-note-header {
+          display: flex;
+          align-items: center;
+          gap: 0.85rem;
+          margin-bottom: 0.85rem;
+        }
+
+        .founder-badge-icon {
+          width: 42px;
+          height: 42px;
+          border-radius: 12px;
+          background: var(--amber-soft);
+          color: var(--amber);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.15rem;
+          flex-shrink: 0;
+        }
+
+        .founder-note-title {
+          font-family: var(--font-display);
+          font-size: 1.15rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.2;
+        }
+
+        .founder-note-sub {
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+        }
+
+        .founder-signature {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 1.4rem;
+          padding-top: 1.2rem;
+          border-top: 1px solid rgba(58, 158, 228, 0.14);
+        }
+
+        .founder-avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2.5px solid var(--blue-mid);
+          box-shadow: 0 4px 12px rgba(27, 42, 59, 0.08);
+          flex-shrink: 0;
+        }
+
+        .founder-signature-text strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 1.05rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.2;
+        }
+
+        .founder-signature-text span {
+          display: block;
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+          margin-top: 0.15rem;
+        }
+
+        .press-facts-dl {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 0.9rem 1.25rem;
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 20px;
+          padding: 1.6rem 1.8rem;
+          margin: 1.25rem 0 2.2rem;
+        }
+
+        .press-fact-item {
+          padding-bottom: 0.65rem;
+          border-bottom: 1px solid rgba(58, 158, 228, 0.1);
+        }
+
+        .press-fact-item dt {
+          font-size: 0.74rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: var(--blue-deep);
+          margin-bottom: 0.2rem;
+        }
+
+        .press-fact-item dd {
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: var(--ink);
+          margin: 0;
+          line-height: 1.4;
+        }
+
+        .press-copy-card {
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 16px;
+          padding: 1.25rem 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .press-copy-card strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 0.95rem;
+          color: var(--blue-deep);
+          margin-bottom: 0.35rem;
+        }
+
+        .press-copy-card p {
+          margin: 0 !important;
+          font-size: 0.94rem !important;
+          color: var(--ink-soft);
+          line-height: 1.6;
+        }
       </style>
 </head>
 
-<body>
-  <nav id="nav" class="always-scrolled scrolled">
+  <body>
+    <nav id="nav" class="always-scrolled scrolled">
   <a href="/" class="nav-logo">
     <img src="/images/k.png" alt="Kidamame logo" />
     <span class="nav-logo-text">Kidamame<sup>®</sup></span>
@@ -2181,13 +2384,13 @@
 
         if (isAndroid) {
           event.preventDefault();
-          // Replace with your Play Store URL
-          window.location.href = "https://play.google.com/store/apps/details?id=YOUR_ANDROID_ID";
+          // Google Play Store URL
+          window.location.href = "https://play.google.com/store/apps/details?id=com.kidamame.discovery.app";
         }
         else if (isIOS) {
           event.preventDefault();
-          // Replace with your App Store URL
-          window.location.href = "https://apps.apple.com/app/idYOUR_APPLE_ID";
+          // Apple App Store URL
+          window.location.href = "https://apps.apple.com/app/id6770446769";
         }
         // Desktop users will simply follow the href="/#ourapps"
       }
@@ -2196,136 +2399,184 @@
     
 </nav>
 
-  <main style="background: var(--white);">
-    <section class="product" style="padding-top: 8rem;">
-      <div class="container">
-        <p class="section-label reveal"><i class="fa-solid fa-book-open"></i> &nbsp;<a href="/">Home</a> &gt; Guides</p>
-        <h1 class="section-title reveal d1">Thoughtful guides to <em>calm, quality</em> screen time</h1>
-
-        <div class="product-simple-content">
-          <p class="reveal d2">
-            Finding digital spaces you can genuinely trust is hard. As the parents and independent creators behind <strong><a href="/discovery/" style="color: var(--blue); text-decoration: underline; text-underline-offset: 3px;">Kidamame Discovery</a></strong>, we created these guides to help families navigate children's apps with honesty and respect—focusing on Montessori principles, nature discovery, 100% offline reliability, privacy, and fair pricing without subscription fatigue.
-          </p>
-
-          <div class="reveal" style="margin-top: 3rem;">
-            <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 0.6rem; color: var(--ink);">
-              Curated by Topic &amp; Need
-            </h2>
-            <p style="margin-bottom: 1.5rem;">
-              Explore our guides on real-world nature apps, authentic Montessori learning, low-stimulation play, airplane-ready offline apps, and strict children's privacy.
+      <main style="background: var(--white);">
+        <section class="product" style="padding-top: 8rem;">
+          <div class="container">
+            <p class="section-label reveal"><i class="fa-solid fa-book-open"></i> &nbsp;<a href="/">Home</a> &gt; Guides
             </p>
-            <div class="guides-grid" style="margin-top: 1.5rem;">
-              
-                <a href="/guides/best-nature-and-animal-apps-for-kids/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="fa-solid fa-leaf"></i></div>
-                  </div>
-                  <h3>Best Nature &amp; Animal Apps for Kids</h3>
-                  <p>Discover the best nature, wildlife, and animal apps for kids ages 4–10. Calm, ad-free apps that spark real-world curiosity about biomes, plants, and ecosystems.</p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              
-                <a href="/guides/best-montessori-apps-for-kids/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="fa-solid fa-seedling"></i></div>
-                  </div>
-                  <h3>Best Montessori Apps for Kids</h3>
-                  <p>What makes an app truly Montessori? Explore the best child-led, real-world Montessori apps for kids ages 4–10 with no timers, no ads, and no addictive rewards.</p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              
-                <a href="/guides/calm-low-stimulation-apps-for-kids/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="fa-solid fa-spa"></i></div>
-                  </div>
-                  <h3>Best Low-Stimulation &amp; Calm Apps for Kids</h3>
-                  <p>Looking for gentle screen time that will not overstimulate your child? Here are the best calm, low-stimulation apps for kids with no flashing lights, timers, or ads.</p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              
-                <a href="/guides/best-offline-kids-apps-for-travel/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="fa-solid fa-plane-departure"></i></div>
-                  </div>
-                  <h3>Best 100% Offline Kids Apps for Travel</h3>
-                  <p>Preparing for a flight or long family road trip? Discover the best 100% offline educational apps for kids that work in airplane mode with zero buffering and no ads.</p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              
-                <a href="/guides/privacy-first-kids-apps-no-tracking-no-subscription/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                  </div>
-                  <h3>Best Privacy-First Kids Apps (No Tracking or Login)</h3>
-                  <p>Tired of kids apps demanding accounts, tracking data, and charging monthly fees? Explore the best privacy-first children&#39;s apps with zero data collection and one-time pricing.</p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              
+            <h1 class="section-title reveal d1">Thoughtful guides to <em>calm, quality</em> screen time</h1>
+
+            <div class="product-simple-content">
+              <p class="reveal d2">
+                Finding digital spaces you can genuinely trust is hard. As the parents and independent creators behind
+                <strong><a href="/discovery/"
+                    style="color: var(--blue); text-decoration: underline; text-underline-offset: 3px;">Kidamame
+                    Discovery</a></strong>, we created these guides to help families navigate children's apps, focusing
+                on Montessori principles, nature discovery, travel-ready offline play, privacy, and fair pricing without
+                subscription fatigue.
+              </p>
+
+              <div class="simple-gallery reveal">
+                <img src="/images/guides/australia_empty.jpeg" class="landscape"
+                  alt="Panoramic view of the Alps biome in Kidamame Discovery with mountain wildlife, pine trees, and a young explorer."
+                  loading="lazy" />
+              </div>
+
+              <div class="reveal" style="margin-top: 3rem;">
+                <h2
+                  style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 0.6rem; color: var(--ink);">
+                  Curated by Topic &amp; Need
+                </h2>
+                <div class="guides-grid" style="margin-top: 1.5rem;">
+                  
+                    <a href="/guides/best-nature-and-animal-apps-for-kids/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="fa-solid fa-leaf"></i></div>
+                      </div>
+                      <h3>
+                        Best Nature &amp; Animal Apps for Kids
+                      </h3>
+                      <p>
+                        Discover the best nature, wildlife, and animal apps for kids of all ages. Calm, ad-free apps that spark real-world curiosity about biomes, plants, and ecosystems.
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    
+                    <a href="/guides/best-montessori-apps-for-kids/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="fa-solid fa-seedling"></i></div>
+                      </div>
+                      <h3>
+                        Best Montessori Apps for Kids
+                      </h3>
+                      <p>
+                        What makes an app truly Montessori? Explore the best child-led, real-world Montessori apps for toddlers, preschoolers, and older kids with no timers, no ads, and no addictive rewards.
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    
+                    <a href="/guides/calm-low-stimulation-apps-for-kids/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="fa-solid fa-spa"></i></div>
+                      </div>
+                      <h3>
+                        Best Low-Stimulation &amp; Calm Apps for Kids
+                      </h3>
+                      <p>
+                        Looking for gentle screen time that will not overstimulate your child? Here are the best calm, low-stimulation apps for kids with no flashing lights, timers, or ads.
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    
+                    <a href="/guides/best-offline-kids-apps-for-travel/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                      </div>
+                      <h3>
+                        Best 100% Offline Kids Apps for Travel
+                      </h3>
+                      <p>
+                        Preparing for a flight or long family road trip? Discover the best 100% offline educational apps for kids that work in airplane mode with zero buffering and no ads.
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    
+                    <a href="/guides/privacy-first-kids-apps-no-tracking-no-subscription/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                      </div>
+                      <h3>
+                        Best Privacy-First Kids Apps (No Tracking or Login)
+                      </h3>
+                      <p>
+                        Tired of kids apps demanding accounts, tracking data, and charging monthly fees? Explore the best privacy-first children&#39;s apps with zero data collection and one-time pricing.
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    
+                </div>
+              </div>
+
+              <div class="reveal" style="margin-top: 4rem;">
+                <h2
+                  style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 0.6rem; color: var(--ink);">
+                  App Comparisons &amp; Alternatives
+                </h2>
+                <div class="guides-grid" style="margin-top: 1.5rem;">
+                  
+                    <a href="/guides/lingokids-alternatives/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="fa-solid fa-language"></i></div>
+                      </div>
+                      <h3>
+                        Lingokids Alternatives (Calm &amp; No Subscription)
+                      </h3>
+                      <p>
+                        Love Lingokids&#39; playful approach to early learning and languages? Explore 6 wonderful apps like Lingokids offering calm exploration, multilingual discovery, and one-time purchase options.
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    
+                    <a href="/guides/pok-pok-alternatives/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                      </div>
+                      <h3>
+                        Pok Pok Alternatives (Montessori &amp; One-Time Purchase)
+                      </h3>
+                      <p>
+                        Adore Pok Pok&#39;s gentle Montessori philosophy? Discover the best Pok Pok alternatives across different ages, including one-time purchase options with no recurring fees.
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    
+                    <a href="/guides/sago-mini-alternatives/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="fa-solid fa-compass"></i></div>
+                      </div>
+                      <h3>
+                        Sago Mini World Alternatives (Open-Ended &amp; No Subscription)
+                      </h3>
+                      <p>
+                        Does your family love Sago Mini World? Discover 6 wonderful open-ended, ad-free apps and companions for preschoolers and growing explorers, including real-world nature and one-time purchase options.
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    
+                    <a href="/guides/toca-boca-alternatives/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                      </div>
+                      <h3>
+                        Calm &amp; Educational Alternatives to Toca Boca
+                      </h3>
+                      <p>
+                        Love Toca Boca&#39;s open-ended digital worlds? Explore 6 wonderful apps like Toca Boca that celebrate child-led curiosity, real-world nature, and creative play.
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    
+                    <a href="/guides/khan-academy-kids-alternatives/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                      </div>
+                      <h3>
+                        Khan Academy Kids &amp; PBS Kids Alternatives (Offline &amp; Open-Ended)
+                      </h3>
+                      <p>
+                        Khan Academy Kids and PBS Kids are wonderful free resources. Discover 6 great companion apps offering 100% offline travel play, open-ended science models, and Montessori nature discovery.
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    
+                </div>
+              </div>
             </div>
           </div>
+        </section>
+      </main>
 
-          <div class="reveal" style="margin-top: 4rem;">
-            <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 0.6rem; color: var(--ink);">
-              Respectful App Comparisons &amp; Alternatives
-            </h2>
-            <p style="margin-bottom: 1.5rem;">
-              Popular apps like Pok Pok, Lingokids, Sago Mini, Toca Boca, and Khan Academy Kids are loved by millions of families. If your child is growing into a new stage (ages 4–10), or if you are looking for a calmer pace, 100% offline play, or a one-time purchase without recurring subscriptions, these guides compare the best options side by side.
-            </p>
-            <div class="guides-grid" style="margin-top: 1.5rem;">
-              
-                <a href="/guides/lingokids-alternatives/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="fa-solid fa-language"></i></div>
-                  </div>
-                  <h3>Lingokids Alternatives (Calm &amp; No Subscription)</h3>
-                  <p>Love Lingokids&#39; multilingual vision but want a calmer pace without a monthly subscription? Explore the best respectful, ad-free alternatives to Lingokids for ages 4–10.</p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              
-                <a href="/guides/pok-pok-alternatives/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
-                  </div>
-                  <h3>Pok Pok Alternatives (Montessori &amp; One-Time Purchase)</h3>
-                  <p>Adore Pok Pok&#39;s gentle Montessori philosophy? Discover the best Pok Pok alternatives for older kids (ages 4–10) and families who prefer a one-time purchase over recurring fees.</p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              
-                <a href="/guides/sago-mini-alternatives/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="fa-solid fa-compass"></i></div>
-                  </div>
-                  <h3>Sago Mini World Alternatives for Ages 4–10</h3>
-                  <p>Has your child outgrown Sago Mini World, or are you looking to skip monthly subscriptions? Here are the best open-ended, ad-free alternatives for curious kids ages 4–10.</p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              
-                <a href="/guides/toca-boca-alternatives/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                  </div>
-                  <h3>Calm &amp; Educational Alternatives to Toca Boca</h3>
-                  <p>Looking for open-ended digital play like Toca Boca, but calmer, more educational, and free from endless in-app item shops? Explore these parent-approved alternatives.</p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              
-                <a href="/guides/khan-academy-kids-alternatives/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                  </div>
-                  <h3>Khan Academy Kids &amp; PBS Kids Alternatives (Offline &amp; Open-Ended)</h3>
-                  <p>Khan Academy Kids and PBS Kids are wonderful free resources. When you need 100% offline travel play or pure Montessori discovery without quizzes, try these alternatives.</p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
+      <!-- FOOTER -->
 <footer id="footer">
   <div class="footer-grid">
 
@@ -2484,5 +2735,6 @@
     initLightbox();
   }
 </script>
-</body>
+  </body>
+
 </html>

@@ -34,32 +34,48 @@
       <!-- Canonical URL -->
       <link rel="canonical" href="https://www.kidamame.com/guides/calm-low-stimulation-apps-for-kids/">
 
+      <!-- iOS Smart App Banner (uncomment when live on the App Store):
+      <meta name="apple-itunes-app" content="app-id=6770446769, app-argument=https://www.kidamame.com/guides/calm-low-stimulation-apps-for-kids/" />
+      -->
+
       <!-- Structured Data -->
       <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "KIDAMAME",
-    "description": "Calm, ad-free apps for kids 4-10. We inspire kids to explore the world beyond the screen through art and nature. 100% offline. Start the adventure!",
+    "legalName": "KIDAMAME® — Marco Uberti",
+    "description": "Independent family studio creating calm, ad-free, Montessori-inspired educational apps for kids ages 4–10. No subscriptions, no ads, no tracking, 100% offline.",
     "url": "https://www.kidamame.com/",
     "logo": "https://www.kidamame.com/images/weblogo.webp",
+    "founder": {
+      "@type": "Person",
+      "name": "Marco Uberti"
+    },
     "sameAs": [
+      "https://www.instagram.com/kidamame.official",
+      "https://pinterest.com/kidamame/",
+      "https://youtube.com/@Kidamame",
+      "https://x.com/KidamameKids",
+      "https://www.facebook.com/profile.php?id=61579039664314",
+      "https://www.tiktok.com/@kidamame",
       "https://www.linkedin.com/company/kidamame/",
-      "https://youtube.com/@Kidamame"
+      "https://kidamame.substack.com"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "info@kidamame.com",
-      "contactType": "Customer Service"
+      "contactType": "Customer Service & Press"
     },
     "makesOffer": {
       "@type": "Offer",
       "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "Educational Apps for Kids",
-        "applicationCategory": "Educational",
-        "operatingSystem": "iOS, Android",
-        "description": "Calm, ad-free apps for kids 4-10. We inspire kids to explore the world beyond the screen through art and nature. 100% offline. Start the adventure!"
+        "@type": "MobileApplication",
+        "name": "Kidamame Discovery",
+        "url": "https://www.kidamame.com/discovery/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "iOS, iPadOS, Android",
+        "description": "Calm, Montessori-inspired nature and science exploration app for kids ages 4–10. 100% offline, no ads, no tracking, and no subscriptions."
       }
     }
   }
@@ -544,7 +560,7 @@
           box-shadow: 0 30px 100px rgba(13, 61, 96, 0.45), 0 0 0 10px rgba(255, 255, 255, 0.12);
           overflow: hidden;
           position: relative;
-          background: #000;
+          background: transparent;
         }
 
         @keyframes floatImage {
@@ -566,8 +582,9 @@
 
         .hero-visual-box img,
         .hero-visual-box video {
-          width: 100%;
-          height: 100%;
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          margin: -1px;
           object-fit: cover;
           object-position: center;
           display: block;
@@ -1023,6 +1040,7 @@
           margin-bottom: 1rem;
         }
 
+        .value-card h3,
         .value-card h4 {
           font-family: var(--font-display);
           font-size: 1.1rem;
@@ -1254,14 +1272,6 @@
             box-shadow: 0 16px 40px rgba(13, 61, 96, 0.25);
             animation: none;
             transform: none;
-          }
-
-          .hero-visual-box img,
-          .hero-visual-box video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
           }
 
           .hero-text {
@@ -2109,12 +2119,6 @@
           transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .app-review-card.kidamame-pick {
-          background: var(--white);
-          border: 2px solid rgba(89, 172, 255, 0.45);
-          box-shadow: 0 12px 34px rgba(58, 158, 228, 0.12);
-        }
-
         .guide-article-container .faq-list details {
           background: var(--white) !important;
           border: 1px solid rgba(89, 172, 255, 0.15) !important;
@@ -2142,11 +2146,210 @@
             padding: 1.4rem;
           }
         }
+
+        /* ── AT-A-GLANCE SPECS & CRO BLOCKS ── */
+        .specs-glance-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          margin: 2rem 0 2.5rem;
+          list-style: none;
+          padding: 0;
+        }
+
+        @media (max-width: 860px) {
+          .specs-glance-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 560px) {
+          .specs-glance-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .spec-pill-card {
+          background: var(--blue-light);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 16px;
+          padding: 1rem 1.2rem;
+          display: flex;
+          align-items: flex-start;
+          gap: 0.85rem;
+        }
+
+        .spec-pill-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
+          background: var(--white);
+          color: var(--blue);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.95rem;
+          flex-shrink: 0;
+          box-shadow: 0 2px 8px rgba(58, 158, 228, 0.12);
+        }
+
+        .spec-pill-text strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 0.95rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.25;
+          margin-bottom: 0.15rem;
+        }
+
+        .spec-pill-text span {
+          display: block;
+          font-size: 0.84rem;
+          color: var(--ink-soft);
+          line-height: 1.4;
+        }
+
+        .founder-note {
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.18);
+          border-radius: 22px;
+          padding: 2rem 2.2rem;
+          margin-top: 2.2rem;
+          box-shadow: 0 10px 30px rgba(27, 42, 59, 0.04);
+          position: relative;
+        }
+
+        .founder-note-header {
+          display: flex;
+          align-items: center;
+          gap: 0.85rem;
+          margin-bottom: 0.85rem;
+        }
+
+        .founder-badge-icon {
+          width: 42px;
+          height: 42px;
+          border-radius: 12px;
+          background: var(--amber-soft);
+          color: var(--amber);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.15rem;
+          flex-shrink: 0;
+        }
+
+        .founder-note-title {
+          font-family: var(--font-display);
+          font-size: 1.15rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.2;
+        }
+
+        .founder-note-sub {
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+        }
+
+        .founder-signature {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 1.4rem;
+          padding-top: 1.2rem;
+          border-top: 1px solid rgba(58, 158, 228, 0.14);
+        }
+
+        .founder-avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2.5px solid var(--blue-mid);
+          box-shadow: 0 4px 12px rgba(27, 42, 59, 0.08);
+          flex-shrink: 0;
+        }
+
+        .founder-signature-text strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 1.05rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.2;
+        }
+
+        .founder-signature-text span {
+          display: block;
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+          margin-top: 0.15rem;
+        }
+
+        .press-facts-dl {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 0.9rem 1.25rem;
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 20px;
+          padding: 1.6rem 1.8rem;
+          margin: 1.25rem 0 2.2rem;
+        }
+
+        .press-fact-item {
+          padding-bottom: 0.65rem;
+          border-bottom: 1px solid rgba(58, 158, 228, 0.1);
+        }
+
+        .press-fact-item dt {
+          font-size: 0.74rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: var(--blue-deep);
+          margin-bottom: 0.2rem;
+        }
+
+        .press-fact-item dd {
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: var(--ink);
+          margin: 0;
+          line-height: 1.4;
+        }
+
+        .press-copy-card {
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 16px;
+          padding: 1.25rem 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .press-copy-card strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 0.95rem;
+          color: var(--blue-deep);
+          margin-bottom: 0.35rem;
+        }
+
+        .press-copy-card p {
+          margin: 0 !important;
+          font-size: 0.94rem !important;
+          color: var(--ink-soft);
+          line-height: 1.6;
+        }
       </style>
 </head>
 
-<body>
-  <nav id="nav" class="always-scrolled scrolled">
+  <body>
+    <nav id="nav" class="always-scrolled scrolled">
   <a href="/" class="nav-logo">
     <img src="/images/k.png" alt="Kidamame logo" />
     <span class="nav-logo-text">Kidamame<sup>®</sup></span>
@@ -2181,13 +2384,13 @@
 
         if (isAndroid) {
           event.preventDefault();
-          // Replace with your Play Store URL
-          window.location.href = "https://play.google.com/store/apps/details?id=YOUR_ANDROID_ID";
+          // Google Play Store URL
+          window.location.href = "https://play.google.com/store/apps/details?id=com.kidamame.discovery.app";
         }
         else if (isIOS) {
           event.preventDefault();
-          // Replace with your App Store URL
-          window.location.href = "https://apps.apple.com/app/idYOUR_APPLE_ID";
+          // Apple App Store URL
+          window.location.href = "https://apps.apple.com/app/id6770446769";
         }
         // Desktop users will simply follow the href="/#ourapps"
       }
@@ -2196,242 +2399,334 @@
     
 </nav>
 
-  <main style="background: var(--white);">
-    <section class="product" style="padding-top: 8rem;">
-      <div class="container guide-article-container">
-        <p class="section-label reveal"><i class="fa-solid fa-spa"></i> &nbsp;<a href="/">Home</a> &gt; <a href="/guides/">Guides</a> &gt; Low-Stimulation Apps</p>
-        <h1 class="section-title reveal d1">7 Best <em>Low-Stimulation &amp; Calm Apps</em> for Kids</h1>
+      <main style="background: var(--white);">
+        <section class="product" style="padding-top: 8rem;">
+          <div class="container guide-article-container">
+            <p class="section-label reveal"><i class="fa-solid fa-spa"></i> &nbsp;<a href="/">Home</a> &gt; <a
+                href="/guides/">Guides</a> &gt; Low-Stimulation Apps</p>
+            <h1 class="section-title reveal d1">7 Best <em>Low-Stimulation &amp; Calm Apps</em> for Kids</h1>
 
-        <div class="product-simple-content">
-          <p class="reveal d2">
-            Just like families are trading frantic cartoons for gentle shows like <em>Puffin Rock</em> and <em>Trash Truck</em>, parents are looking for children's apps that don't hijack a child's nervous system. Here are the 7 best low-stimulation apps that leave kids peaceful when screen time ends.
-          </p>
+            <div class="product-simple-content">
+              <p class="reveal d2">
+                Just like families are trading frantic cartoons for gentle shows like <em>Puffin Rock</em> and <em>Trash
+                  Truck</em>, parents are looking for children's apps that don't hijack a child's nervous system. Here
+                are the 7 best low-stimulation apps that leave kids peaceful when screen time ends.
+              </p>
 
-        <h2>Why Some Apps Trigger Tantrums (And How Low-Stimulation Apps Prevent Them)</h2>
-        <p>
-          Have you ever noticed that your child can read a picture book for 30 minutes and happily walk away—yet 15 minutes on a typical mobile game ends in tears when you ask to turn it off?
-        </p>
-        <p>
-          The culprit usually isn't "the screen" itself; it's <strong>persuasive game design</strong>: rapid scene cuts, flashing confetti, countdown timers, streak counters, and intermittent reward loops that flood a developing brain with dopamine and cortisol.
-        </p>
-        <p>
-          <strong>Low-stimulation kids' apps</strong> are built differently:
-        </p>
-        <ul>
-          <li><strong>Natural Stopping Points:</strong> Because there are no streaks, timers, or "just one more level" hooks, children can pause and put the device down peacefully.</li>
-          <li><strong>Acoustic &amp; Visual Calm:</strong> Soft illustrations, natural ambient sounds (rainforest wind, ocean waves, acoustic instruments), and unhurried animations.</li>
-          <li><strong>Co-Viewing Friendly:</strong> Aligned with American Academy of Pediatrics (AAP) recommendations, calm apps leave room for parents and children to talk and wonder together.</li>
-        </ul>
+              <div class="simple-gallery reveal">
+                <img src="/images/guides/guides_14.jpeg" class="landscape"
+                  alt="Panoramic view of the Alps biome in Kidamame Discovery with mountain wildlife, pine trees, and a young explorer."
+                  loading="lazy" />
+              </div>
 
-        <h2>Quick Comparison: Top Low-Stimulation Apps for Kids</h2>
-        <div tabindex="0" role="region" aria-labelledby="calm-table-caption" class="guide-table-wrap">
-          <table class="guide-table" style="--label-2: 'Sensory Vibe'; --label-3: 'Ages'; --label-4: 'Pricing Model'; --label-5: 'Offline Play';">
-            <caption id="calm-table-caption">Comparison of the 7 best calm, low-stimulation apps for kids</caption>
-            <thead>
-              <tr>
-                <th scope="col">App Name</th>
-                <th scope="col">Sensory Vibe</th>
-                <th scope="col">Ages</th>
-                <th scope="col">Pricing Model</th>
-                <th scope="col">Offline Play</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="highlight-row">
-                <th scope="row"><a href="/discovery/">1. Kidamame Discovery</a></th>
-                <td>Natural wildlife soundscapes &amp; storybook biomes</td>
-                <td>4–10</td>
-                <td><strong>Free trial + 1-time purchase</strong> (No subscription)</td>
-                <td>100% Offline</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://playpokpok.com/" target="_blank" rel="noopener noreferrer">2. Pok Pok Playroom</a></th>
-                <td>Soft acoustic clicks &amp; muted Montessori toys</td>
-                <td>2–7</td>
-                <td>Subscription</td>
-                <td>100% Offline</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://tinybop.com/" target="_blank" rel="noopener noreferrer">3. Tinybop (Plants &amp; Sky)</a></th>
-                <td>Ambient seasonal &amp; night-sky exploration</td>
-                <td>4–10</td>
-                <td>One-time purchase per app</td>
-                <td>100% Offline</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://www.ahoiii.com/" target="_blank" rel="noopener noreferrer">4. Fiete Islands</a></th>
-                <td>Slow-paced picture book island tasks</td>
-                <td>2–6</td>
-                <td>One-time purchase</td>
-                <td>100% Offline</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://www.edokiacademy.com/" target="_blank" rel="noopener noreferrer">5. Busy Shapes</a></th>
-                <td>Quiet, minimalist Montessori shape workspace</td>
-                <td>2–6</td>
-                <td>Standalone purchase</td>
-                <td>100% Offline</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://merlin.allaboutbirds.org/" target="_blank" rel="noopener noreferrer">6. Merlin Bird ID</a></th>
-                <td>Mindful outdoor listening to real bird songs</td>
-                <td>5–12+</td>
-                <td>100% Free</td>
-                <td>Offline regional packs</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://www.sesameworkshop.org/" target="_blank" rel="noopener noreferrer">7. Breathe, Think, Do with Sesame</a></th>
-                <td>Guided belly breathing &amp; emotional calm-down</td>
-                <td>2–6</td>
-                <td>100% Free</td>
-                <td>100% Offline</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+              <h2>Why Some Apps Trigger Tantrums (And How Low-Stimulation Apps Prevent Them)</h2>
+              <p>
+                Have you ever noticed that your child can read a picture book for 30 minutes and happily walk away, yet
+                15 minutes on a typical mobile game ends in tears when you ask to turn it off?
+              </p>
+              <p>
+                The culprit usually isn't "the screen" itself; it's <strong>persuasive game design</strong>: rapid scene
+                cuts, flashing confetti, countdown timers, streak counters, and intermittent reward loops that flood a
+                developing brain with dopamine and cortisol.
+              </p>
+              <p>
+                <strong>Low-stimulation kids' apps</strong> are built differently:
+              </p>
+              <ul>
+                <li><strong>Natural Stopping Points:</strong> Because there are no streaks, timers, or "just one more
+                  level" hooks, children can pause and put the device down peacefully.</li>
+                <li><strong>Acoustic &amp; Visual Calm:</strong> Soft illustrations, natural ambient sounds (rainforest
+                  wind, ocean waves, acoustic instruments), and unhurried animations.</li>
+                <li><strong>Co-Viewing Friendly:</strong> Aligned with American Academy of Pediatrics (AAP)
+                  recommendations, calm apps leave room for parents and children to talk and wonder together.</li>
+              </ul>
 
-        <h2>The 7 Best Calm, Low-Stimulation Apps for Kids</h2>
+              <h2>Quick Comparison: Top Low-Stimulation Apps for Kids</h2>
+              <div tabindex="0" role="region" aria-labelledby="calm-table-caption" class="guide-table-wrap">
+                <table class="guide-table"
+                  style="--label-2: 'Sensory Vibe'; --label-3: 'Ages'; --label-4: 'Pricing Model'; --label-5: 'Offline Play';">
+                  <caption id="calm-table-caption">Comparison of the 7 best calm, low-stimulation apps for kids
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">App Name</th>
+                      <th scope="col">Sensory Vibe</th>
+                      <th scope="col">Ages</th>
+                      <th scope="col">Pricing Model</th>
+                      <th scope="col">Offline Play</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="highlight-row">
+                      <th scope="row"><a href="/discovery/">1. Kidamame Discovery</a></th>
+                      <td>Natural wildlife soundscapes &amp; storybook biomes</td>
+                      <td>4–10</td>
+                      <td><strong>Free trial + 1-time purchase</strong> (No subscription)</td>
+                      <td>100% Offline</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://playpokpok.com/" target="_blank" rel="noopener noreferrer">2. Pok
+                          Pok Playroom</a></th>
+                      <td>Soft acoustic clicks &amp; muted Montessori toys</td>
+                      <td>2–7</td>
+                      <td>Subscription</td>
+                      <td>100% Offline</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://tinybop.com/" target="_blank" rel="noopener noreferrer">3.
+                          Tinybop (Plants &amp; Sky)</a></th>
+                      <td>Ambient seasonal &amp; night-sky exploration</td>
+                      <td>4–10</td>
+                      <td>One-time purchase per app</td>
+                      <td>100% Offline</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://www.ahoiii.com/" target="_blank" rel="noopener noreferrer">4.
+                          Fiete Islands</a></th>
+                      <td>Slow-paced picture book island tasks</td>
+                      <td>2–6</td>
+                      <td>One-time purchase</td>
+                      <td>100% Offline</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://www.edokiacademy.com/" target="_blank"
+                          rel="noopener noreferrer">5. Busy Shapes</a></th>
+                      <td>Quiet, minimalist Montessori shape workspace</td>
+                      <td>2–6</td>
+                      <td>Standalone purchase</td>
+                      <td>100% Offline</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://www.merlinbirds.org/download/" target="_blank"
+                          rel="noopener noreferrer">6. Merlin Bird ID</a></th>
+                      <td>Mindful outdoor listening to real bird songs</td>
+                      <td>5–12+</td>
+                      <td>100% Free</td>
+                      <td>Offline regional packs</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://www.foxandsheep.com/" target="_blank"
+                          rel="noopener noreferrer">7. Nighty Night! (Fox &amp; Sheep)</a></th>
+                      <td>Cozy bedtime ritual putting sleepy farm animals to bed</td>
+                      <td>1–5</td>
+                      <td>Paid download / Optional animals</td>
+                      <td>100% Offline</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
-        <!-- 1. KIDAMAME DISCOVERY -->
-        <div class="app-review-card kidamame-pick">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill"><i class="fa-solid fa-spa"></i> Best Calm Nature &amp; Science App (No Subscription)</span>
-              <h3 style="margin-top: 0.6rem !important;">1. Kidamame Discovery</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 4–10</span>
-            <span><i class="fa-solid fa-infinity"></i> One-Time Purchase (No Subscription)</span>
-            <span><i class="fa-solid fa-volume-low"></i> Authentic Nature Audio</span>
-            <span><i class="fa-solid fa-plane-departure"></i> 100% Offline</span>
-          </div>
-          <p>
-            We designed <strong><a href="/discovery/">Kidamame Discovery</a></strong> from the ground up as an oasis of calm for children ages 4–10. Instead of background synth music or flashing scoreboards, each of its <strong>6 hand-illustrated biomes</strong> (Alps, African Savannah, Australian Outback, Arctic, Sonoran Desert, and Amazon Rainforest) is accompanied by gentle, authentic nature sounds.
-          </p>
-          <ul>
-            <li><strong>Zero Urgency Loops:</strong> There is nothing to win, no puzzles to fail, and no timers ticking down. Children pan across the landscape at their own pace, tapping 120+ animals, plants, and geological features.</li>
-            <li><strong>Storybook Co-Reading:</strong> Tapping the magnifying glass opens ~400 illustrated "Did You Know?" cards—turning tablet time into the same cozy, shared rhythm as reading a bedtime nature book together.</li>
-            <li><strong>Try Free, Own Forever:</strong> Download and try for free, then unlock the full app forever with a single one-time purchase. 100% offline, ad-free, and tracking-free.</li>
-          </ul>
-          <div class="simple-gallery" style="margin: 1.5rem 0 1.2rem;">
-            <img src="/images/screenshots/phone/kidamame_discovery_screenshot_12.jpeg" alt="Kidamame Discovery calm nature exploration." loading="lazy" />
-            <img src="/images/screenshots/phone/kidamame_discovery_screenshot_18.jpeg" alt="Kidamame Discovery peaceful wildlife scene." loading="lazy" />
-          </div>
-          <a href="/discovery/" class="btn-primary" style="margin-top: 0.5rem;">
-            <i class="fa-solid fa-compass"></i> Explore Kidamame Discovery
-          </a>
-        </div>
+              <h2>The 7 Best Calm, Low-Stimulation Apps for Kids</h2>
 
-        <!-- 2. POK POK -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Low-Stimulation Toybox for Ages 2–6</span>
-              <h3 style="margin-top: 0.6rem !important;">2. Pok Pok Playroom</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 2–7</span>
-            <span><i class="fa-solid fa-tag"></i> Subscription</span>
-            <span><i class="fa-solid fa-volume-off"></i> Gentle Acoustic Foley</span>
-          </div>
-          <p>
-            <a href="https://playpokpok.com/" target="_blank" rel="noopener noreferrer">Pok Pok</a> records real wooden clicks, soft chimes, and gentle brushstrokes for its digital toys so that young children never get overstimulated—even without headphones. (If you prefer avoiding subscriptions, see our <a href="/guides/pok-pok-alternatives/">Pok Pok Alternatives guide</a>.)
-          </p>
-        </div>
+              <!-- 1. KIDAMAME DISCOVERY -->
+              <div class="app-review-card kidamame-pick">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill"><i class="fa-solid fa-spa"></i> Best Calm Nature &amp; Science App (No
+                      Subscription)</span>
+                    <h3 style="margin-top: 0.6rem !important;">1. Kidamame Discovery</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 4–10</span>
+                  <span><i class="fa-solid fa-infinity"></i> One-Time Purchase (No Subscription)</span>
+                  <span><i class="fa-solid fa-volume-low"></i> Authentic Nature Audio</span>
+                  <span><i class="fa-solid fa-plane-departure"></i> 100% Offline</span>
+                </div>
+                <p>
+                  We designed <strong><a href="/discovery/">Kidamame Discovery</a></strong> from the ground up as an
+                  oasis of calm for children ages 4–10. Instead of background synth music or flashing scoreboards, each
+                  of its <strong>6 hand-illustrated biomes</strong> (Alps, African Savannah, Australian Outback, Arctic,
+                  Sonoran Desert, and Amazon Rainforest) is accompanied by gentle, authentic nature sounds.
+                </p>
+                <ul>
+                  <li><strong>Zero Urgency Loops:</strong> There is nothing to win, no puzzles to fail, and no timers
+                    ticking down. Children pan across the landscape at their own pace, tapping 120+ animals, plants, and
+                    geological features.</li>
+                  <li><strong>Storybook Co-Reading:</strong> Tapping the magnifying glass opens ~400 illustrated "Did
+                    You Know?" cards, turning tablet time into the same cozy, shared rhythm as reading a bedtime nature
+                    book together.</li>
+                  <li><strong>Try Free, Own Forever:</strong> Download and try for free, then unlock the full app
+                    forever with a single one-time purchase. 100% offline, ad-free, and tracking-free.</li>
+                </ul>
+                <div class="simple-gallery" style="margin: 1.5rem 0 1.2rem;">
+  <img src="/images/guides/guides_17.jpeg" alt="Kidamame Discovery Alps biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_2.jpeg" alt="Kidamame Discovery Australian Outback biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_26.jpeg" alt="Kidamame Discovery African Savannah biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_31.jpeg" alt="Kidamame Discovery Amazon Rainforest biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_11.jpeg" alt="Kidamame Discovery Arctic biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_5.jpeg" alt="Kidamame Discovery Sonoran Desert fact card." loading="lazy" />
+</div>
+<a href="/discovery/" class="btn-primary" style="margin-top: 0.5rem;">
+  <i class="fa-solid fa-compass"></i> Explore Kidamame Discovery
+</a>
 
-        <!-- 3. TINYBOP PLANTS -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Peaceful Seasonal Dioramas</span>
-              <h3 style="margin-top: 0.6rem !important;">3. Tinybop (Plants &amp; Sky)</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 4–10</span>
-            <span><i class="fa-solid fa-tag"></i> Standalone App Purchases</span>
-            <span><i class="fa-solid fa-tree"></i> Slow Seasonal Changes</span>
-          </div>
-          <p>
-            Among <a href="https://tinybop.com/" target="_blank" rel="noopener noreferrer">Tinybop</a>'s science apps, <em>Plants</em> is especially soothing: children watch day turn to night and spring turn to winter across forest, desert, and grassland scenes, listening to rain fall and wind rustle through leaves.
-          </p>
-        </div>
 
-        <!-- 4. FIETE ISLANDS -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Slow-Paced Picture Book App for Young Kids</span>
-              <h3 style="margin-top: 0.6rem !important;">4. Fiete Islands (by Ahoiii)</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 2–6</span>
-            <span><i class="fa-solid fa-tag"></i> One-Time Purchase</span>
-            <span><i class="fa-solid fa-water"></i> Gentle Ocean Waves</span>
-          </div>
-          <p>
-            In <a href="https://www.ahoiii.com/" target="_blank" rel="noopener noreferrer">Fiete Islands</a>, toddlers help a friendly sailor load apples onto a boat, change a tire, or row across calm waters. The animations move at a deliberate, unhurried picture-book tempo.
-          </p>
-        </div>
 
-        <!-- 5. BUSY SHAPES -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Minimalist Montessori Logic</span>
-              <h3 style="margin-top: 0.6rem !important;">5. Busy Shapes</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 2–6</span>
-            <span><i class="fa-solid fa-tag"></i> One-Time Purchase</span>
-            <span><i class="fa-solid fa-shapes"></i> Clean Visuals</span>
-          </div>
-          <p>
-            With uncluttered backgrounds and soft tactile sounds, <a href="https://www.edokiacademy.com/" target="_blank" rel="noopener noreferrer">Busy Shapes</a> gives preschoolers a quiet puzzle environment where they can focus deeply on one shape at a time.
-          </p>
-        </div>
+              </div>
 
-        <!-- 6. MERLIN BIRD ID -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best for Mindful Outdoor Listening</span>
-              <h3 style="margin-top: 0.6rem !important;">6. Merlin Bird ID</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 5–12+</span>
-            <span><i class="fa-solid fa-tag"></i> 100% Free</span>
-            <span><i class="fa-solid fa-dove"></i> Outdoor Mindfulness</span>
-          </div>
-          <p>
-            Using <a href="https://merlin.allaboutbirds.org/" target="_blank" rel="noopener noreferrer">Merlin Bird ID</a> requires standing completely still and quiet outdoors for 60 seconds so the microphone can hear nearby birds—making it one of the most naturally grounding screen activities a family can share.
-          </p>
-        </div>
+              <!-- 2. POK POK -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Low-Stimulation Toybox for Ages 2–6</span>
+                    <h3 style="margin-top: 0.6rem !important;">2. Pok Pok Playroom</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 2–7</span>
+                  <span><i class="fa-solid fa-tag"></i> Subscription</span>
+                  <span><i class="fa-solid fa-volume-off"></i> Gentle Acoustic Foley</span>
+                </div>
+                <p>
+                  Winner of an Apple Design Award, <a href="https://playpokpok.com/" target="_blank"
+                    rel="noopener noreferrer">Pok Pok</a> is widely admired for its obsessive attention to sensory calm.
+                  The team records real wooden clicks, soft chimes, and gentle brushstrokes for its digital toys so that
+                  young children never get overstimulated, even when playing without headphones in a quiet living room.
+                </p>
+                <p>
+                  <strong>Why families love it:</strong> Every toy inside the playroom (from the wooden marble run and
+                  busy board to the peaceful town and drawing canvas) is non-verbal, hand-animated at a gentle frame
+                  rate, and completely free of levels or fail states. (If you prefer avoiding subscriptions, see our <a
+                    href="/guides/pok-pok-alternatives/">Pok Pok Alternatives guide</a>.)
+                </p>
+              </div>
 
-        <!-- 7. BREATHE THINK DO WITH SESAME -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Free Emotional Regulation Tool</span>
-              <h3 style="margin-top: 0.6rem !important;">7. Breathe, Think, Do with Sesame</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 2–6</span>
-            <span><i class="fa-solid fa-tag"></i> 100% Free</span>
-            <span><i class="fa-solid fa-wind"></i> Deep Breathing</span>
-          </div>
-          <p>
-            Created by <a href="https://www.sesameworkshop.org/" target="_blank" rel="noopener noreferrer">Sesame Workshop</a>, this free bilingual (English/Spanish) app helps young children practice taking three slow belly breaths to help a monster friend calm down and solve everyday frustrations.
-          </p>
-        </div>
+              <!-- 3. TINYBOP PLANTS -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Peaceful Seasonal Dioramas</span>
+                    <h3 style="margin-top: 0.6rem !important;">3. Tinybop (Plants &amp; Sky)</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 4–10</span>
+                  <span><i class="fa-solid fa-tag"></i> Standalone App Purchases</span>
+                  <span><i class="fa-solid fa-tree"></i> Slow Seasonal Changes</span>
+                </div>
+                <p>
+                  Among <a href="https://tinybop.com/" target="_blank" rel="noopener noreferrer">Tinybop</a>'s acclaimed
+                  science apps, <em>Plants</em> and <em>Sky</em> are especially soothing. In <em>Plants</em>, children
+                  explore forest, desert, and grassland dioramas as day turns to night and spring turns to winter,
+                  listening to gentle rain fall, wind rustle through leaves, and nocturnal animals emerge.
+                </p>
+                <p>
+                  <strong>Why families love it:</strong> There is no narrator barking instructions and no background
+                  arcade music. Children simply touch the clouds to bring rain, burrow underground to see roots and
+                  earthworms, and watch nature unfold at its own pace.
+                </p>
+              </div>
 
-        
+              <!-- 4. FIETE ISLANDS -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Slow-Paced Picture Book App for Young Kids</span>
+                    <h3 style="margin-top: 0.6rem !important;">4. Fiete Islands (by Ahoiii)</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 2–6</span>
+                  <span><i class="fa-solid fa-tag"></i> One-Time Purchase</span>
+                  <span><i class="fa-solid fa-water"></i> Gentle Ocean Waves</span>
+                </div>
+                <p>
+                  In <a href="https://www.ahoiii.com/" target="_blank" rel="noopener noreferrer">Fiete Islands</a> (and
+                  its companion <em>Fiete Farm</em>), toddlers and preschoolers help a friendly sailor load apples onto
+                  a wooden boat, change a tire, or row across calm waters. Originally created by German illustrator
+                  Wolfgang Schmitz for his own daughter, the entire series feels like a classic European picture book
+                  brought gently to life.
+                </p>
+                <p>
+                  <strong>Why families love it:</strong> The animations move at a deliberate, unhurried tempo with
+                  ambient sounds of seagulls, lapping water, and footsteps. Because each small task has a clear, cozy
+                  conclusion, young children find it very easy to stop when screen time is over.
+                </p>
+              </div>
+
+              <!-- 5. BUSY SHAPES -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Minimalist Montessori Logic</span>
+                    <h3 style="margin-top: 0.6rem !important;">5. Busy Shapes</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 2–6</span>
+                  <span><i class="fa-solid fa-tag"></i> One-Time Purchase</span>
+                  <span><i class="fa-solid fa-shapes"></i> Clean Visuals</span>
+                </div>
+                <p>
+                  With uncluttered backgrounds, soft pastel palettes, and crisp tactile sound effects, <a
+                    href="https://www.edokiacademy.com/" target="_blank" rel="noopener noreferrer">Busy Shapes</a> gives
+                  toddlers and preschoolers a quiet puzzle environment where they can focus deeply on one shape at a
+                  time.
+                </p>
+                <p>
+                  <strong>Why families love it:</strong> Inspired by Montessori and Piagetian principles, the app avoids
+                  flashing scoreboards or frantic timers. Instead, it gently introduces new physical obstacles (like
+                  sliding walls or ice patches) as your child's reasoning grows, encouraging calm problem-solving.
+                </p>
+              </div>
+
+              <!-- 6. MERLIN BIRD ID -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best for Mindful Outdoor Listening</span>
+                    <h3 style="margin-top: 0.6rem !important;">6. Merlin Bird ID</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 5–12+</span>
+                  <span><i class="fa-solid fa-tag"></i> 100% Free</span>
+                  <span><i class="fa-solid fa-dove"></i> Outdoor Mindfulness</span>
+                </div>
+                <p>
+                  Built by the Cornell Lab of Ornithology, <a href="https://www.merlinbirds.org/download/" target="_blank"
+                    rel="noopener noreferrer">Merlin Bird ID</a> is a wonderful secret weapon for parents who want
+                  technology to slow their children down. Using its live "Sound ID" feature requires standing completely
+                  still and quiet outdoors for 30 to 60 seconds so the microphone can hear nearby birds singing in the
+                  trees.
+                </p>
+                <p>
+                  <strong>Why families love it:</strong> Watching the app identify a robin, wren, or warbler in real time
+                  turns a backyard or park walk into a shared mindfulness exercise. It is 100% free, non-profit, and
+                  reconnects children's senses with the real world.
+                </p>
+              </div>
+
+              <!-- 7. NIGHTY NIGHT BY FOX & SHEEP -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Interactive Bedtime Ritual for Young Kids</span>
+                    <h3 style="margin-top: 0.6rem !important;">7. Nighty Night! (by Fox &amp; Sheep)</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 1–5</span>
+                  <span><i class="fa-solid fa-tag"></i> Paid App</span>
+                  <span><i class="fa-solid fa-moon"></i> Soothing Bedtime Wind-Down</span>
+                </div>
+                <p>
+                  Designed by Oscar-nominated animator Heidi Wittlinger and published by <a
+                    href="https://www.foxandsheep.com/" target="_blank" rel="noopener noreferrer">Fox &amp; Sheep</a>,
+                  <em>Nighty Night!</em> is a beloved classic of calm children's media. Set in a warm, dreamy winter
+                  farmhouse, toddlers and preschoolers visit each lit room in the barn and tap the light switch to tuck
+                  sleepy animals (a dog, pig, sheep, duck, cow, and little fish) into bed.
+                </p>
+                <p>
+                  <strong>Why families love it:</strong> Accompanied by a gentle lullaby and a warm, unhurried
+                  storyteller voice in multiple languages, each animal yawns, stretches, and curls up to sleep as the
+                  lights go out. Because the story naturally ends when the entire farm is dark and fast asleep, it
+                  creates the ultimate peaceful stopping point before bedtime.
+                </p>
+              </div>
+
+              
 
 
 <!-- RELATED GUIDES -->
@@ -2447,7 +2742,7 @@
           <div class="guide-card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
         </div>
         <h3>Pok Pok Alternatives (Montessori &amp; One-Time Purchase)</h3>
-        <p>Adore Pok Pok&#39;s gentle Montessori philosophy? Discover the best Pok Pok alternatives for older kids (ages 4–10) and families who prefer a one-time purchase over recurring fees.</p>
+        <p>Adore Pok Pok&#39;s gentle Montessori philosophy? Discover the best Pok Pok alternatives across different ages, including one-time purchase options with no recurring fees.</p>
         <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
       </a>
     
@@ -2456,7 +2751,7 @@
           <div class="guide-card-icon"><i class="fa-solid fa-language"></i></div>
         </div>
         <h3>Lingokids Alternatives (Calm &amp; No Subscription)</h3>
-        <p>Love Lingokids&#39; multilingual vision but want a calmer pace without a monthly subscription? Explore the best respectful, ad-free alternatives to Lingokids for ages 4–10.</p>
+        <p>Love Lingokids&#39; playful approach to early learning and languages? Explore 6 wonderful apps like Lingokids offering calm exploration, multilingual discovery, and one-time purchase options.</p>
         <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
       </a>
     
@@ -2465,7 +2760,7 @@
           <div class="guide-card-icon"><i class="fa-solid fa-seedling"></i></div>
         </div>
         <h3>Best Montessori Apps for Kids</h3>
-        <p>What makes an app truly Montessori? Explore the best child-led, real-world Montessori apps for kids ages 4–10 with no timers, no ads, and no addictive rewards.</p>
+        <p>What makes an app truly Montessori? Explore the best child-led, real-world Montessori apps for toddlers, preschoolers, and older kids with no timers, no ads, and no addictive rewards.</p>
         <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
       </a>
     
@@ -2528,11 +2823,11 @@
 </div>
 
 
-      </div>
-    </section>
-  </main>
+            </div>
+        </section>
+      </main>
 
-  <!-- FOOTER -->
+      <!-- FOOTER -->
 <footer id="footer">
   <div class="footer-grid">
 
@@ -2691,5 +2986,6 @@
     initLightbox();
   }
 </script>
-</body>
+  </body>
+
 </html>

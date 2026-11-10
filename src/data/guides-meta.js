@@ -8,8 +8,8 @@ module.exports = [
     readTime: '7 min read',
     shortTitle: 'Best Nature & Animal Apps for Kids',
     title: '7 Best Nature & Animal Apps for Kids (Calm, Educational & Ad-Free)',
-    description: 'Discover the best nature, wildlife, and animal apps for kids ages 4–10. Calm, ad-free apps that spark real-world curiosity about biomes, plants, and ecosystems.',
-    tags: ['Ages 4–10', 'Wildlife & Biomes', 'Ad-Free']
+    description: 'Discover the best nature, wildlife, and animal apps for kids of all ages. Calm, ad-free apps that spark real-world curiosity about biomes, plants, and ecosystems.',
+    tags: ['All Ages', 'Wildlife & Biomes', 'Ad-Free']
   },
   {
     slug: 'best-montessori-apps-for-kids',
@@ -19,7 +19,7 @@ module.exports = [
     readTime: '7 min read',
     shortTitle: 'Best Montessori Apps for Kids',
     title: '7 Best Montessori Apps for Kids (Child-Led, Real-World & Calm)',
-    description: 'What makes an app truly Montessori? Explore the best child-led, real-world Montessori apps for kids ages 4–10 with no timers, no ads, and no addictive rewards.',
+    description: 'What makes an app truly Montessori? Explore the best child-led, real-world Montessori apps for toddlers, preschoolers, and older kids with no timers, no ads, and no addictive rewards.',
     tags: ['Child-Led', 'Real-World Focus', 'No Timers']
   },
   {
@@ -65,7 +65,7 @@ module.exports = [
     readTime: '6 min read',
     shortTitle: 'Lingokids Alternatives (Calm & No Subscription)',
     title: '6 Best Lingokids Alternatives for Families Seeking Calm, Subscription-Free Play',
-    description: 'Love Lingokids\' multilingual vision but want a calmer pace without a monthly subscription? Explore the best respectful, ad-free alternatives to Lingokids for ages 4–10.',
+    description: 'Love Lingokids\' playful approach to early learning and languages? Explore 6 wonderful apps like Lingokids offering calm exploration, multilingual discovery, and one-time purchase options.',
     tags: ['6 Languages', 'No Subscription', 'Low-Stimulation']
   },
   {
@@ -76,8 +76,8 @@ module.exports = [
     readTime: '6 min read',
     shortTitle: 'Pok Pok Alternatives (Montessori & One-Time Purchase)',
     title: '6 Best Pok Pok Alternatives: Calm, Montessori-Inspired Apps Without Subscriptions',
-    description: 'Adore Pok Pok\'s gentle Montessori philosophy? Discover the best Pok Pok alternatives for older kids (ages 4–10) and families who prefer a one-time purchase over recurring fees.',
-    tags: ['Montessori Style', 'One-Time Purchase', 'Ages 4–10']
+    description: 'Adore Pok Pok\'s gentle Montessori philosophy? Discover the best Pok Pok alternatives across different ages, including one-time purchase options with no recurring fees.',
+    tags: ['Montessori Style', 'One-Time Purchase', 'Ages 2–10+']
   },
   {
     slug: 'sago-mini-alternatives',
@@ -85,9 +85,9 @@ module.exports = [
     badge: 'App Comparison',
     icon: 'fa-solid fa-compass',
     readTime: '6 min read',
-    shortTitle: 'Sago Mini World Alternatives for Ages 4–10',
-    title: '6 Best Sago Mini World Alternatives for Growing Explorers (Ages 4–10)',
-    description: 'Has your child outgrown Sago Mini World, or are you looking to skip monthly subscriptions? Here are the best open-ended, ad-free alternatives for curious kids ages 4–10.',
+    shortTitle: 'Sago Mini World Alternatives (Open-Ended & No Subscription)',
+    title: '6 Best Sago Mini World Alternatives for Curious Kids (Preschool & Up)',
+    description: 'Does your family love Sago Mini World? Discover 6 wonderful open-ended, ad-free apps and companions for preschoolers and growing explorers, including real-world nature and one-time purchase options.',
     tags: ['Open-Ended Play', 'Real-World Science', 'No Monthly Fee']
   },
   {
@@ -97,8 +97,8 @@ module.exports = [
     icon: 'fa-solid fa-wand-magic-sparkles',
     readTime: '6 min read',
     shortTitle: 'Calm & Educational Alternatives to Toca Boca',
-    title: '6 Best Calm & Educational Toca Boca Alternatives (No In-App Shop Pressure)',
-    description: 'Looking for open-ended digital play like Toca Boca, but calmer, more educational, and free from endless in-app item shops? Explore these parent-approved alternatives.',
+    title: '6 Best Calm & Educational Toca Boca Alternatives for Open-Ended Play',
+    description: 'Love Toca Boca\'s open-ended digital worlds? Explore 6 wonderful apps like Toca Boca that celebrate child-led curiosity, real-world nature, and creative play.',
     tags: ['No In-App Shops', 'Calm Exploration', 'Educational']
   },
   {
@@ -109,7 +109,7 @@ module.exports = [
     readTime: '6 min read',
     shortTitle: 'Khan Academy Kids & PBS Kids Alternatives (Offline & Open-Ended)',
     title: '6 Best Khan Academy Kids & PBS Kids Alternatives for 100% Offline, Child-Led Play',
-    description: 'Khan Academy Kids and PBS Kids are wonderful free resources. When you need 100% offline travel play or pure Montessori discovery without quizzes, try these alternatives.',
+    description: 'Khan Academy Kids and PBS Kids are wonderful free resources. Discover 6 great companion apps offering 100% offline travel play, open-ended science models, and Montessori nature discovery.',
     tags: ['100% Offline', 'No Quizzes', 'Montessori Discovery']
   }
 ];

@@ -1,71 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../../partials/new-head', {
-  title: 'Parenting & Mindful Screen Time Guides | Kidamame',
-  description: 'Honest, respectful guides to the best calm, Montessori, offline, and privacy-first apps for kids ages 4–10, written by the parents behind Kidamame.',
-  url: 'https://www.kidamame.com/guides/'
-}) %>
+<%- include('../../partials/new-head', { title: 'Parenting & Mindful Screen Time Guides | Kidamame' ,
+  description: 'Practical guides to the best calm, Montessori, offline, and privacy-first apps for toddlers, preschoolers, and older kids, written by the parents behind Kidamame.'
+  , url: 'https://www.kidamame.com/guides/' }) %>
 
-<body>
-  <%- include('../../partials/new-nav', { alwaysScrolled: true, hideNavItems: false, isInnerPage: true }) %>
+  <body>
+    <%- include('../../partials/new-nav', { alwaysScrolled: true, hideNavItems: false, isInnerPage: true }) %>
 
-  <main style="background: var(--white);">
-    <section class="product" style="padding-top: 8rem;">
-      <div class="container">
-        <p class="section-label reveal"><i class="fa-solid fa-book-open"></i> &nbsp;<a href="/">Home</a> &gt; Guides</p>
-        <h1 class="section-title reveal d1">Thoughtful guides to <em>calm, quality</em> screen time</h1>
-
-        <div class="product-simple-content">
-          <p class="reveal d2">
-            Finding digital spaces you can genuinely trust is hard. As the parents and independent creators behind <strong><a href="/discovery/" style="color: var(--blue); text-decoration: underline; text-underline-offset: 3px;">Kidamame Discovery</a></strong>, we created these guides to help families navigate children's apps with honesty and respect—focusing on Montessori principles, nature discovery, 100% offline reliability, privacy, and fair pricing without subscription fatigue.
-          </p>
-
-          <div class="reveal" style="margin-top: 3rem;">
-            <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 0.6rem; color: var(--ink);">
-              Curated by Topic &amp; Need
-            </h2>
-            <p style="margin-bottom: 1.5rem;">
-              Explore our guides on real-world nature apps, authentic Montessori learning, low-stimulation play, airplane-ready offline apps, and strict children's privacy.
+      <main style="background: var(--white);">
+        <section class="product" style="padding-top: 8rem;">
+          <div class="container">
+            <p class="section-label reveal"><i class="fa-solid fa-book-open"></i> &nbsp;<a href="/">Home</a> &gt; Guides
             </p>
-            <div class="guides-grid" style="margin-top: 1.5rem;">
-              <% (locals.guides || []).filter(g => g.group === 'pillar').forEach(function(item) { %>
-                <a href="/guides/<%= item.slug %>/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="<%= item.icon %>"></i></div>
-                  </div>
-                  <h3><%= item.shortTitle %></h3>
-                  <p><%= item.description %></p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              <% }); %>
+            <h1 class="section-title reveal d1">Thoughtful guides to <em>calm, quality</em> screen time</h1>
+
+            <div class="product-simple-content">
+              <p class="reveal d2">
+                Finding digital spaces you can genuinely trust is hard. As the parents and independent creators behind
+                <strong><a href="/discovery/"
+                    style="color: var(--blue); text-decoration: underline; text-underline-offset: 3px;">Kidamame
+                    Discovery</a></strong>, we created these guides to help families navigate children's apps, focusing
+                on Montessori principles, nature discovery, travel-ready offline play, privacy, and fair pricing without
+                subscription fatigue.
+              </p>
+
+              <div class="simple-gallery reveal">
+                <img src="/images/guides/australia_empty.jpeg" class="landscape"
+                  alt="Panoramic view of the Alps biome in Kidamame Discovery with mountain wildlife, pine trees, and a young explorer."
+                  loading="lazy" />
+              </div>
+
+              <div class="reveal" style="margin-top: 3rem;">
+                <h2
+                  style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 0.6rem; color: var(--ink);">
+                  Curated by Topic &amp; Need
+                </h2>
+                <div class="guides-grid" style="margin-top: 1.5rem;">
+                  <% (locals.guides || []).filter(g=> g.group === 'pillar').forEach(function(item) { %>
+                    <a href="/guides/<%= item.slug %>/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="<%= item.icon %>"></i></div>
+                      </div>
+                      <h3>
+                        <%= item.shortTitle %>
+                      </h3>
+                      <p>
+                        <%= item.description %>
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <% }); %>
+                </div>
+              </div>
+
+              <div class="reveal" style="margin-top: 4rem;">
+                <h2
+                  style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 0.6rem; color: var(--ink);">
+                  App Comparisons &amp; Alternatives
+                </h2>
+                <div class="guides-grid" style="margin-top: 1.5rem;">
+                  <% (locals.guides || []).filter(g=> g.group === 'alternatives').forEach(function(item) { %>
+                    <a href="/guides/<%= item.slug %>/" class="guide-card">
+                      <div class="guide-card-top" style="margin-bottom: 0.9rem;">
+                        <div class="guide-card-icon"><i class="<%= item.icon %>"></i></div>
+                      </div>
+                      <h3>
+                        <%= item.shortTitle %>
+                      </h3>
+                      <p>
+                        <%= item.description %>
+                      </p>
+                      <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                    <% }); %>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
+      </main>
 
-          <div class="reveal" style="margin-top: 4rem;">
-            <h2 style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 0.6rem; color: var(--ink);">
-              Respectful App Comparisons &amp; Alternatives
-            </h2>
-            <p style="margin-bottom: 1.5rem;">
-              Popular apps like Pok Pok, Lingokids, Sago Mini, Toca Boca, and Khan Academy Kids are loved by millions of families. If your child is growing into a new stage (ages 4–10), or if you are looking for a calmer pace, 100% offline play, or a one-time purchase without recurring subscriptions, these guides compare the best options side by side.
-            </p>
-            <div class="guides-grid" style="margin-top: 1.5rem;">
-              <% (locals.guides || []).filter(g => g.group === 'alternatives').forEach(function(item) { %>
-                <a href="/guides/<%= item.slug %>/" class="guide-card">
-                  <div class="guide-card-top" style="margin-bottom: 0.9rem;">
-                    <div class="guide-card-icon"><i class="<%= item.icon %>"></i></div>
-                  </div>
-                  <h3><%= item.shortTitle %></h3>
-                  <p><%= item.description %></p>
-                  <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-              <% }); %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+      <%- include('../../partials/new-footer') %>
+  </body>
 
-  <%- include('../../partials/new-footer') %>
-</body>
 </html>

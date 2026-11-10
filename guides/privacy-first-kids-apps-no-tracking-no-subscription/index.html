@@ -34,32 +34,48 @@
       <!-- Canonical URL -->
       <link rel="canonical" href="https://www.kidamame.com/guides/privacy-first-kids-apps-no-tracking-no-subscription/">
 
+      <!-- iOS Smart App Banner (uncomment when live on the App Store):
+      <meta name="apple-itunes-app" content="app-id=6770446769, app-argument=https://www.kidamame.com/guides/privacy-first-kids-apps-no-tracking-no-subscription/" />
+      -->
+
       <!-- Structured Data -->
       <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "KIDAMAME",
-    "description": "Calm, ad-free apps for kids 4-10. We inspire kids to explore the world beyond the screen through art and nature. 100% offline. Start the adventure!",
+    "legalName": "KIDAMAME® — Marco Uberti",
+    "description": "Independent family studio creating calm, ad-free, Montessori-inspired educational apps for kids ages 4–10. No subscriptions, no ads, no tracking, 100% offline.",
     "url": "https://www.kidamame.com/",
     "logo": "https://www.kidamame.com/images/weblogo.webp",
+    "founder": {
+      "@type": "Person",
+      "name": "Marco Uberti"
+    },
     "sameAs": [
+      "https://www.instagram.com/kidamame.official",
+      "https://pinterest.com/kidamame/",
+      "https://youtube.com/@Kidamame",
+      "https://x.com/KidamameKids",
+      "https://www.facebook.com/profile.php?id=61579039664314",
+      "https://www.tiktok.com/@kidamame",
       "https://www.linkedin.com/company/kidamame/",
-      "https://youtube.com/@Kidamame"
+      "https://kidamame.substack.com"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "info@kidamame.com",
-      "contactType": "Customer Service"
+      "contactType": "Customer Service & Press"
     },
     "makesOffer": {
       "@type": "Offer",
       "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "Educational Apps for Kids",
-        "applicationCategory": "Educational",
-        "operatingSystem": "iOS, Android",
-        "description": "Calm, ad-free apps for kids 4-10. We inspire kids to explore the world beyond the screen through art and nature. 100% offline. Start the adventure!"
+        "@type": "MobileApplication",
+        "name": "Kidamame Discovery",
+        "url": "https://www.kidamame.com/discovery/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "iOS, iPadOS, Android",
+        "description": "Calm, Montessori-inspired nature and science exploration app for kids ages 4–10. 100% offline, no ads, no tracking, and no subscriptions."
       }
     }
   }
@@ -544,7 +560,7 @@
           box-shadow: 0 30px 100px rgba(13, 61, 96, 0.45), 0 0 0 10px rgba(255, 255, 255, 0.12);
           overflow: hidden;
           position: relative;
-          background: #000;
+          background: transparent;
         }
 
         @keyframes floatImage {
@@ -566,8 +582,9 @@
 
         .hero-visual-box img,
         .hero-visual-box video {
-          width: 100%;
-          height: 100%;
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          margin: -1px;
           object-fit: cover;
           object-position: center;
           display: block;
@@ -1023,6 +1040,7 @@
           margin-bottom: 1rem;
         }
 
+        .value-card h3,
         .value-card h4 {
           font-family: var(--font-display);
           font-size: 1.1rem;
@@ -1254,14 +1272,6 @@
             box-shadow: 0 16px 40px rgba(13, 61, 96, 0.25);
             animation: none;
             transform: none;
-          }
-
-          .hero-visual-box img,
-          .hero-visual-box video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
           }
 
           .hero-text {
@@ -2109,12 +2119,6 @@
           transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .app-review-card.kidamame-pick {
-          background: var(--white);
-          border: 2px solid rgba(89, 172, 255, 0.45);
-          box-shadow: 0 12px 34px rgba(58, 158, 228, 0.12);
-        }
-
         .guide-article-container .faq-list details {
           background: var(--white) !important;
           border: 1px solid rgba(89, 172, 255, 0.15) !important;
@@ -2142,11 +2146,210 @@
             padding: 1.4rem;
           }
         }
+
+        /* ── AT-A-GLANCE SPECS & CRO BLOCKS ── */
+        .specs-glance-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          margin: 2rem 0 2.5rem;
+          list-style: none;
+          padding: 0;
+        }
+
+        @media (max-width: 860px) {
+          .specs-glance-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 560px) {
+          .specs-glance-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .spec-pill-card {
+          background: var(--blue-light);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 16px;
+          padding: 1rem 1.2rem;
+          display: flex;
+          align-items: flex-start;
+          gap: 0.85rem;
+        }
+
+        .spec-pill-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
+          background: var(--white);
+          color: var(--blue);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.95rem;
+          flex-shrink: 0;
+          box-shadow: 0 2px 8px rgba(58, 158, 228, 0.12);
+        }
+
+        .spec-pill-text strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 0.95rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.25;
+          margin-bottom: 0.15rem;
+        }
+
+        .spec-pill-text span {
+          display: block;
+          font-size: 0.84rem;
+          color: var(--ink-soft);
+          line-height: 1.4;
+        }
+
+        .founder-note {
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.18);
+          border-radius: 22px;
+          padding: 2rem 2.2rem;
+          margin-top: 2.2rem;
+          box-shadow: 0 10px 30px rgba(27, 42, 59, 0.04);
+          position: relative;
+        }
+
+        .founder-note-header {
+          display: flex;
+          align-items: center;
+          gap: 0.85rem;
+          margin-bottom: 0.85rem;
+        }
+
+        .founder-badge-icon {
+          width: 42px;
+          height: 42px;
+          border-radius: 12px;
+          background: var(--amber-soft);
+          color: var(--amber);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.15rem;
+          flex-shrink: 0;
+        }
+
+        .founder-note-title {
+          font-family: var(--font-display);
+          font-size: 1.15rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.2;
+        }
+
+        .founder-note-sub {
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+        }
+
+        .founder-signature {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 1.4rem;
+          padding-top: 1.2rem;
+          border-top: 1px solid rgba(58, 158, 228, 0.14);
+        }
+
+        .founder-avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2.5px solid var(--blue-mid);
+          box-shadow: 0 4px 12px rgba(27, 42, 59, 0.08);
+          flex-shrink: 0;
+        }
+
+        .founder-signature-text strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 1.05rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.2;
+        }
+
+        .founder-signature-text span {
+          display: block;
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+          margin-top: 0.15rem;
+        }
+
+        .press-facts-dl {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 0.9rem 1.25rem;
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 20px;
+          padding: 1.6rem 1.8rem;
+          margin: 1.25rem 0 2.2rem;
+        }
+
+        .press-fact-item {
+          padding-bottom: 0.65rem;
+          border-bottom: 1px solid rgba(58, 158, 228, 0.1);
+        }
+
+        .press-fact-item dt {
+          font-size: 0.74rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: var(--blue-deep);
+          margin-bottom: 0.2rem;
+        }
+
+        .press-fact-item dd {
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: var(--ink);
+          margin: 0;
+          line-height: 1.4;
+        }
+
+        .press-copy-card {
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 16px;
+          padding: 1.25rem 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .press-copy-card strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 0.95rem;
+          color: var(--blue-deep);
+          margin-bottom: 0.35rem;
+        }
+
+        .press-copy-card p {
+          margin: 0 !important;
+          font-size: 0.94rem !important;
+          color: var(--ink-soft);
+          line-height: 1.6;
+        }
       </style>
 </head>
 
-<body>
-  <nav id="nav" class="always-scrolled scrolled">
+  <body>
+    <nav id="nav" class="always-scrolled scrolled">
   <a href="/" class="nav-logo">
     <img src="/images/k.png" alt="Kidamame logo" />
     <span class="nav-logo-text">Kidamame<sup>®</sup></span>
@@ -2181,13 +2384,13 @@
 
         if (isAndroid) {
           event.preventDefault();
-          // Replace with your Play Store URL
-          window.location.href = "https://play.google.com/store/apps/details?id=YOUR_ANDROID_ID";
+          // Google Play Store URL
+          window.location.href = "https://play.google.com/store/apps/details?id=com.kidamame.discovery.app";
         }
         else if (isIOS) {
           event.preventDefault();
-          // Replace with your App Store URL
-          window.location.href = "https://apps.apple.com/app/idYOUR_APPLE_ID";
+          // Apple App Store URL
+          window.location.href = "https://apps.apple.com/app/id6770446769";
         }
         // Desktop users will simply follow the href="/#ourapps"
       }
@@ -2196,224 +2399,313 @@
     
 </nav>
 
-  <main style="background: var(--white);">
-    <section class="product" style="padding-top: 8rem;">
-      <div class="container guide-article-container">
-        <p class="section-label reveal"><i class="fa-solid fa-shield-halved"></i> &nbsp;<a href="/">Home</a> &gt; <a href="/guides/">Guides</a> &gt; Privacy-First Kids Apps</p>
-        <h1 class="section-title reveal d1">Best <em>Privacy-First Kids Apps</em>: No Ads, No Tracking &amp; No Login</h1>
+      <main style="background: var(--white);">
+        <section class="product" style="padding-top: 8rem;">
+          <div class="container guide-article-container">
+            <p class="section-label reveal"><i class="fa-solid fa-shield-halved"></i> &nbsp;<a href="/">Home</a> &gt; <a
+                href="/guides/">Guides</a> &gt; Privacy-First Kids Apps</p>
+            <h1 class="section-title reveal d1">Best <em>Privacy-First Kids Apps</em>: No Ads, No Tracking &amp; No
+              Login</h1>
 
-        <div class="product-simple-content">
-          <p class="reveal d2">
-            Why should a 6-year-old need an account, an email address, and a cloud profile just to explore an educational app? Here is why "100% offline + no login" is the gold standard of children's digital privacy—and the best ethical apps that respect your family.
-          </p>
+            <div class="product-simple-content">
+              <p class="reveal d2">
+                Why should a 6-year-old need an account, an email address, and a cloud profile just to explore an
+                educational app? Here is why "100% offline + no login" is the gold standard of children's digital
+                privacy, along with the best ethical apps that respect your family.
+              </p>
 
-        <h2>Why "No Login + 100% Offline" Is the Ultimate Privacy Guarantee</h2>
-        <p>
-          Even when a children's app promises to comply with privacy laws (like COPPA in the US or GDPR-K in Europe), many modern apps still require parents to create an account with an email address, child's name, and birth month before the child can play a single screen. Once signed in, the app streams usage telemetry back to remote servers and triggers automated marketing emails pushing subscription upgrades.
-        </p>
-        <p>
-          True <strong>privacy by design</strong> for children looks much simpler:
-        </p>
-        <ul>
-          <li><strong>No Registration or Accounts:</strong> You download the app, tap the icon, and your child plays immediately. No email, no password, no child profile in the cloud.</li>
-          <li><strong>100% Offline Architecture:</strong> An app that runs completely offline on your device doesn't need to phone home to analytics servers every time your child taps an animal.</li>
-          <li><strong>Zero Third-Party Ad SDKs:</strong> Even "kid-safe" ad banners introduce external code and cross-promotion interruptions into your child's play space.</li>
-          <li><strong>Transparent One-Time or Non-Profit Pricing:</strong> When you pay once to unlock an app forever (or use a public-interest non-profit tool), your family is the customer—never the product.</li>
-        </ul>
+              <div class="simple-gallery reveal">
+                <img src="/images/guides/guides_10.jpeg" class="landscape"
+                  alt="Panoramic view of the Alps biome in Kidamame Discovery with mountain wildlife, pine trees, and a young explorer."
+                  loading="lazy" />
+              </div>
 
-        <h2>Quick Comparison: Top Privacy-First Apps (No Account Required)</h2>
-        <div tabindex="0" role="region" aria-labelledby="privacy-table-caption" class="guide-table-wrap">
-          <table class="guide-table" style="--label-2: 'Account Needed?'; --label-3: 'Data Collected'; --label-4: 'Pricing Model'; --label-5: 'Ages';">
-            <caption id="privacy-table-caption">Comparison of privacy-first children's apps that require no login</caption>
-            <thead>
-              <tr>
-                <th scope="col">App Name</th>
-                <th scope="col">Account Needed?</th>
-                <th scope="col">Data Collected</th>
-                <th scope="col">Pricing Model</th>
-                <th scope="col">Ages</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="highlight-row">
-                <th scope="row"><a href="/discovery/">1. Kidamame Discovery</a></th>
-                <td><strong>No login ever</strong></td>
-                <td>Zero personal data (100% offline)</td>
-                <td>Free trial + 1-time purchase (No subscription)</td>
-                <td>4–10</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://www.inaturalist.org/pages/seek_app" target="_blank" rel="noopener noreferrer">2. Seek by iNaturalist</a></th>
-                <td>No login required</td>
-                <td>Zero data by default (On-device camera ID)</td>
-                <td>100% Free (Non-profit)</td>
-                <td>5–12+</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://pbskids.org/apps/pbs-kids-games.html" target="_blank" rel="noopener noreferrer">3. PBS Kids Games</a></th>
-                <td>No login required</td>
-                <td>Minimal anonymous usage stats</td>
-                <td>100% Free</td>
-                <td>3–8</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://lescapadou.com/" target="_blank" rel="noopener noreferrer">4. L'Escapadou Montessori Apps</a></th>
-                <td>No login</td>
-                <td>Zero personal data</td>
-                <td>One-time purchase</td>
-                <td>3–8</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://avokiddo.com/" target="_blank" rel="noopener noreferrer">5. Thinkrolls (Classic Titles)</a></th>
-                <td>No login (Local profiles)</td>
-                <td>Zero personal data</td>
-                <td>One-time purchase</td>
-                <td>3–9</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://www.rvappstudios.com/" target="_blank" rel="noopener noreferrer">6. Lucas &amp; Friends</a></th>
-                <td>No login</td>
-                <td>Zero personal data / No ads</td>
-                <td>100% Free</td>
-                <td>2–7</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+              <h2>Why "No Login + 100% Offline" Is the Ultimate Privacy Guarantee</h2>
+              <p>
+                Even when a children's app promises to comply with privacy laws (like COPPA in the US or GDPR-K in
+                Europe), many modern apps still require parents to create an account with an email address, child's
+                name, and birth month before the child can play a single screen. Once signed in, the app streams usage
+                telemetry back to remote servers and triggers automated marketing emails pushing subscription upgrades.
+              </p>
+              <p>
+                True <strong>privacy by design</strong> for children looks much simpler:
+              </p>
+              <ul>
+                <li><strong>No Registration or Accounts:</strong> You download the app, tap the icon, and your child
+                  plays immediately. No email, no password, no child profile in the cloud.</li>
+                <li><strong>100% Offline Architecture:</strong> An app that runs completely offline on your device
+                  doesn't need to phone home to analytics servers every time your child taps an animal.</li>
+                <li><strong>Zero Third-Party Ad SDKs:</strong> Even "kid-safe" ad banners introduce external code and
+                  cross-promotion interruptions into your child's play space.</li>
+                <li><strong>Transparent One-Time or Non-Profit Pricing:</strong> When you pay once to unlock an app
+                  forever (or use a public-interest non-profit tool), your family is the customer, never the product.
+                </li>
+              </ul>
 
-        <h2>The 6 Best Privacy-First Apps for Kids</h2>
+              <h2>Quick Comparison: Top Privacy-First Apps (No Account Required)</h2>
+              <div tabindex="0" role="region" aria-labelledby="privacy-table-caption" class="guide-table-wrap">
+                <table class="guide-table"
+                  style="--label-2: 'Account Needed?'; --label-3: 'Data Collected'; --label-4: 'Pricing Model'; --label-5: 'Ages';">
+                  <caption id="privacy-table-caption">Comparison of privacy-first children's apps that require no login
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">App Name</th>
+                      <th scope="col">Account Needed?</th>
+                      <th scope="col">Data Collected</th>
+                      <th scope="col">Pricing Model</th>
+                      <th scope="col">Ages</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="highlight-row">
+                      <th scope="row"><a href="/discovery/">1. Kidamame Discovery</a></th>
+                      <td><strong>No login ever</strong></td>
+                      <td>Zero personal data (100% offline)</td>
+                      <td>Free trial + 1-time purchase (No subscription)</td>
+                      <td>4–10</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://www.inaturalist.org/pages/seek_app" target="_blank"
+                          rel="noopener noreferrer">2. Seek by iNaturalist</a></th>
+                      <td>No login required</td>
+                      <td>Zero data by default (On-device camera ID)</td>
+                      <td>100% Free (Non-profit)</td>
+                      <td>5–12+</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://pbskids.org/apps/pbs-kids-games.html" target="_blank"
+                          rel="noopener noreferrer">3. PBS Kids Games</a></th>
+                      <td>No login required</td>
+                      <td>Minimal anonymous usage stats</td>
+                      <td>100% Free</td>
+                      <td>3–8</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://lescapadou.com/" target="_blank" rel="noopener noreferrer">4.
+                          L'Escapadou Montessori Apps</a></th>
+                      <td>No login</td>
+                      <td>Zero personal data</td>
+                      <td>One-time purchase</td>
+                      <td>3–8</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://avokiddo.com/" target="_blank" rel="noopener noreferrer">5.
+                          Thinkrolls (Classic Titles)</a></th>
+                      <td>No login (Local profiles)</td>
+                      <td>Zero personal data</td>
+                      <td>One-time purchase</td>
+                      <td>3–9</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://www.foxandsheep.com/" target="_blank"
+                          rel="noopener noreferrer">6. Nighty Night! (Fox &amp; Sheep)</a></th>
+                      <td>No login</td>
+                      <td>Zero personal data / No ads</td>
+                      <td>Paid download</td>
+                      <td>1–5</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
-        <!-- 1. KIDAMAME DISCOVERY -->
-        <div class="app-review-card kidamame-pick">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill"><i class="fa-solid fa-shield-halved"></i> #1 Pick: Zero Tracking, Zero Login, Zero Subscription</span>
-              <h3 style="margin-top: 0.6rem !important;">1. Kidamame Discovery</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 4–10</span>
-            <span><i class="fa-solid fa-user-slash"></i> No Account or Email</span>
-            <span><i class="fa-solid fa-ban"></i> No Ads or Tracking</span>
-            <span><i class="fa-solid fa-infinity"></i> Single One-Time Purchase</span>
-          </div>
-          <p>
-            At Kidamame, we created <strong>The Kidamame Promise</strong> because we believe a child's curiosity is private. When you open <strong><a href="/discovery/">Kidamame Discovery</a></strong>, you are never greeted by a registration wall, an email capture form, or a recurring subscription trial that secretly auto-renews.
-          </p>
-          <ul>
-            <li><strong>Zero Personal Data Collection:</strong> We do not collect names, emails, location data, or behavioral analytics from your children. Read our transparent <a href="/privacy/">Privacy Policy</a> to see how seriously we take this commitment.</li>
-            <li><strong>100% Offline By Design:</strong> All 6 hand-illustrated biomes (Alps, Savannah, Outback, Arctic, Desert, and Amazon Rainforest), 120+ interactive elements, and ~400 science facts run locally on your phone or tablet.</li>
-            <li><strong>Honest One-Time Unlock:</strong> Try the app for free to see if your family loves it. A single one-time purchase unlocks the complete world forever—no subscriptions, no virtual coins, and no dark patterns.</li>
-          </ul>
-          <div class="simple-gallery" style="margin: 1.5rem 0 1.2rem;">
-            <img src="/images/screenshots/phone/kidamame_discovery_screenshot_14.jpeg" alt="Kidamame Discovery privacy-safe nature scene." loading="lazy" />
-            <img src="/images/screenshots/phone/kidamame_discovery_screenshot_22.jpeg" alt="Kidamame Discovery educational fact card." loading="lazy" />
-          </div>
-          <a href="/discovery/" class="btn-primary" style="margin-top: 0.5rem;">
-            <i class="fa-solid fa-compass"></i> Explore Kidamame Discovery
-          </a>
-        </div>
+              <h2>The 6 Best Privacy-First Apps for Kids</h2>
 
-        <!-- 2. SEEK BY INATURALIST -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Privacy-Safe Outdoor Science App</span>
-              <h3 style="margin-top: 0.6rem !important;">2. Seek by iNaturalist</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 5–12+</span>
-            <span><i class="fa-solid fa-tag"></i> 100% Free</span>
-            <span><i class="fa-solid fa-user-shield"></i> COPPA-Safe / No Registration</span>
-          </div>
-          <p>
-            While the main iNaturalist platform is a social network for adult citizen scientists, the team specifically built <a href="https://www.inaturalist.org/pages/seek_app" target="_blank" rel="noopener noreferrer">Seek by iNaturalist</a> for children and families: by default, it requires no registration, collects no user data, and does not upload location-tagged photos to public servers.
-          </p>
-        </div>
+              <!-- 1. KIDAMAME DISCOVERY -->
+              <div class="app-review-card kidamame-pick">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill"><i class="fa-solid fa-shield-halved"></i> #1 Pick: Zero Tracking, Zero
+                      Login, Zero Subscription</span>
+                    <h3 style="margin-top: 0.6rem !important;">1. Kidamame Discovery</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 4–10</span>
+                  <span><i class="fa-solid fa-user-slash"></i> No Account or Email</span>
+                  <span><i class="fa-solid fa-ban"></i> No Ads or Tracking</span>
+                  <span><i class="fa-solid fa-infinity"></i> Single One-Time Purchase</span>
+                </div>
+                <p>
+                  At Kidamame, we created <strong>The Kidamame Promise</strong> because we believe a child's curiosity
+                  is private. When you open <strong><a href="/discovery/">Kidamame Discovery</a></strong>, you are never
+                  greeted by a registration wall, an email capture form, or a recurring subscription trial that secretly
+                  auto-renews.
+                </p>
+                <ul>
+                  <li><strong>Zero Personal Data Collection:</strong> We do not collect names, emails, location data, or
+                    behavioral analytics from your children. Read our transparent <a href="/privacy/">Privacy Policy</a>
+                    to see how seriously we take this commitment.</li>
+                  <li><strong>100% Offline By Design:</strong> All 6 hand-illustrated biomes (Alps, Savannah, Outback,
+                    Arctic, Desert, and Amazon Rainforest), 120+ interactive elements, and ~400 science facts run
+                    locally on your phone or tablet.</li>
+                  <li><strong>Honest One-Time Unlock:</strong> Try the app for free to see if your family loves it. A
+                    single one-time purchase unlocks the complete world forever, with no subscriptions, no virtual coins,
+                    and no dark patterns.</li>
+                </ul>
+                <div class="simple-gallery" style="margin: 1.5rem 0 1.2rem;">
+  <img src="/images/guides/guides_17.jpeg" alt="Kidamame Discovery Alps biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_2.jpeg" alt="Kidamame Discovery Australian Outback biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_26.jpeg" alt="Kidamame Discovery African Savannah biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_31.jpeg" alt="Kidamame Discovery Amazon Rainforest biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_11.jpeg" alt="Kidamame Discovery Arctic biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_5.jpeg" alt="Kidamame Discovery Sonoran Desert fact card." loading="lazy" />
+</div>
+<a href="/discovery/" class="btn-primary" style="margin-top: 0.5rem;">
+  <i class="fa-solid fa-compass"></i> Explore Kidamame Discovery
+</a>
 
-        <!-- 3. PBS KIDS GAMES -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Free App Without Mandatory Sign-Up</span>
-              <h3 style="margin-top: 0.6rem !important;">3. PBS Kids Games</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 3–8</span>
-            <span><i class="fa-solid fa-tag"></i> 100% Free</span>
-            <span><i class="fa-solid fa-ban"></i> No Commercial Ads</span>
-          </div>
-          <p>
-            Unlike many free educational apps that require a parent email login before launching, <a href="https://pbskids.org/apps/pbs-kids-games.html" target="_blank" rel="noopener noreferrer">PBS Kids Games</a> lets children jump straight into playing without creating an account.
-          </p>
-        </div>
 
-        <!-- 4. L'ESCAPADOU -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Indie Montessori Literacy Without Subscriptions</span>
-              <h3 style="margin-top: 0.6rem !important;">4. Montessori Words &amp; Crosswords (by L'Escapadou)</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 3–8</span>
-            <span><i class="fa-solid fa-tag"></i> One-Time Purchase</span>
-            <span><i class="fa-solid fa-lock"></i> Zero Data Collected</span>
-          </div>
-          <p>
-            Independent studio <a href="https://lescapadou.com/" target="_blank" rel="noopener noreferrer">L'Escapadou</a> has stuck to the classic, ethical App Store model: pay once, get the full Montessori phonics app offline, with zero user accounts or third-party trackers.
-          </p>
-        </div>
 
-        <!-- 5. THINKROLLS CLASSIC -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Local-Only Profiles for Logic Puzzles</span>
-              <h3 style="margin-top: 0.6rem !important;">5. Thinkrolls &amp; Thinkrolls: Kings &amp; Queens</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 3–9</span>
-            <span><i class="fa-solid fa-tag"></i> One-Time Purchase</span>
-            <span><i class="fa-solid fa-tablet-screen-button"></i> On-Device Progress Only</span>
-          </div>
-          <p>
-            In <a href="https://avokiddo.com/" target="_blank" rel="noopener noreferrer">Avokiddo</a>'s standalone <em>Thinkrolls</em> apps, player avatars are saved locally on your tablet without requiring an email address, cloud account, or internet connection.
-          </p>
-        </div>
+              </div>
 
-        <!-- 6. LUCAS & FRIENDS -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Free Offline Apps for Toddlers</span>
-              <h3 style="margin-top: 0.6rem !important;">6. Lucas &amp; Friends (by RV AppStudios)</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 2–7</span>
-            <span><i class="fa-solid fa-tag"></i> 100% Free</span>
-            <span><i class="fa-solid fa-ban"></i> No Ads, No In-App Purchases, No Login</span>
-          </div>
-          <p>
-            <a href="https://www.rvappstudios.com/" target="_blank" rel="noopener noreferrer">RV AppStudios</a> funds its children's educational apps entirely through its adult casual games division—allowing its toddler math, spelling, and coloring apps to remain free, ad-free, and login-free.
-          </p>
-        </div>
+              <!-- 2. SEEK BY INATURALIST -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Privacy-Safe Outdoor Science App</span>
+                    <h3 style="margin-top: 0.6rem !important;">2. Seek by iNaturalist</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 5–12+</span>
+                  <span><i class="fa-solid fa-tag"></i> 100% Free</span>
+                  <span><i class="fa-solid fa-user-shield"></i> COPPA-Safe / No Registration</span>
+                </div>
+                <p>
+                  While the main iNaturalist platform is a social network for adult citizen scientists, the California
+                  Academy of Sciences and National Geographic specifically engineered <a
+                    href="https://www.inaturalist.org/pages/seek_app" target="_blank" rel="noopener noreferrer">Seek by
+                    iNaturalist</a> for children and families. By default, it requires no registration, collects zero
+                  personal data, and never uploads location-tagged photos to public servers.
+                </p>
+                <p>
+                  <strong>Why its privacy model shines:</strong> All image recognition happens right on your phone or
+                  tablet using on-device machine learning. Kids can identify plants, mushrooms, insects, and birds in
+                  real time and earn nature badges stored locally on the device, giving families a world-class science
+                  tool with total peace of mind.
+                </p>
+              </div>
 
-        <h2>How to Check Any Kids' App for Hidden Tracking in 10 Seconds</h2>
-        <p>
-          Before downloading any app for your child on the Apple App Store or Google Play Store, scroll down to the <strong>App Privacy</strong> (iOS) or <strong>Data Safety</strong> (Android) nutrition label:
-        </p>
-        <ol>
-          <li>Look for <strong>"Data Not Collected"</strong>—the gold-standard badge indicating the developer does not collect any data from the app.</li>
-          <li>Check <strong>"In-App Purchases"</strong> to see whether the app offers a single <em>"Full Game Unlock"</em> (one-time purchase) or lists multiple recurring monthly/annual subscription tiers.</li>
-        </ol>
+              <!-- 3. PBS KIDS GAMES -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Free App Without Mandatory Sign-Up</span>
+                    <h3 style="margin-top: 0.6rem !important;">3. PBS Kids Games</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 3–8</span>
+                  <span><i class="fa-solid fa-tag"></i> 100% Free</span>
+                  <span><i class="fa-solid fa-ban"></i> No Commercial Ads</span>
+                </div>
+                <p>
+                  Unlike many free educational apps that require a parent email login before launching, <a
+                    href="https://pbskids.org/apps/pbs-kids-games.html" target="_blank" rel="noopener noreferrer">PBS
+                    Kids Games</a> lets children jump straight into playing over 250 curriculum-based mini-games without
+                  creating an account or handing over an email address.
+                </p>
+                <p>
+                  <strong>Why its privacy model shines:</strong> Backed by public broadcasting standards, the app has
+                  zero third-party commercial ads and zero in-app purchases, and it allows kids to download favorite
+                  games (like <em>Wild Kratts</em>, <em>Daniel Tiger</em>, and <em>Elinor Wonders Why</em>) directly to
+                  the device for offline play.
+                </p>
+              </div>
 
-        
+              <!-- 4. L'ESCAPADOU -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Indie Montessori Literacy Without Subscriptions</span>
+                    <h3 style="margin-top: 0.6rem !important;">4. Montessori Words &amp; Crosswords (by L'Escapadou)
+                    </h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 3–8</span>
+                  <span><i class="fa-solid fa-tag"></i> One-Time Purchase</span>
+                  <span><i class="fa-solid fa-lock"></i> Zero Data Collected</span>
+                </div>
+                <p>
+                  Independent studio <a href="https://lescapadou.com/" target="_blank"
+                    rel="noopener noreferrer">L'Escapadou</a> has admirably stuck to the classic, ethical App Store
+                  model: pay once, get the full Montessori phonics app offline, with zero user accounts, zero marketing
+                  emails, and zero third-party behavioral trackers.
+                </p>
+                <p>
+                  <strong>Why its privacy model shines:</strong> Its App Store privacy nutrition label proudly states
+                  "Data Not Collected." Inside the app, children practice phonetic spelling across 320+ word-image-audio
+                  combinations using a color-coded Moveable Alphabet in a calm, self-contained workspace.
+                </p>
+              </div>
+
+              <!-- 5. THINKROLLS CLASSIC -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Local-Only Profiles for Logic Puzzles</span>
+                    <h3 style="margin-top: 0.6rem !important;">5. Thinkrolls &amp; Thinkrolls: Kings &amp; Queens</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 3–9</span>
+                  <span><i class="fa-solid fa-tag"></i> One-Time Purchase</span>
+                  <span><i class="fa-solid fa-tablet-screen-button"></i> On-Device Progress Only</span>
+                </div>
+                <p>
+                  In family-run studio <a href="https://avokiddo.com/" target="_blank"
+                    rel="noopener noreferrer">Avokiddo</a>'s standalone <em>Thinkrolls</em>, <em>Thinkrolls 2</em>, and
+                  <em>Thinkrolls: Kings &amp; Queens</em> apps, player avatars and puzzle progress are saved purely
+                  locally on your tablet without requiring an email address, cloud account, or internet connection.
+                </p>
+                <p>
+                  <strong>Why its privacy model shines:</strong> Multiple siblings can each pick their own character icon
+                  to track their progress through hundreds of clever physics and logic mazes, while parents enjoy a
+                  one-time purchase with zero external links or data collection.
+                </p>
+              </div>
+
+              <!-- 6. NIGHTY NIGHT -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Offline Bedtime Story App for Toddlers</span>
+                    <h3 style="margin-top: 0.6rem !important;">6. Nighty Night! (by Fox &amp; Sheep)</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 1–5</span>
+                  <span><i class="fa-solid fa-tag"></i> Paid App</span>
+                  <span><i class="fa-solid fa-ban"></i> No Login, No Ads, 100% Offline</span>
+                </div>
+                <p>
+                  Created by Berlin-based studio <a href="https://www.foxandsheep.com/" target="_blank"
+                    rel="noopener noreferrer">Fox &amp; Sheep</a> and illustrated by Oscar-nominated artist Heidi
+                  Wittlinger, <em>Nighty Night!</em> is a gentle interactive bedtime book where young children turn off
+                  the lights in a sleepy barn to wish farm animals goodnight.
+                </p>
+                <p>
+                  <strong>Why its privacy model shines:</strong> Like a physical board book on your nightstand, the app
+                  launches straight into the story without asking for an email address, user account, or internet
+                  connection, keeping evening family wind-down time completely private and peaceful.
+                </p>
+              </div>
+
+              <h2>How to Check Any Kids' App for Hidden Tracking in 10 Seconds</h2>
+              <p>
+                Before downloading any app for your child on the Apple App Store or Google Play Store, scroll down to
+                the <strong>App Privacy</strong> (iOS) or <strong>Data Safety</strong> (Android) nutrition label:
+              </p>
+              <ol>
+                <li>Look for <strong>"Data Not Collected"</strong>, the gold-standard badge indicating the developer does
+                  not collect any data from the app.</li>
+                <li>Check <strong>"In-App Purchases"</strong> to see whether the app offers a single <em>"Full Game
+                    Unlock"</em> (one-time purchase) or lists multiple recurring monthly/annual subscription tiers.</li>
+              </ol>
+
+              
 
 
 <!-- RELATED GUIDES -->
@@ -2429,7 +2721,7 @@
           <div class="guide-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
         </div>
         <h3>Calm &amp; Educational Alternatives to Toca Boca</h3>
-        <p>Looking for open-ended digital play like Toca Boca, but calmer, more educational, and free from endless in-app item shops? Explore these parent-approved alternatives.</p>
+        <p>Love Toca Boca&#39;s open-ended digital worlds? Explore 6 wonderful apps like Toca Boca that celebrate child-led curiosity, real-world nature, and creative play.</p>
         <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
       </a>
     
@@ -2447,7 +2739,7 @@
           <div class="guide-card-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
         </div>
         <h3>Pok Pok Alternatives (Montessori &amp; One-Time Purchase)</h3>
-        <p>Adore Pok Pok&#39;s gentle Montessori philosophy? Discover the best Pok Pok alternatives for older kids (ages 4–10) and families who prefer a one-time purchase over recurring fees.</p>
+        <p>Adore Pok Pok&#39;s gentle Montessori philosophy? Discover the best Pok Pok alternatives across different ages, including one-time purchase options with no recurring fees.</p>
         <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
       </a>
     
@@ -2510,11 +2802,11 @@
 </div>
 
 
-      </div>
-    </section>
-  </main>
+            </div>
+        </section>
+      </main>
 
-  <!-- FOOTER -->
+      <!-- FOOTER -->
 <footer id="footer">
   <div class="footer-grid">
 
@@ -2673,6 +2965,6 @@
     initLightbox();
   }
 </script>
-</body>
-</html>
+  </body>
 
+</html>

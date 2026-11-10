@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, viewport-fit=cover" />
   
       <meta name="description"
-        content="Love Pok Pok&#39;s calm Montessori approach? Discover the 6 best Pok Pok alternatives—including subscription-free, real-world nature apps for kids ages 4–10." />
+        content="Love Pok Pok&#39;s calm Montessori approach? Discover the 6 best Pok Pok alternatives across different ages, including subscription-free and real-world nature apps." />
       <meta name="keywords"
         content="Pok Pok alternatives, apps like Pok Pok, Pok Pok without subscription, calm Montessori apps for kids, low stimulation apps like Pok Pok" />
       <!-- Pinterest verify domain -->
@@ -15,7 +15,7 @@
       <meta property="og:url" content="https://www.kidamame.com/guides/pok-pok-alternatives/" />
       <meta property="og:title" content="6 Best Pok Pok Alternatives (Montessori, Calm &amp; No Subscription) | Kidamame" />
       <meta property="og:description"
-        content="Love Pok Pok&#39;s calm Montessori approach? Discover the 6 best Pok Pok alternatives—including subscription-free, real-world nature apps for kids ages 4–10." />
+        content="Love Pok Pok&#39;s calm Montessori approach? Discover the 6 best Pok Pok alternatives across different ages, including subscription-free and real-world nature apps." />
       <meta property="og:image" content="https://www.kidamame.com/images/hero_image.webp" />
       <meta property="og:image:width" content="2048" />
       <meta property="og:image:height" content="1684" />
@@ -27,12 +27,16 @@
       <meta name="twitter:url" content="https://www.kidamame.com/guides/pok-pok-alternatives/" />
       <meta name="twitter:title" content="6 Best Pok Pok Alternatives (Montessori, Calm &amp; No Subscription) | Kidamame" />
       <meta name="twitter:description"
-        content="Love Pok Pok&#39;s calm Montessori approach? Discover the 6 best Pok Pok alternatives—including subscription-free, real-world nature apps for kids ages 4–10." />
+        content="Love Pok Pok&#39;s calm Montessori approach? Discover the 6 best Pok Pok alternatives across different ages, including subscription-free and real-world nature apps." />
       <meta name="twitter:image" content="https://www.kidamame.com/images/hero_image.webp" />
       <meta name="twitter:image:alt" content="Kidamame Discovery - A calm, interactive world designed for families" />
 
       <!-- Canonical URL -->
       <link rel="canonical" href="https://www.kidamame.com/guides/pok-pok-alternatives/">
+
+      <!-- iOS Smart App Banner (uncomment when live on the App Store):
+      <meta name="apple-itunes-app" content="app-id=6770446769, app-argument=https://www.kidamame.com/guides/pok-pok-alternatives/" />
+      -->
 
       <!-- Structured Data -->
       <script type="application/ld+json">
@@ -40,26 +44,38 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "KIDAMAME",
-    "description": "Calm, ad-free apps for kids 4-10. We inspire kids to explore the world beyond the screen through art and nature. 100% offline. Start the adventure!",
+    "legalName": "KIDAMAME® — Marco Uberti",
+    "description": "Independent family studio creating calm, ad-free, Montessori-inspired educational apps for kids ages 4–10. No subscriptions, no ads, no tracking, 100% offline.",
     "url": "https://www.kidamame.com/",
     "logo": "https://www.kidamame.com/images/weblogo.webp",
+    "founder": {
+      "@type": "Person",
+      "name": "Marco Uberti"
+    },
     "sameAs": [
+      "https://www.instagram.com/kidamame.official",
+      "https://pinterest.com/kidamame/",
+      "https://youtube.com/@Kidamame",
+      "https://x.com/KidamameKids",
+      "https://www.facebook.com/profile.php?id=61579039664314",
+      "https://www.tiktok.com/@kidamame",
       "https://www.linkedin.com/company/kidamame/",
-      "https://youtube.com/@Kidamame"
+      "https://kidamame.substack.com"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "info@kidamame.com",
-      "contactType": "Customer Service"
+      "contactType": "Customer Service & Press"
     },
     "makesOffer": {
       "@type": "Offer",
       "itemOffered": {
-        "@type": "SoftwareApplication",
-        "name": "Educational Apps for Kids",
-        "applicationCategory": "Educational",
-        "operatingSystem": "iOS, Android",
-        "description": "Calm, ad-free apps for kids 4-10. We inspire kids to explore the world beyond the screen through art and nature. 100% offline. Start the adventure!"
+        "@type": "MobileApplication",
+        "name": "Kidamame Discovery",
+        "url": "https://www.kidamame.com/discovery/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "iOS, iPadOS, Android",
+        "description": "Calm, Montessori-inspired nature and science exploration app for kids ages 4–10. 100% offline, no ads, no tracking, and no subscriptions."
       }
     }
   }
@@ -544,7 +560,7 @@
           box-shadow: 0 30px 100px rgba(13, 61, 96, 0.45), 0 0 0 10px rgba(255, 255, 255, 0.12);
           overflow: hidden;
           position: relative;
-          background: #000;
+          background: transparent;
         }
 
         @keyframes floatImage {
@@ -566,8 +582,9 @@
 
         .hero-visual-box img,
         .hero-visual-box video {
-          width: 100%;
-          height: 100%;
+          width: calc(100% + 2px);
+          height: calc(100% + 2px);
+          margin: -1px;
           object-fit: cover;
           object-position: center;
           display: block;
@@ -1023,6 +1040,7 @@
           margin-bottom: 1rem;
         }
 
+        .value-card h3,
         .value-card h4 {
           font-family: var(--font-display);
           font-size: 1.1rem;
@@ -1254,14 +1272,6 @@
             box-shadow: 0 16px 40px rgba(13, 61, 96, 0.25);
             animation: none;
             transform: none;
-          }
-
-          .hero-visual-box img,
-          .hero-visual-box video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
           }
 
           .hero-text {
@@ -2109,12 +2119,6 @@
           transition: transform 0.2s, box-shadow 0.2s;
         }
 
-        .app-review-card.kidamame-pick {
-          background: var(--white);
-          border: 2px solid rgba(89, 172, 255, 0.45);
-          box-shadow: 0 12px 34px rgba(58, 158, 228, 0.12);
-        }
-
         .guide-article-container .faq-list details {
           background: var(--white) !important;
           border: 1px solid rgba(89, 172, 255, 0.15) !important;
@@ -2142,11 +2146,210 @@
             padding: 1.4rem;
           }
         }
+
+        /* ── AT-A-GLANCE SPECS & CRO BLOCKS ── */
+        .specs-glance-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          margin: 2rem 0 2.5rem;
+          list-style: none;
+          padding: 0;
+        }
+
+        @media (max-width: 860px) {
+          .specs-glance-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (max-width: 560px) {
+          .specs-glance-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .spec-pill-card {
+          background: var(--blue-light);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 16px;
+          padding: 1rem 1.2rem;
+          display: flex;
+          align-items: flex-start;
+          gap: 0.85rem;
+        }
+
+        .spec-pill-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
+          background: var(--white);
+          color: var(--blue);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.95rem;
+          flex-shrink: 0;
+          box-shadow: 0 2px 8px rgba(58, 158, 228, 0.12);
+        }
+
+        .spec-pill-text strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 0.95rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.25;
+          margin-bottom: 0.15rem;
+        }
+
+        .spec-pill-text span {
+          display: block;
+          font-size: 0.84rem;
+          color: var(--ink-soft);
+          line-height: 1.4;
+        }
+
+        .founder-note {
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.18);
+          border-radius: 22px;
+          padding: 2rem 2.2rem;
+          margin-top: 2.2rem;
+          box-shadow: 0 10px 30px rgba(27, 42, 59, 0.04);
+          position: relative;
+        }
+
+        .founder-note-header {
+          display: flex;
+          align-items: center;
+          gap: 0.85rem;
+          margin-bottom: 0.85rem;
+        }
+
+        .founder-badge-icon {
+          width: 42px;
+          height: 42px;
+          border-radius: 12px;
+          background: var(--amber-soft);
+          color: var(--amber);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.15rem;
+          flex-shrink: 0;
+        }
+
+        .founder-note-title {
+          font-family: var(--font-display);
+          font-size: 1.15rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.2;
+        }
+
+        .founder-note-sub {
+          font-size: 0.82rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+        }
+
+        .founder-signature {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-top: 1.4rem;
+          padding-top: 1.2rem;
+          border-top: 1px solid rgba(58, 158, 228, 0.14);
+        }
+
+        .founder-avatar {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2.5px solid var(--blue-mid);
+          box-shadow: 0 4px 12px rgba(27, 42, 59, 0.08);
+          flex-shrink: 0;
+        }
+
+        .founder-signature-text strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 1.05rem;
+          font-weight: 800;
+          color: var(--ink);
+          line-height: 1.2;
+        }
+
+        .founder-signature-text span {
+          display: block;
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: var(--ink-soft);
+          margin-top: 0.15rem;
+        }
+
+        .press-facts-dl {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 0.9rem 1.25rem;
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 20px;
+          padding: 1.6rem 1.8rem;
+          margin: 1.25rem 0 2.2rem;
+        }
+
+        .press-fact-item {
+          padding-bottom: 0.65rem;
+          border-bottom: 1px solid rgba(58, 158, 228, 0.1);
+        }
+
+        .press-fact-item dt {
+          font-size: 0.74rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.08em;
+          color: var(--blue-deep);
+          margin-bottom: 0.2rem;
+        }
+
+        .press-fact-item dd {
+          font-size: 0.95rem;
+          font-weight: 700;
+          color: var(--ink);
+          margin: 0;
+          line-height: 1.4;
+        }
+
+        .press-copy-card {
+          background: var(--white);
+          border: 1.5px solid rgba(58, 158, 228, 0.16);
+          border-radius: 16px;
+          padding: 1.25rem 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .press-copy-card strong {
+          display: block;
+          font-family: var(--font-display);
+          font-size: 0.95rem;
+          color: var(--blue-deep);
+          margin-bottom: 0.35rem;
+        }
+
+        .press-copy-card p {
+          margin: 0 !important;
+          font-size: 0.94rem !important;
+          color: var(--ink-soft);
+          line-height: 1.6;
+        }
       </style>
 </head>
 
-<body>
-  <nav id="nav" class="always-scrolled scrolled">
+  <body>
+    <nav id="nav" class="always-scrolled scrolled">
   <a href="/" class="nav-logo">
     <img src="/images/k.png" alt="Kidamame logo" />
     <span class="nav-logo-text">Kidamame<sup>®</sup></span>
@@ -2181,13 +2384,13 @@
 
         if (isAndroid) {
           event.preventDefault();
-          // Replace with your Play Store URL
-          window.location.href = "https://play.google.com/store/apps/details?id=YOUR_ANDROID_ID";
+          // Google Play Store URL
+          window.location.href = "https://play.google.com/store/apps/details?id=com.kidamame.discovery.app";
         }
         else if (isIOS) {
           event.preventDefault();
-          // Replace with your App Store URL
-          window.location.href = "https://apps.apple.com/app/idYOUR_APPLE_ID";
+          // Apple App Store URL
+          window.location.href = "https://apps.apple.com/app/id6770446769";
         }
         // Desktop users will simply follow the href="/#ourapps"
       }
@@ -2196,218 +2399,309 @@
     
 </nav>
 
-  <main style="background: var(--white);">
-    <section class="product" style="padding-top: 8rem;">
-      <div class="container guide-article-container">
-        <p class="section-label reveal"><i class="fa-solid fa-puzzle-piece"></i> &nbsp;<a href="/">Home</a> &gt; <a href="/guides/">Guides</a> &gt; Pok Pok Alternatives</p>
-        <h1 class="section-title reveal d1">6 Best <em>Pok Pok Alternatives</em>: Calm Montessori Apps Without Subscriptions</h1>
+      <main style="background: var(--white);">
+        <section class="product" style="padding-top: 8rem;">
+          <div class="container guide-article-container">
+            <p class="section-label reveal"><i class="fa-solid fa-puzzle-piece"></i> &nbsp;<a href="/">Home</a> &gt; <a
+                href="/guides/">Guides</a> &gt; Pok Pok Alternatives</p>
+            <h1 class="section-title reveal d1">6 Best <em>Pok Pok Alternatives</em>: Calm Montessori Apps Without
+              Subscriptions</h1>
 
-        <div class="product-simple-content">
-          <p class="reveal d2">
-            Pok Pok helped pioneer the movement toward gentle, low-stimulation digital play. If your family adores that peaceful philosophy—but you prefer a one-time purchase over a recurring subscription, or your child (ages 4–10) is ready for real-world science and nature—these are the best alternatives.
-          </p>
+            <div class="product-simple-content">
+              <p class="reveal d2">
+                Pok Pok helped pioneer the movement toward gentle, low-stimulation digital play. If your family adores
+                that peaceful philosophy and wants to discover more calm, Montessori-inspired apps, including real-world
+                nature exploration and one-time purchase options, here are 6 wonderful picks for toddlers, preschoolers,
+                and older kids.
+              </p>
 
-        <h2>Why We Admire Pok Pok (And When Families Seek an Alternative)</h2>
-        <p>
-          Winner of an Apple Design Award, <a href="https://playpokpok.com/" target="_blank" rel="noopener noreferrer">Pok Pok Playroom</a> is a beautifully crafted collection of open-ended digital toys designed primarily for children ages 2–7. With hand-drawn animations, soft acoustic sound effects, and zero levels to fail, it sets a wonderful example of mindful screen time.
-        </p>
-        <p>
-          Even so, parents frequently look for <strong>apps like Pok Pok</strong> for two main reasons:
-        </p>
-        <ul>
-          <li><strong>Preferring One-Time Ownership Over Subscriptions:</strong> Pok Pok operates on a monthly or annual subscription model. Many families who only use tablets occasionally (such as on weekends, flights, or road trips) prefer paying once to own an app forever.</li>
-          <li><strong>Growing Into Real-World Curiosity (Ages 4–10):</strong> Because Pok Pok is non-verbal and built for toddlers and preschoolers, kids around ages 4 to 10 often start asking <em>"Why?"</em> and <em>"How does that work in real life?"</em>—craving factual knowledge about real animals, habitats, and natural phenomena while keeping that same calm, unhurried atmosphere.</li>
-        </ul>
+              <div class="simple-gallery reveal">
+                <img src="/images/guides/guides_9.jpeg" class="landscape"
+                  alt="Panoramic view of the Alps biome in Kidamame Discovery with mountain wildlife, pine trees, and a young explorer."
+                  loading="lazy" />
+              </div>
 
-        <h2>Quick Comparison: Top Pok Pok Alternatives</h2>
-        <div tabindex="0" role="region" aria-labelledby="pokpok-table-caption" class="guide-table-wrap">
-          <table class="guide-table" style="--label-2: 'Best For'; --label-3: 'Ages'; --label-4: 'Pricing Model'; --label-5: 'Offline Play';">
-            <caption id="pokpok-table-caption">Side-by-side comparison of calm, Montessori-inspired alternatives to Pok Pok</caption>
-            <thead>
-              <tr>
-                <th scope="col">App Name</th>
-                <th scope="col">Best For</th>
-                <th scope="col">Ages</th>
-                <th scope="col">Pricing Model</th>
-                <th scope="col">Offline Play</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="highlight-row">
-                <th scope="row"><a href="/discovery/">Kidamame Discovery</a></th>
-                <td>Calm Montessori nature &amp; wildlife exploration</td>
-                <td>4–10</td>
-                <td><strong>Free trial + 1-time purchase</strong> (No subscription)</td>
-                <td>100% Offline</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://tinybop.com/" target="_blank" rel="noopener noreferrer">Tinybop (Explorer's Library)</a></th>
-                <td>Interactive science models (Human Body, Earth, Mammals)</td>
-                <td>4–10</td>
-                <td>Individual one-time purchases (or bundle)</td>
-                <td>100% Offline</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://www.edokiacademy.com/en/montessori-preschool" target="_blank" rel="noopener noreferrer">Busy Shapes (by Edoki)</a></th>
-                <td>Montessori logic &amp; cause-and-effect for younger kids</td>
-                <td>2–6</td>
-                <td>One-time purchase (standalone app)</td>
-                <td>100% Offline</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://avokiddo.com/" target="_blank" rel="noopener noreferrer">Thinkrolls (by Avokiddo)</a></th>
-                <td>Calm physics &amp; logic puzzles without timers</td>
-                <td>3–8</td>
-                <td>One-time purchase (original titles)</td>
-                <td>100% Offline</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://sagomini.com/" target="_blank" rel="noopener noreferrer">Sago Mini World</a></th>
-                <td>Gentle pretend play for toddlers &amp; preschoolers</td>
-                <td>2–5</td>
-                <td>Subscription (or standalone apps)</td>
-                <td>Offline after download</td>
-              </tr>
-              <tr>
-                <th scope="row"><a href="https://www.inaturalist.org/pages/seek_app" target="_blank" rel="noopener noreferrer">Seek by iNaturalist</a></th>
-                <td>Taking curiosity outdoors to identify real plants &amp; bugs</td>
-                <td>5–12+</td>
-                <td>100% Free (Non-profit)</td>
-                <td>Offline species camera</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+              <h2>Why We Admire Pok Pok (And What to Look For in Similar Apps)</h2>
+              <p>
+                Winner of an Apple Design Award, <a href="https://playpokpok.com/" target="_blank"
+                  rel="noopener noreferrer">Pok Pok Playroom</a> is a beautifully crafted collection of open-ended
+                digital toys designed primarily for children ages 2–7. With hand-drawn animations, soft acoustic sound
+                effects, and zero levels to fail, it sets a wonderful example of mindful screen time.
+              </p>
+              <p>
+                When families search for <strong>apps like Pok Pok</strong> to add to their child's device, they usually
+                look for two main qualities:
+              </p>
+              <ul>
+                <li><strong>One-Time Purchase Options:</strong> Alongside subscription apps, many families love having
+                  standalone apps they can unlock once and keep on the family tablet forever for weekends, flights, and
+                  road trips.</li>
+                <li><strong>Real-World Science &amp; Nature for Growing Kids:</strong> As toddlers grow into
+                  preschoolers and elementary learners, they start asking <em>"Why?"</em> and <em>"How does that work in
+                    real life?"</em>, loving apps that combine Pok Pok's calm, unhurried atmosphere with real facts
+                  about animals, habitats, and natural phenomena.</li>
+              </ul>
 
-        <h2>The 6 Best Alternatives to Pok Pok</h2>
+              <h2>Quick Comparison: Top Pok Pok Alternatives</h2>
+              <div tabindex="0" role="region" aria-labelledby="pokpok-table-caption" class="guide-table-wrap">
+                <table class="guide-table"
+                  style="--label-2: 'Best For'; --label-3: 'Ages'; --label-4: 'Pricing Model'; --label-5: 'Offline Play';">
+                  <caption id="pokpok-table-caption">Side-by-side comparison of calm, Montessori-inspired alternatives
+                    to Pok Pok</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">App Name</th>
+                      <th scope="col">Best For</th>
+                      <th scope="col">Ages</th>
+                      <th scope="col">Pricing Model</th>
+                      <th scope="col">Offline Play</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="highlight-row">
+                      <th scope="row"><a href="/discovery/">Kidamame Discovery</a></th>
+                      <td>Calm Montessori nature &amp; wildlife exploration</td>
+                      <td>4–10</td>
+                      <td><strong>Free trial + 1-time purchase</strong> (No subscription)</td>
+                      <td>100% Offline</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://tinybop.com/" target="_blank" rel="noopener noreferrer">Tinybop
+                          (Explorer's Library)</a></th>
+                      <td>Interactive science models (Human Body, Earth, Mammals)</td>
+                      <td>4–10</td>
+                      <td>Individual one-time purchases (or bundle)</td>
+                      <td>100% Offline</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://www.edokiacademy.com/en/montessori-preschool" target="_blank"
+                          rel="noopener noreferrer">Busy Shapes (by Edoki)</a></th>
+                      <td>Montessori logic &amp; cause-and-effect for younger kids</td>
+                      <td>2–6</td>
+                      <td>One-time purchase (standalone app)</td>
+                      <td>100% Offline</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://avokiddo.com/" target="_blank"
+                          rel="noopener noreferrer">Thinkrolls (by Avokiddo)</a></th>
+                      <td>Calm physics &amp; logic puzzles without timers</td>
+                      <td>3–8</td>
+                      <td>One-time purchase (original titles)</td>
+                      <td>100% Offline</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://sagomini.com/" target="_blank" rel="noopener noreferrer">Sago
+                          Mini World</a></th>
+                      <td>Gentle pretend play for toddlers &amp; preschoolers</td>
+                      <td>2–5</td>
+                      <td>Subscription (or standalone apps)</td>
+                      <td>Offline after download</td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><a href="https://www.inaturalist.org/pages/seek_app" target="_blank"
+                          rel="noopener noreferrer">Seek by iNaturalist</a></th>
+                      <td>Taking curiosity outdoors to identify real plants &amp; bugs</td>
+                      <td>5–12+</td>
+                      <td>100% Free (Non-profit)</td>
+                      <td>Offline species camera</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
 
-        <!-- 1. KIDAMAME DISCOVERY -->
-        <div class="app-review-card kidamame-pick">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill"><i class="fa-solid fa-seedling"></i> Best Subscription-Free Montessori Pick (Ages 4–10)</span>
-              <h3 style="margin-top: 0.6rem !important;">1. Kidamame Discovery</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 4–10</span>
-            <span><i class="fa-solid fa-infinity"></i> One-Time Purchase (No Subscription)</span>
-            <span><i class="fa-solid fa-spa"></i> Low-Stimulation</span>
-            <span><i class="fa-solid fa-plane-departure"></i> 100% Offline</span>
-          </div>
-          <p>
-            We created <strong><a href="/discovery/">Kidamame Discovery</a></strong> with the exact same core conviction that makes Pok Pok so special: children deserve digital spaces that are peaceful, unhurried, and free of manipulative game mechanics. Where Kidamame Discovery differs—and why it makes the ideal next step or companion—is in its <strong>focus on real-world nature</strong> and its <strong>one-time ownership model</strong>.
-          </p>
-          <p>
-            In Montessori education for ages 4–10 (often called <em>Cosmic Education</em>), children are naturally drawn to understanding the real living world: biomes, animals, plants, and geological wonders. In Kidamame Discovery, kids pan across <strong>6 richly illustrated ecosystems</strong>—the Alps, African Savannah, Australian Outback, Arctic, Sonoran Desert, and Amazon Rainforest.
-          </p>
-          <ul>
-            <li><strong>Pure Child-Led Exploration:</strong> There are no scores, timers, or puzzles to fail. Kids tap over 120 animals, plants, and natural phenomena (from erupting volcanoes to calving glaciers) to hear authentic nature sounds and watch gentle animations.</li>
-            <li><strong>~400 Fascinating Science Facts:</strong> Tapping the magnifying glass opens illustrated "Did You Know?" cards designed for co-reading with a parent or independent reading for older kids.</li>
-            <li><strong>No Recurring Fees Ever:</strong> Try the app for free. If your family loves it, a single one-time purchase unlocks everything forever—with zero ads, zero tracking, and 100% offline play.</li>
-          </ul>
-          <div class="simple-gallery" style="margin: 1.5rem 0 1.2rem;">
-            <img src="/images/screenshots/phone/kidamame_discovery_screenshot_8.jpeg" alt="Kidamame Discovery calm nature scene." loading="lazy" />
-            <img src="/images/screenshots/phone/kidamame_discovery_screenshot_22.jpeg" alt="Kidamame Discovery interactive wildlife card." loading="lazy" />
-          </div>
-          <a href="/discovery/" class="btn-primary" style="margin-top: 0.5rem;">
-            <i class="fa-solid fa-compass"></i> Explore Kidamame Discovery
-          </a>
-        </div>
+              <h2>The 6 Best Alternatives to Pok Pok</h2>
 
-        <!-- 2. TINYBOP -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Interactive Science Dioramas</span>
-              <h3 style="margin-top: 0.6rem !important;">2. Tinybop's Explorer's Library (The Earth, Mammals, Plants)</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 4–10</span>
-            <span><i class="fa-solid fa-tag"></i> Individual App Purchases</span>
-            <span><i class="fa-solid fa-flask"></i> STEM &amp; Science</span>
-          </div>
-          <p>
-            Like Pok Pok, <a href="https://tinybop.com/" target="_blank" rel="noopener noreferrer">Tinybop</a> emphasizes open-ended sandbox curiosity without rules or time limits. Their <em>Explorer's Library</em> series includes standalone apps like <em>The Human Body</em>, <em>Mammals</em>, <em>Plants</em>, and <em>The Earth</em>, where children can peer inside a kangaroo's pouch, trigger earthquakes, or see how a heart beats.
-          </p>
-          <p>
-            <strong>Why parents love it:</strong> Many of Tinybop's individual titles can still be purchased outright on the App Store, and they pair wonderfully with parent-child conversation.
-          </p>
-        </div>
+              <!-- 1. KIDAMAME DISCOVERY -->
+              <div class="app-review-card kidamame-pick">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill"><i class="fa-solid fa-seedling"></i> Best Subscription-Free Montessori
+                      Pick (Ages 4–10)</span>
+                    <h3 style="margin-top: 0.6rem !important;">1. Kidamame Discovery</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 4–10</span>
+                  <span><i class="fa-solid fa-infinity"></i> One-Time Purchase (No Subscription)</span>
+                  <span><i class="fa-solid fa-spa"></i> Low-Stimulation</span>
+                  <span><i class="fa-solid fa-plane-departure"></i> 100% Offline</span>
+                </div>
+                <p>
+                  We created <strong><a href="/discovery/">Kidamame Discovery</a></strong> with the exact same core
+                  conviction that makes Pok Pok so special: children deserve digital spaces that are peaceful,
+                  unhurried, and free of manipulative game mechanics. Where Kidamame Discovery differs, and why it makes
+                  the ideal next step or companion, is in its <strong>focus on real-world nature</strong> and its
+                  <strong>one-time ownership model</strong>.
+                </p>
+                <p>
+                  In Montessori education for ages 4–10 (often called <em>Cosmic Education</em>), children are naturally
+                  drawn to understanding the real living world: biomes, animals, plants, and geological wonders. In
+                  Kidamame Discovery, kids pan across <strong>6 richly illustrated ecosystems</strong>: the Alps, African
+                  Savannah, Australian Outback, Arctic, Sonoran Desert, and Amazon Rainforest.
+                </p>
+                <ul>
+                  <li><strong>Pure Child-Led Exploration:</strong> There are no scores, timers, or puzzles to fail. Kids
+                    tap over 120 animals, plants, and natural phenomena (from erupting volcanoes to calving glaciers) to
+                    hear authentic nature sounds and watch gentle animations.</li>
+                  <li><strong>~400 Fascinating Science Facts:</strong> Tapping the magnifying glass opens illustrated
+                    "Did You Know?" cards designed for co-reading with a parent or independent reading for older kids.
+                  </li>
+                  <li><strong>No Recurring Fees Ever:</strong> Try the app for free. If your family loves it, a single
+                    one-time purchase unlocks everything forever, with zero ads, zero tracking, and 100% offline play.
+                  </li>
+                </ul>
+                <div class="simple-gallery" style="margin: 1.5rem 0 1.2rem;">
+  <img src="/images/guides/guides_17.jpeg" alt="Kidamame Discovery Alps biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_2.jpeg" alt="Kidamame Discovery Australian Outback biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_26.jpeg" alt="Kidamame Discovery African Savannah biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_31.jpeg" alt="Kidamame Discovery Amazon Rainforest biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_11.jpeg" alt="Kidamame Discovery Arctic biome gameplay." loading="lazy" />
+  <img src="/images/guides/guides_5.jpeg" alt="Kidamame Discovery Sonoran Desert fact card." loading="lazy" />
+</div>
+<a href="/discovery/" class="btn-primary" style="margin-top: 0.5rem;">
+  <i class="fa-solid fa-compass"></i> Explore Kidamame Discovery
+</a>
 
-        <!-- 3. BUSY SHAPES -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Montessori Logic App for Toddlers (2–5)</span>
-              <h3 style="margin-top: 0.6rem !important;">3. Busy Shapes (by Edoki Academy)</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 2–6</span>
-            <span><i class="fa-solid fa-tag"></i> Standalone Purchase Available</span>
-            <span><i class="fa-solid fa-shapes"></i> Montessori Reasoning</span>
-          </div>
-          <p>
-            Inspired by the pioneering developmental work of Jean Piaget and Maria Montessori, <a href="https://www.edokiacademy.com/" target="_blank" rel="noopener noreferrer">Busy Shapes</a> gives young children a calm workspace to experiment with shapes, colors, and hidden obstacles. There is no text, no voiceover nagging, and no countdown clock—making it very close in spirit to Pok Pok's spatial toys.
-          </p>
-        </div>
 
-        <!-- 4. THINKROLLS -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Calm Physics &amp; Problem-Solving</span>
-              <h3 style="margin-top: 0.6rem !important;">4. Thinkrolls &amp; Thinkrolls: Kings &amp; Queens (by Avokiddo)</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 3–8</span>
-            <span><i class="fa-solid fa-tag"></i> One-Time Purchase (Classic Titles)</span>
-            <span><i class="fa-solid fa-gears"></i> Logic &amp; Physics</span>
-          </div>
-          <p>
-            While <a href="https://avokiddo.com/" target="_blank" rel="noopener noreferrer">Avokiddo</a> also offers a subscription bundle (Thinkrolls Play &amp; Code), their standalone <em>Thinkrolls</em> and <em>Thinkrolls: Kings &amp; Queens</em> apps remain available as one-time purchases. Kids guide rolling characters through calm, thoughtful physics mazes using gears, bridges, and gravity at their own pace.
-          </p>
-        </div>
 
-        <!-- 5. SAGO MINI STANDALONE APPS -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Gentle Pretend Play for Ages 2–5</span>
-              <h3 style="margin-top: 0.6rem !important;">5. Sago Mini (Standalone Classics)</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 2–5</span>
-            <span><i class="fa-solid fa-face-smile"></i> Gentle Humor &amp; Storytelling</span>
-          </div>
-          <p>
-            Before launching its subscription bundle, <a href="https://sagomini.com/" target="_blank" rel="noopener noreferrer">Sago Mini</a> built its reputation on sweet, slow-paced pretend-play apps like <em>Sago Mini Forest Flyer</em> and <em>Ocean Swimmer</em>. For toddlers who love Pok Pok's open-ended discovery, Sago Mini's gentle animal characters offer a warm, rule-free world (and you can also read our <a href="/guides/sago-mini-alternatives/">Sago Mini Alternatives guide</a> for older kids).
-          </p>
-        </div>
+              </div>
 
-        <!-- 6. SEEK BY INATURALIST -->
-        <div class="app-review-card">
-          <div class="app-review-header">
-            <div>
-              <span class="app-pick-pill neutral">Best Free App for Real-World Outdoor Discovery</span>
-              <h3 style="margin-top: 0.6rem !important;">6. Seek by iNaturalist</h3>
-            </div>
-          </div>
-          <div class="app-specs-bar">
-            <span><i class="fa-solid fa-child"></i> Ages 5–12+ (with Parent)</span>
-            <span><i class="fa-solid fa-tag"></i> 100% Free &amp; Privacy-Safe</span>
-            <span><i class="fa-solid fa-camera"></i> Outdoor Nature ID</span>
-          </div>
-          <p>
-            Montessori philosophy always points children back toward the real outdoors. Created by the California Academy of Sciences and National Geographic, <a href="https://www.inaturalist.org/pages/seek_app" target="_blank" rel="noopener noreferrer">Seek by iNaturalist</a> requires no registration, collects no user data, and lets kids point a phone or tablet camera at leaves, flowers, and insects in your backyard or local park to identify them instantly. Pair it with <strong>Kidamame Discovery</strong> on rainy days or flights for a complete indoor-and-outdoor nature toolkit!
-          </p>
-        </div>
+              <!-- 2. TINYBOP -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Interactive Science Dioramas</span>
+                    <h3 style="margin-top: 0.6rem !important;">2. Tinybop's Explorer's Library (The Earth, Mammals,
+                      Plants)</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 4–10</span>
+                  <span><i class="fa-solid fa-tag"></i> Individual App Purchases</span>
+                  <span><i class="fa-solid fa-flask"></i> STEM &amp; Science</span>
+                </div>
+                <p>
+                  Like Pok Pok, <a href="https://tinybop.com/" target="_blank" rel="noopener noreferrer">Tinybop</a>
+                  emphasizes open-ended sandbox curiosity without rules or time limits. Their <em>Explorer's
+                    Library</em> series includes standalone apps like <em>The Human Body</em>, <em>Mammals</em>,
+                  <em>Plants</em>, and <em>The Earth</em>, where children can peer inside a kangaroo's pouch, trigger
+                  earthquakes, or see how a heart beats.
+                </p>
+                <p>
+                  <strong>Why parents love it:</strong> Each Tinybop app is illustrated by a different guest artist and
+                  features subtle, atmospheric sound design. Many of their individual titles can be purchased outright
+                  on the App Store without a subscription, and they come with free downloadable parent handbooks to help
+                  answer your child's biggest science questions.
+                </p>
+              </div>
 
-        
+              <!-- 3. BUSY SHAPES -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Montessori Logic App for Toddlers (2–5)</span>
+                    <h3 style="margin-top: 0.6rem !important;">3. Busy Shapes (by Edoki Academy)</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 2–6</span>
+                  <span><i class="fa-solid fa-tag"></i> Standalone Purchase Available</span>
+                  <span><i class="fa-solid fa-shapes"></i> Montessori Reasoning</span>
+                </div>
+                <p>
+                  Inspired by the pioneering developmental work of Jean Piaget and Maria Montessori, <a
+                    href="https://www.edokiacademy.com/" target="_blank" rel="noopener noreferrer">Busy Shapes</a> gives
+                  young children a calm workspace to experiment with shapes, colors, and hidden obstacles. There is no
+                  text, no voiceover nagging, and no countdown clock, making it very close in spirit to Pok Pok's spatial
+                  toys.
+                </p>
+                <p>
+                  <strong>Why parents love it:</strong> The app uses an intelligent adaptive engine that gently
+                  introduces new physical mechanics (such as sliding walls, puddles, or moving platforms) only when your
+                  child is ready, fostering deep concentration and independent problem-solving.
+                </p>
+              </div>
+
+              <!-- 4. THINKROLLS -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Calm Physics &amp; Problem-Solving</span>
+                    <h3 style="margin-top: 0.6rem !important;">4. Thinkrolls &amp; Thinkrolls: Kings &amp; Queens (by
+                      Avokiddo)</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 3–8</span>
+                  <span><i class="fa-solid fa-tag"></i> One-Time Purchase (Classic Titles)</span>
+                  <span><i class="fa-solid fa-gears"></i> Logic &amp; Physics</span>
+                </div>
+                <p>
+                  While family-run studio <a href="https://avokiddo.com/" target="_blank"
+                    rel="noopener noreferrer">Avokiddo</a> also offers a subscription bundle (<em>Thinkrolls Play &amp;
+                    Code</em>), their award-winning standalone <em>Thinkrolls</em>, <em>Thinkrolls 2</em>, and
+                  <em>Thinkrolls: Kings &amp; Queens</em> apps remain available as classic one-time purchases.
+                </p>
+                <p>
+                  <strong>Why parents love it:</strong> Kids guide charming rolling characters through calm, thoughtful
+                  physics mazes using gears, bridges, elasticity, and gravity at their own pace. There are no time
+                  limits and no lives to lose, so children learn trial-and-error reasoning without frustration.
+                </p>
+              </div>
+
+              <!-- 5. SAGO MINI STANDALONE APPS -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Gentle Pretend Play for Ages 2–5</span>
+                    <h3 style="margin-top: 0.6rem !important;">5. Sago Mini (Standalone Classics)</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 2–5</span>
+                  <span><i class="fa-solid fa-face-smile"></i> Gentle Humor &amp; Storytelling</span>
+                </div>
+                <p>
+                  Before launching its subscription bundle, Canadian studio <a href="https://sagomini.com/"
+                    target="_blank" rel="noopener noreferrer">Sago Mini</a> built its reputation on sweet, slow-paced
+                  pretend-play apps like <em>Sago Mini Forest Flyer</em>, <em>Ocean Swimmer</em>, and <em>Friends</em>.
+                </p>
+                <p>
+                  <strong>Why parents love it:</strong> For toddlers who love Pok Pok's open-ended discovery, Sago
+                  Mini's lovable animal characters (Harvey the Dog, Jinja the Cat, and Robin the Bird) offer a warm,
+                  rule-free world filled with gentle visual humor and intuitive single-tap controls. (You can also read
+                  our <a href="/guides/sago-mini-alternatives/">Sago Mini Alternatives guide</a> for older kids.)
+                </p>
+              </div>
+
+              <!-- 6. SEEK BY INATURALIST -->
+              <div class="app-review-card">
+                <div class="app-review-header">
+                  <div>
+                    <span class="app-pick-pill neutral">Best Free App for Real-World Outdoor Discovery</span>
+                    <h3 style="margin-top: 0.6rem !important;">6. Seek by iNaturalist</h3>
+                  </div>
+                </div>
+                <div class="app-specs-bar">
+                  <span><i class="fa-solid fa-child"></i> Ages 5–12+ (with Parent)</span>
+                  <span><i class="fa-solid fa-tag"></i> 100% Free &amp; Privacy-Safe</span>
+                  <span><i class="fa-solid fa-camera"></i> Outdoor Nature ID</span>
+                </div>
+                <p>
+                  Montessori philosophy always points children back toward the real outdoors. Created by the California
+                  Academy of Sciences and National Geographic, <a href="https://www.inaturalist.org/pages/seek_app"
+                    target="_blank" rel="noopener noreferrer">Seek by iNaturalist</a> requires no registration, collects
+                  no user data, and lets kids point a phone or tablet camera at leaves, flowers, mushrooms, and insects
+                  in your backyard or local park to identify them in real time.
+                </p>
+                <p>
+                  <strong>Why parents love it:</strong> It is 100% free, non-profit, and turns every family walk into a
+                  hands-on biology lesson. Pair it with <strong>Kidamame Discovery</strong> on rainy days or flights for
+                  a complete indoor-and-outdoor nature toolkit!
+                </p>
+              </div>
+
+              
 
 
 <!-- RELATED GUIDES -->
@@ -2423,7 +2717,7 @@
           <div class="guide-card-icon"><i class="fa-solid fa-seedling"></i></div>
         </div>
         <h3>Best Montessori Apps for Kids</h3>
-        <p>What makes an app truly Montessori? Explore the best child-led, real-world Montessori apps for kids ages 4–10 with no timers, no ads, and no addictive rewards.</p>
+        <p>What makes an app truly Montessori? Explore the best child-led, real-world Montessori apps for toddlers, preschoolers, and older kids with no timers, no ads, and no addictive rewards.</p>
         <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
       </a>
     
@@ -2440,8 +2734,8 @@
         <div class="guide-card-top" style="margin-bottom: 0.8rem;">
           <div class="guide-card-icon"><i class="fa-solid fa-compass"></i></div>
         </div>
-        <h3>Sago Mini World Alternatives for Ages 4–10</h3>
-        <p>Has your child outgrown Sago Mini World, or are you looking to skip monthly subscriptions? Here are the best open-ended, ad-free alternatives for curious kids ages 4–10.</p>
+        <h3>Sago Mini World Alternatives (Open-Ended &amp; No Subscription)</h3>
+        <p>Does your family love Sago Mini World? Discover 6 wonderful open-ended, ad-free apps and companions for preschoolers and growing explorers, including real-world nature and one-time purchase options.</p>
         <span class="guide-card-link">Read guide <i class="fa-solid fa-arrow-right"></i></span>
       </a>
     
@@ -2480,7 +2774,7 @@
     {
       "@type": "Article",
       "headline": "6 Best Pok Pok Alternatives: Calm, Montessori-Inspired Apps Without Subscriptions",
-      "description": "Adore Pok Pok's gentle Montessori philosophy? Discover the best Pok Pok alternatives for older kids (ages 4–10) and families who prefer a one-time purchase over recurring fees.",
+      "description": "Adore Pok Pok's gentle Montessori philosophy? Discover the best Pok Pok alternatives across different ages, including one-time purchase options with no recurring fees.",
       "author": {
         "@type": "Organization",
         "name": "Kidamame",
@@ -2504,11 +2798,11 @@
 </div>
 
 
-      </div>
-    </section>
-  </main>
+            </div>
+        </section>
+      </main>
 
-  <!-- FOOTER -->
+      <!-- FOOTER -->
 <footer id="footer">
   <div class="footer-grid">
 
@@ -2667,6 +2961,6 @@
     initLightbox();
   }
 </script>
-</body>
-</html>
+  </body>
 
+</html>

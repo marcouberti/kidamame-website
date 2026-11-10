@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/new-head', { title: 'Kidamame Discovery | The Calm App for Kids' ,
-  url: 'https://www.kidamame.com/discovery/' }) %>
+<%- include('../partials/new-head', {
+  title: 'Kidamame Discovery | Calm, 100% Offline Montessori Nature App for Kids 4–10' ,
+  description: 'Explore 6 interactive biomes, 120+ animals and plants, and 400 nature facts. A calm, Montessori-inspired app for kids ages 4–10. 100% offline for flights & road trips. No ads, no tracking, no subscriptions.'
+  ,
+  keywords: 'Kidamame Discovery, Montessori nature app for kids, offline kids app for flights, low stimulation apps for kids 4-10, no subscription kids apps, animal and biome app for kids, calm educational apps'
+  , url: 'https://www.kidamame.com/discovery/' }) %>
 
   <body>
     <%- include('../partials/new-nav', { alwaysScrolled: true, hideNavItems: false, isInnerPage: true }) %>
@@ -10,8 +14,9 @@
         <!-- PRODUCT -->
         <section class="product" id="apps" style="padding-top: 8rem;">
           <div class="container">
-            <p class="section-label reveal"><i class="fa-solid fa-mobile-screen"></i> &nbsp;<a href="/">Home</a> &gt; Discovery</p>
-            <h2 class="section-title reveal d1">Kidamame <em>Discovery</em></h2>
+            <p class="section-label reveal"><i class="fa-solid fa-mobile-screen"></i> &nbsp;<a href="/">Home</a> &gt;
+              Discovery</p>
+            <h1 class="section-title reveal d1">Kidamame <em>Discovery</em></h1>
 
             <div class="product-simple-content">
               <p class="reveal d2">
@@ -25,14 +30,82 @@
               </p>
 
               <div class="simple-gallery reveal d3">
-                <img src="/images/kidamame_discovery_hero.webp" class="landscape" alt="Kidamame Discovery home page."
-                  loading="lazy" />
+                <img src="/images/kidamame_discovery_hero.webp" class="landscape"
+                  alt="Kidamame Discovery interactive biome selection map showing the Alps, African Savannah, Australian Outback, Arctic, Sonoran Desert, and Amazon Rainforest."
+                  fetchpriority="high" />
               </div>
 
+              <!-- AT-A-GLANCE SPECS FOR PARENTS & AI SEARCH (GEO) -->
+              <ul class="specs-glance-grid reveal" role="list" aria-label="Kidamame Discovery Key Facts for Parents">
+                <li class="spec-pill-card">
+                  <div class="spec-pill-icon" aria-hidden="true"><i class="fa-solid fa-child-reaching"></i></div>
+                  <div class="spec-pill-text">
+                    <strong>Ages 4–10 &amp; Family</strong>
+                    <span>Co-viewing with younger kids or independent reading</span>
+                  </div>
+                </li>
+                <li class="spec-pill-card">
+                  <div class="spec-pill-icon" aria-hidden="true"><i class="fa-solid fa-earth-americas"></i></div>
+                  <div class="spec-pill-text">
+                    <strong>6 Interactive Biomes</strong>
+                    <span>Alps, Savannah, Outback, Arctic, Sonoran Desert &amp; Amazon</span>
+                  </div>
+                </li>
+                <li class="spec-pill-card">
+                  <div class="spec-pill-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></div>
+                  <div class="spec-pill-text">
+                    <strong>120+ Elements &amp; 400 Facts</strong>
+                    <span>Animals, plants &amp; natural phenomena to discover</span>
+                  </div>
+                </li>
+                <li class="spec-pill-card">
+                  <div class="spec-pill-icon" aria-hidden="true"><i class="fa-solid fa-volume-high"></i></div>
+                  <div class="spec-pill-text">
+                    <strong>Authentic Nature Audio</strong>
+                    <span>Real animal calls and relaxing ambient soundscapes</span>
+                  </div>
+                </li>
+                <li class="spec-pill-card">
+                  <div class="spec-pill-icon" aria-hidden="true"><i class="fa-solid fa-plane-departure"></i></div>
+                  <div class="spec-pill-text">
+                    <strong>100% Offline Ready</strong>
+                    <span>Works in airplane mode with zero Wi-Fi or buffering</span>
+                  </div>
+                </li>
+                <li class="spec-pill-card">
+                  <div class="spec-pill-icon" aria-hidden="true"><i class="fa-solid fa-unlock-keyhole"></i></div>
+                  <div class="spec-pill-text">
+                    <strong>Free Trial, No Subscription</strong>
+                    <span>Try for free; one-time unlock behind a Parental Gate</span>
+                  </div>
+                </li>
+                <li class="spec-pill-card">
+                  <div class="spec-pill-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></div>
+                  <div class="spec-pill-text">
+                    <strong>Family Sharing</strong>
+                    <span>Share one purchase across your family's devices</span>
+                  </div>
+                </li>
+                <li class="spec-pill-card">
+                  <div class="spec-pill-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+                  <div class="spec-pill-text">
+                    <strong>Strict Kids' Privacy</strong>
+                    <span>Zero ads, zero data tracking, and no login required</span>
+                  </div>
+                </li>
+                <li class="spec-pill-card">
+                  <div class="spec-pill-icon" aria-hidden="true"><i class="fa-solid fa-language"></i></div>
+                  <div class="spec-pill-text">
+                    <strong>6 Languages Included</strong>
+                    <span>English, Italian, French, German, Spanish &amp; Portuguese</span>
+                  </div>
+                </li>
+              </ul>
+
               <div class="reveal" style="margin-top: 2.5rem;">
-                <h3
+                <h2
                   style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 1rem; color: var(--ink);">
-                  Pure Exploration & Wonder</h3>
+                  Pure Exploration &amp; Wonder</h2>
                 <p>
                   Built entirely around curiosity and <strong>Montessori principles</strong>, there are absolutely
                   <strong>no things to win and no puzzles to
@@ -43,20 +116,23 @@
               </div>
 
               <div class="simple-gallery reveal" style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_7.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_13.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_14.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_27.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_24.jpeg"
+                  alt="The Alps biome in Kidamame Discovery with a brown bear, wolf, marmot, golden eagle, and young explorer."
+                  loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_15.jpeg"
+                  alt="Educational fact card about the African savannah in Kidamame Discovery." loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_22.jpeg"
+                  alt="Australian Outback scene with a Kangaroo Crossing Sign educational card, red kangaroo, and scorpion."
+                  loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_10.jpeg"
+                  alt="The Amazon Rainforest biome with a jaguar, poison dart frogs, toucan, squirrel monkey, and young explorer."
+                  loading="lazy" />
               </div>
 
               <div class="reveal" style="margin-top: 2.5rem;">
-                <h3
+                <h2
                   style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 1rem; color: var(--ink);">
-                  Interactive Animals, Plants & Natural Phenomena</h3>
+                  Interactive Animals, Plants &amp; Natural Phenomena</h2>
                 <p>
                   The app features <strong>6 stunning scenes</strong>: the Alps, the African Savannah, the
                   Australian Outback, the Arctic, the Sonoran Desert, and the Amazon Rainforest. Each sensory-rich biome
@@ -69,20 +145,24 @@
               </div>
 
               <div class="simple-gallery reveal" style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_10.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_22.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_40.jpeg"
+                  alt="Interactive Discovery Journal tracking nature elements discovered across the Alps biome."
+                  loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_34.jpeg"
+                  alt="Northern Lights (Aurora Borealis) illustrated science card in the Arctic biome."
+                  loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_9.jpeg"
+                  alt="Amazon Rainforest river scene with a capybara, green anaconda, caiman, squirrel monkey, and blue-and-yellow macaw."
+                  loading="lazy" />
                 <img src="/images/screenshots/phone/kidamame_discovery_screenshot_39.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_36.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
+                  alt="Discovery Journal in the Sonoran Desert showing Saguaro Cactus, Tumbleweed, and Weaver's Needle badges."
+                  loading="lazy" />
               </div>
 
               <div class="reveal" style="margin-top: 2.5rem;">
-                <h3
+                <h2
                   style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 1rem; color: var(--ink);">
-                  Quality Time Together</h3>
+                  Quality Time Together</h2>
                 <p>
                   We designed Kidamame Discovery as a <strong>shared experience</strong>. The app shines when a child
                   plays alongside an adult, exploring the biomes together while the parent helps reading the fun facts
@@ -95,22 +175,27 @@
               </div>
 
               <div class="simple-gallery reveal" style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_11.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_12.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_30.jpeg"
+                  alt="Illustrated botanical fact card comparing pine needles and spruce needles in the Alps."
+                  loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_14.jpeg"
+                  alt="The African Savannah biome at sunset featuring a lion, meerkat, baboon, zebra, cheetah, and giraffes near Mount Kilimanjaro."
+                  loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_31.jpeg"
+                  alt="The Arctic biome under the Northern Lights with a polar bear and cub, Arctic fox, puffin, and walrus."
+                  loading="lazy" />
                 <img src="/images/screenshots/phone/kidamame_discovery_screenshot_21.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_19.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
+                  alt="Australian Outback scene with a Kangaroo Crossing Sign educational card, red kangaroo, and scorpion."
+                  loading="lazy" />
               </div>
 
               <div class="reveal" style="margin-top: 2.5rem;">
-                <h3
+                <h2
                   style="font-family: var(--font-display); font-size: 1.8rem; margin-top: 0; margin-bottom: 1rem; color: var(--ink);">
-                  100% Offline & Perfect for Travel</h3>
+                  100% Offline &amp; Perfect for Travel</h2>
                 <p>
-                  Whether you are on a long <strong>airplane flight</strong>, taking a family <strong>road trip</strong>,
+                  Whether you are on a long <strong>airplane flight</strong>, taking a family <strong>road
+                    trip</strong>,
                   waiting at a restaurant, or relaxing outdoors with no cellular reception, Kidamame Discovery is always
                   ready to play. With all animations, animal sounds, and nature facts stored directly on your device,
                   there is zero buffering, zero data usage, and no need for Wi-Fi. Just calm, reliable wonder wherever
@@ -119,14 +204,15 @@
               </div>
 
               <div class="simple-gallery reveal" style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_16.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_18.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_33.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
-                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_37.jpeg"
-                  alt="Kidamame Discovery gameplay." loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_17.jpeg"
+                  alt="African Savannah ecosystem fact card showing a baobab tree." loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_23.jpeg"
+                  alt="Australian Outback biome with a aquila audax card." loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_38.jpeg"
+                  alt="Bald Eagle illustrated wildlife card in the Sonoran Desert biome." loading="lazy" />
+                <img src="/images/screenshots/phone/kidamame_discovery_screenshot_7.jpeg"
+                  alt="Amazon Rainforest geothermal boiling river fact card alongside a jaguar and blue poison dart frog."
+                  loading="lazy" />
               </div>
 
               <div class="promise-block reveal"
@@ -136,35 +222,40 @@
                     style="width: 50px; height: 50px; flex-shrink: 0; border-radius: 12px; background: var(--amber); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.4rem;">
                     <i class="fa-solid fa-shield-halved"></i>
                   </div>
-                  <h3
+                  <h2
                     style="font-family: var(--font-display); font-size: clamp(1.5rem, 5vw, 1.8rem); line-height: 1.2; color: var(--ink); margin: 0;">
                     No ads. No tracking. No subscriptions.
-                  </h3>
+                  </h2>
                 </div>
                 <p style="margin-bottom: 0;">
                   We know how hard it is to find digital spaces you can trust. That's why we created <strong>The
                     Kidamame Promise</strong>: our apps will never feature advertisements, hidden subscription fees, or
-                  confusing in-game currencies. You can <strong>try the app for free</strong> and, if your family loves
-                  it, a <strong>single one-time purchase</strong> unlocks the entire world forever. Furthermore,
-                  <strong>we do not collect any personal data</strong> from your children and the app <strong>plays
-                    fully offline</strong> — making it safe, reliable, and perfect for travel with complete peace of
-                  mind.
+                  confusing in-game currencies. You can <strong>download and try the first biome for free</strong> and,
+                  if your family loves
+                  it, a <strong>single one-time purchase</strong> unlocks all 6 biomes forever, protected behind a
+                  <strong>child-proof Parental Gate</strong> so kids can never make accidental purchases, with
+                  <strong>Family Sharing</strong> supported. Furthermore,
+                  <strong>we do not collect any personal data</strong> from your children (built with strict
+                  <strong>COPPA &amp; GDPR-K privacy-by-design</strong>, zero accounts, and zero third-party trackers)
+                  and the app <strong>plays
+                    fully offline</strong>, giving you complete peace of mind.
                 </p>
               </div>
 
               <div class="simple-gallery reveal" style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
                 <img src="/images/gallery/thumbs/08.webp" class="landscape"
-                  alt="The Alps biome in Kidamame Discovery app." loading="lazy" />
+                  alt="Panoramic view of the Alps biome in Kidamame Discovery featuring mountain wildlife and pine forests."
+                  loading="lazy" />
               </div>
 
               <!-- FAQ SECTION -->
               <div class="faq-section reveal" style="margin-top: 4rem; margin-bottom: 4rem;">
-                <h3
+                <h2
                   style="font-family: var(--font-display); font-size: 1.8rem; color: var(--ink); margin-bottom: 2rem; text-align: center;">
-                  Frequently Asked Questions</h3>
+                  Frequently Asked Questions</h2>
 
                 <div class="faq-list" style="display: flex; flex-direction: column; gap: 1rem;">
-                  <details
+                  <details name="discovery-faq"
                     style="background: white; border: 1.5px solid rgba(58, 158, 228, 0.15); border-radius: 12px; padding: 1.2rem 1.5rem; cursor: pointer;">
                     <summary
                       style="font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
@@ -178,21 +269,56 @@
                     </p>
                   </details>
 
-                  <details
+                  <details name="discovery-faq"
                     style="background: white; border: 1.5px solid rgba(58, 158, 228, 0.15); border-radius: 12px; padding: 1.2rem 1.5rem; cursor: pointer;">
                     <summary
                       style="font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                      Do I need a subscription?
+                      Do I need a subscription, and what is included in the free trial?
                       <i class="fa-solid fa-chevron-down" style="color: var(--blue); font-size: 0.9rem;"></i>
                     </summary>
                     <p style="margin-top: 1rem; color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 0;">
-                      No subscriptions. We offer a simple, transparent pricing model. You can download and try the app
-                      for free to see if it's right for your family. If you love it, a single one-time purchase unlocks
-                      the entire world of wonder forever.
+                      No subscriptions, ever. We offer a simple, transparent pricing model: you can download the app and
+                      explore the first biome for free to see if it's right for your family. If you love it, a single
+                      one-time purchase unlocks all 6 biomes and ~400 nature facts forever, with no recurring monthly
+                      fees and Family Sharing supported across your family's devices.
                     </p>
                   </details>
 
-                  <details
+                  <details name="discovery-faq"
+                    style="background: white; border: 1.5px solid rgba(58, 158, 228, 0.15); border-radius: 12px; padding: 1.2rem 1.5rem; cursor: pointer;">
+                    <summary
+                      style="font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                      How are in-app purchases and children's privacy protected?
+                      <i class="fa-solid fa-chevron-down" style="color: var(--blue); font-size: 0.9rem;"></i>
+                    </summary>
+                    <p style="margin-top: 1rem; color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 0;">
+                      The one-time full-version unlock is protected behind a child-proof Parental Gate, ensuring young
+                      children cannot accidentally trigger a purchase or leave the app. Kidamame Discovery requires no
+                      user account, collects zero personal data, and contains no third-party analytics or behavioral
+                      trackers.
+                    </p>
+                  </details>
+
+                  <details name="discovery-faq"
+                    style="background: white; border: 1.5px solid rgba(58, 158, 228, 0.15); border-radius: 12px; padding: 1.2rem 1.5rem; cursor: pointer;">
+                    <summary
+                      style="font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                      Can I share my purchase between iOS and Android devices?
+                      <i class="fa-solid fa-chevron-down" style="color: var(--blue); font-size: 0.9rem;"></i>
+                    </summary>
+                    <p style="margin-top: 1rem; color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 0;">
+                      Within the same ecosystem (Apple Family Sharing across iPhones and iPads, or Google Play Family
+                      Library across Android devices), your purchase is shared automatically. However, sharing between
+                      iOS and Android is not possible automatically because Apple and Google manage store purchases
+                      separately, and for your privacy we do not ask you to create a Kidamame user account or store
+                      personal data on external servers. If your family uses both iOS and Android and needs a hand, just
+                      reach out to us at <a href="mailto:support@kidamame.com"
+                        style="color: var(--blue); font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">support@kidamame.com</a>
+                      and we will gladly find a solution together!
+                    </p>
+                  </details>
+
+                  <details name="discovery-faq"
                     style="background: white; border: 1.5px solid rgba(58, 158, 228, 0.15); border-radius: 12px; padding: 1.2rem 1.5rem; cursor: pointer;">
                     <summary
                       style="font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
@@ -208,7 +334,7 @@
                     </p>
                   </details>
 
-                  <details
+                  <details name="discovery-faq"
                     style="background: white; border: 1.5px solid rgba(58, 158, 228, 0.15); border-radius: 12px; padding: 1.2rem 1.5rem; cursor: pointer;">
                     <summary
                       style="font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
@@ -222,7 +348,7 @@
                     </p>
                   </details>
 
-                  <details
+                  <details name="discovery-faq"
                     style="background: white; border: 1.5px solid rgba(58, 158, 228, 0.15); border-radius: 12px; padding: 1.2rem 1.5rem; cursor: pointer;">
                     <summary
                       style="font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
@@ -235,7 +361,7 @@
                     </p>
                   </details>
 
-                  <details
+                  <details name="discovery-faq"
                     style="background: white; border: 1.5px solid rgba(58, 158, 228, 0.15); border-radius: 12px; padding: 1.2rem 1.5rem; cursor: pointer;">
                     <summary
                       style="font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
@@ -250,7 +376,7 @@
                     </p>
                   </details>
 
-                  <details
+                  <details name="discovery-faq"
                     style="background: white; border: 1.5px solid rgba(58, 158, 228, 0.15); border-radius: 12px; padding: 1.2rem 1.5rem; cursor: pointer;">
                     <summary
                       style="font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
@@ -266,7 +392,7 @@
                     </p>
                   </details>
 
-                  <details
+                  <details name="discovery-faq"
                     style="background: white; border: 1.5px solid rgba(58, 158, 228, 0.15); border-radius: 12px; padding: 1.2rem 1.5rem; cursor: pointer;">
                     <summary
                       style="font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; align-items: center;">
@@ -280,77 +406,166 @@
                 </div>
               </div>
 
-              <!-- FAQ JSON-LD -->
+              <!-- STRUCTURED DATA: MOBILE APPLICATION, BREADCRUMBS & FAQ -->
               <script type="application/ld+json">
               {
                 "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": [{
-                  "@type": "Question",
-                  "name": "Does Kidamame Discovery have ads?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. Kidamame Discovery is 100% ad-free. We believe children should be able to explore and learn in a calm environment without interruptions, as advertisements ruin the quality and the flow of the play experience."
+                "@graph": [
+                  {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://www.kidamame.com/"
+                      },
+                      {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Kidamame Discovery",
+                        "item": "https://www.kidamame.com/discovery/"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MobileApplication",
+                    "name": "Kidamame Discovery",
+                    "operatingSystem": "iOS, iPadOS, Android",
+                    "applicationCategory": "EducationalApplication",
+                    "applicationSubCategory": "Nature & Science Exploration for Kids",
+                    "url": "https://www.kidamame.com/discovery/",
+                    "image": "https://www.kidamame.com/images/kidamame_discovery_hero.webp",
+                    "screenshot": [
+                      "https://www.kidamame.com/images/screenshots/phone/kidamame_discovery_screenshot_7.jpeg",
+                      "https://www.kidamame.com/images/screenshots/phone/kidamame_discovery_screenshot_12.jpeg",
+                      "https://www.kidamame.com/images/screenshots/phone/kidamame_discovery_screenshot_21.jpeg",
+                      "https://www.kidamame.com/images/screenshots/phone/kidamame_discovery_screenshot_27.jpeg"
+                    ],
+                    "description": "A calm, Montessori-inspired interactive nature and wildlife app for children ages 4–10. Features 6 world biomes, 120+ interactive animals, plants, and natural phenomena, and 400 educational facts. Works 100% offline with no ads, no tracking, and no subscriptions.",
+                    "inLanguage": ["en", "it", "fr", "de", "es", "pt"],
+                    "featureList": [
+                      "100% Offline Play (Airplane Mode Ready)",
+                      "Zero Ads and Zero Data Tracking",
+                      "No Subscriptions (Free Trial + One-Time Unlock)",
+                      "Family Sharing Supported",
+                      "Child-Proof Parental Gate",
+                      "6 Interactive Biomes (Alps, African Savannah, Australian Outback, Arctic, Sonoran Desert, Amazon Rainforest)",
+                      "120+ Interactive Elements & ~400 Educational Fact Cards",
+                      "Authentic Animal & Nature Sounds"
+                    ],
+                    "audience": {
+                      "@type": "PeopleAudience",
+                      "suggestedMinAge": 4,
+                      "suggestedMaxAge": 10
+                    },
+                    "author": {
+                      "@type": "Organization",
+                      "name": "Kidamame",
+                      "url": "https://www.kidamame.com/"
+                    },
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "0",
+                      "priceCurrency": "USD",
+                      "description": "Free to download and try the first biome, with a single one-time in-app purchase to unlock all 6 biomes forever (no subscription)."
+                    }
+                  },
+                  {
+                    "@type": "FAQPage",
+                    "mainEntity": [{
+                      "@type": "Question",
+                      "name": "Does Kidamame Discovery have ads?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. Kidamame Discovery is 100% ad-free. We believe children should be able to explore and learn in a calm environment without interruptions, as advertisements ruin the quality and the flow of the play experience."
+                      }
+                    },{
+                      "@type": "Question",
+                      "name": "Do I need a subscription, and what is included in the free trial?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No subscriptions, ever. We offer a simple, transparent pricing model: you can download the app and explore the first biome for free to see if it's right for your family. If you love it, a single one-time purchase unlocks all 6 biomes and ~400 nature facts forever, with no recurring monthly fees and Family Sharing supported across your family's devices."
+                      }
+                    },{
+                      "@type": "Question",
+                      "name": "How are in-app purchases and children's privacy protected?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "The one-time full-version unlock is protected behind a child-proof Parental Gate, ensuring young children cannot accidentally trigger a purchase or leave the app. Kidamame Discovery requires no user account, collects zero personal data, and contains no third-party analytics or behavioral trackers."
+                      }
+                    },{
+                      "@type": "Question",
+                      "name": "Can I share my purchase between iOS and Android devices?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Within the same ecosystem (Apple Family Sharing across iPhones and iPads, or Google Play Family Library across Android devices), your purchase is shared automatically. However, sharing between iOS and Android is not possible automatically because Apple and Google manage store purchases separately, and for your privacy we do not ask you to create a Kidamame user account or store personal data on external servers. If your family uses both iOS and Android and needs a hand, just reach out to us at support@kidamame.com and we will gladly find a solution together!"
+                      }
+                    },{
+                      "@type": "Question",
+                      "name": "Is the app completely offline?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes! An internet connection is only needed at the time of purchase if you decide to unlock the full app. After that, Kidamame Discovery does not require an internet connection to play. It's truly offline, meaning no tracking, no personal data collection, and it's perfect for road trips or flights."
+                      }
+                    },{
+                      "@type": "Question",
+                      "name": "How many hours of exploration are there?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Depending on the child's pace, playtime can range from 30 minutes if they just explore and listen to the relaxing sounds, up to 90 minutes or more if they discover and read all the interesting facts."
+                      }
+                    },{
+                      "@type": "Question",
+                      "name": "Are there puzzles to solve or levels to unlock?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. Kidamame is pure exploration and discovery in a Montessori style. It is designed to inspire curiosity about our world and nature without any stressful goals, timers, or scoreboards."
+                      }
+                    },{
+                      "@type": "Question",
+                      "name": "Do you plan to add more biomes or scenes?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "We might add one or two scenes, but it's not guaranteed. Because our app is completely offline and all content is included in your download, we have strict storage limits to keep the app size manageable. It's possible we will release new biomes as separate \"chapters\" in new apps. Sign up for our newsletter below to stay updated on future releases!"
+                      }
+                    },{
+                      "@type": "Question",
+                      "name": "What is the recommended age for the app?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Kidamame Discovery is designed for kids ages 4 and up, but it grows with them! Younger kids can explore with a parent who can read the facts to them, while older children can delve into the details on their own. Actually, thanks to the fascinating nature facts and the calm, relaxing atmosphere, the app is genuinely engaging for adults too!"
+                      }
+                    },{
+                      "@type": "Question",
+                      "name": "Which languages are supported?",
+                      "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Kidamame Discovery is available in English, Italian, French, German, Spanish, and Portuguese."
+                      }
+                    }]
                   }
-                },{
-                  "@type": "Question",
-                  "name": "Do I need a subscription?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No subscriptions. We offer a simple, transparent pricing model. You can download and try the app for free to see if it's right for your family. If you love it, a single one-time purchase unlocks the entire world of wonder forever."
-                  }
-                },{
-                  "@type": "Question",
-                  "name": "Is the app completely offline?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! An internet connection is only needed at the time of purchase if you decide to unlock the full app. After that, Kidamame Discovery does not require an internet connection to play. It's truly offline, meaning no tracking, no personal data collection, and it's perfect for road trips or flights."
-                  }
-                },{
-                  "@type": "Question",
-                  "name": "How many hours of exploration are there?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Depending on the child's pace, playtime can range from 30 minutes if they just explore and listen to the relaxing sounds, up to 90 minutes or more if they discover and read all the interesting facts."
-                  }
-                },{
-                  "@type": "Question",
-                  "name": "Are there puzzles to solve or levels to unlock?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. Kidamame is pure exploration and discovery in a Montessori style. It is designed to inspire curiosity about our world and nature without any stressful goals, timers, or scoreboards."
-                  }
-                },{
-                  "@type": "Question",
-                  "name": "Do you plan to add more biomes or scenes?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We might add one or two scenes, but it's not guaranteed. Because our app is completely offline and all content is included in your download, we have strict storage limits to keep the app size manageable. It's possible we will release new biomes as separate \"chapters\" in new apps. Sign up for our newsletter below to stay updated on future releases!"
-                  }
-                },{
-                  "@type": "Question",
-                  "name": "What is the recommended age for the app?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Kidamame Discovery is designed for kids ages 4 and up, but it grows with them! Younger kids can explore with a parent who can read the facts to them, while older children can delve into the details on their own. Actually, thanks to the fascinating nature facts and the calm, relaxing atmosphere, the app is genuinely engaging for adults too!"
-                  }
-                },{
-                  "@type": "Question",
-                  "name": "Which languages are supported?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Kidamame Discovery is available in English, Italian, French, German, Spanish, and Portuguese."
-                  }
-                }]
+                ]
               }
               </script>
 
+              <!--
+              <div class="store-badges reveal">
+                <a href="https://play.google.com/store/apps/details?id=com.kidamame.discovery.app" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/google_play_badge.webp" alt="Get it on Google Play" />
+                </a>
+                <a href="https://apps.apple.com/app/id6770446769" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/apple_store_badge.webp" alt="Download on the App Store" />
+                </a>
+              </div>
+              -->
+
               <div class="reveal"
                 style="text-align: center; margin-top: 3.5rem; background: var(--blue-light); padding: 2.5rem 2rem; border-radius: 20px;">
-                <h4
+                <h2
                   style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 800; color: var(--blue); margin-bottom: 0.8rem;">
                   Stay in the loop!
-                </h4>
+                </h2>
                 <p
                   style="font-size: 0.95rem; color: var(--ink-soft); max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.6;">
                   Want to be the first to know when <strong>Kidamame Discovery</strong> launches on the Google Play
