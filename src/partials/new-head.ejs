@@ -42,42 +42,75 @@
       <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "KIDAMAME",
-    "legalName": "KIDAMAME® — Marco Uberti",
-    "description": "Independent family studio creating calm, ad-free, Montessori-inspired educational apps for kids ages 4–10. No subscriptions, no ads, no tracking, 100% offline.",
-    "url": "https://www.kidamame.com/",
-    "logo": "https://www.kidamame.com/images/weblogo.webp",
-    "founder": {
-      "@type": "Person",
-      "name": "Marco Uberti"
-    },
-    "sameAs": [
-      "https://www.instagram.com/kidamame.official",
-      "https://pinterest.com/kidamame/",
-      "https://youtube.com/@Kidamame",
-      "https://x.com/KidamameKids",
-      "https://www.facebook.com/profile.php?id=61579039664314",
-      "https://www.tiktok.com/@kidamame",
-      "https://www.linkedin.com/company/kidamame/",
-      "https://kidamame.substack.com"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "info@kidamame.com",
-      "contactType": "Customer Service & Press"
-    },
-    "makesOffer": {
-      "@type": "Offer",
-      "itemOffered": {
-        "@type": "MobileApplication",
-        "name": "Kidamame Discovery",
-        "url": "https://www.kidamame.com/discovery/",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "iOS, iPadOS, Android",
-        "description": "Calm, Montessori-inspired nature and science exploration app for kids ages 4–10. 100% offline, no ads, no tracking, and no subscriptions."
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "KIDAMAME",
+        "legalName": "KIDAMAME® — Marco Uberti",
+        "description": "Independent family studio creating calm, ad-free, Montessori-inspired educational apps for kids ages 4–10. No subscriptions, no ads, no tracking, 100% offline.",
+        "url": "https://www.kidamame.com/",
+        "logo": "https://www.kidamame.com/images/weblogo.webp",
+        "founder": {
+          "@type": "Person",
+          "name": "Marco Uberti"
+        },
+        "sameAs": [
+          "https://www.instagram.com/kidamame.official",
+          "https://pinterest.com/kidamame/",
+          "https://youtube.com/@Kidamame",
+          "https://x.com/KidamameKids",
+          "https://www.facebook.com/profile.php?id=61579039664314",
+          "https://www.tiktok.com/@kidamame",
+          "https://www.linkedin.com/company/kidamame/",
+          "https://kidamame.substack.com"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@kidamame.com",
+          "contactType": "Customer Service & Press"
+        },
+        "makesOffer": {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MobileApplication",
+            "name": "Kidamame Discovery",
+            "url": "https://www.kidamame.com/discovery/",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "iOS, iPadOS, Android",
+            "description": "Calm, Montessori-inspired nature and science exploration app for kids ages 4–10. 100% offline, no ads, no tracking, and no subscriptions."
+          }
+        }
+      },
+      {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "SiteNavigationElement",
+            "position": 1,
+            "name": "Kidamame Discovery",
+            "url": "https://www.kidamame.com/discovery/"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 2,
+            "name": "Our Mission",
+            "url": "https://www.kidamame.com/#mission"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 3,
+            "name": "Our Values",
+            "url": "https://www.kidamame.com/#values"
+          },
+          {
+            "@type": "SiteNavigationElement",
+            "position": 4,
+            "name": "Press Kit",
+            "url": "https://www.kidamame.com/press-kit/"
+          }
+        ]
       }
-    }
+    ]
   }
   </script>
 
