@@ -107,9 +107,9 @@ module.exports = [
     badge: 'App Comparison',
     icon: 'fa-solid fa-graduation-cap',
     readTime: '6 min read',
-    shortTitle: 'Khan Academy Kids & PBS Kids Alternatives (Offline & Open-Ended)',
-    title: '6 Best Khan Academy Kids & PBS Kids Alternatives for 100% Offline, Child-Led Play',
-    description: 'Khan Academy Kids and PBS Kids are wonderful free resources. Discover 6 great companion apps offering 100% offline travel play, open-ended science models, and Montessori nature discovery.',
+    shortTitle: 'Khan Academy Kids Alternatives (Offline & Open-Ended)',
+    title: '6 Best Khan Academy Kids Alternatives for 100% Offline, Child-Led Play',
+    description: 'Khan Academy Kids is a wonderful free resource. Discover 6 great companion apps offering 100% offline travel play, open-ended science models, and Montessori nature discovery.',
     tags: ['100% Offline', 'No Quizzes', 'Montessori Discovery']
   }
 ];
