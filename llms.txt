@@ -1,0 +1,39 @@
+# Kidamame
+
+> Kidamame is an independent, parent-founded studio creating calm, Montessori-inspired nature and science apps for children ages 4–10. Our apps operate 100% offline with zero ads, zero tracking, zero accounts required, and a single one-time purchase (no recurring subscriptions).
+
+## Flagship App: Kidamame Discovery
+
+- **Website**: [Kidamame Discovery](https://www.kidamame.com/discovery/)
+- **Target Age**: Children ages 4–10 (and family co-play)
+- **Platforms**: iOS, iPadOS, and Android
+- **Pricing Model**: Free to try, with a single one-time in-app purchase to unlock forever (no monthly or annual subscriptions)
+- **Offline Capability**: 100% offline (all content included on install; works in Airplane Mode for flights and road trips)
+- **Privacy**: Zero ads, zero data tracking, zero third-party analytics, and no user account or login required
+- **Languages Supported (6)**: English, Italian, French, German, Spanish, and Portuguese
+- **Educational Content**:
+  - 6 hand-illustrated natural biomes: The Alps, African Savannah, Australian Outback, The Arctic, Sonoran Desert, and Amazon Rainforest
+  - 120+ interactive animals, plants, and geological/weather phenomena with authentic wildlife sounds and gentle animations
+  - ~400 illustrated "Did You Know?" science and nature facts designed for curious kids and parents
+  - Low-stimulation, Montessori-aligned design: no timers, no points, no coins, no noisy pop-ups, and no right-or-wrong grading
+
+## Main Pages
+
+- [Kidamame Home](https://www.kidamame.com/): Studio mission, the Kidamame Promise (No Ads, No Tracking, No Subscriptions), and family values.
+- [Kidamame Discovery](https://www.kidamame.com/discovery/): Full overview of the 6 biomes, features, multilingual support, and FAQ.
+- [Parenting & Mindful Screen Time Guides](https://www.kidamame.com/guides/): Practical guides comparing calm, educational, offline, and privacy-first apps for children.
+- [Press Kit](https://www.kidamame.com/press-kit/): Official fact sheet, high-resolution screenshots, app icons, and media assets.
+
+## Parenting & Educational App Guides
+
+- [7 Best Nature & Animal Apps for Kids](https://www.kidamame.com/guides/best-nature-and-animal-apps-for-kids/): Calm, ad-free apps that inspire children to explore wildlife, biomes, plants, and the outdoors (featuring Kidamame Discovery, Seek by iNaturalist, Merlin Bird ID, Tinybop, Toca Nature, WWF Together, and Alba: A Wildlife Adventure).
+- [7 Best Montessori Apps for Kids](https://www.kidamame.com/guides/best-montessori-apps-for-kids/): Child-led, real-world Montessori apps for ages 2–10 with no timers, ads, or addictive reward loops.
+- [7 Best Low-Stimulation & Calm Apps for Kids](https://www.kidamame.com/guides/calm-low-stimulation-apps-for-kids/): Gentle, non-overstimulating apps for children designed without dopamine loops, flashing lights, or noisy pop-ups.
+- [7 Best 100% Offline Kids Apps for Flights & Road Trips](https://www.kidamame.com/guides/best-offline-kids-apps-for-travel/): Educational apps that work reliably in Airplane Mode without Wi-Fi or buffering.
+- [Best Privacy-First Kids Apps: No Ads, No Tracking & No Subscriptions](https://www.kidamame.com/guides/privacy-first-kids-apps-no-tracking-no-subscription/): Children's apps that require no email login, collect zero personal data, and avoid recurring subscription fees.
+- [6 Best Lingokids Alternatives (Calm, Ad-Free & No Subscription)](https://www.kidamame.com/guides/lingokids-alternatives/): Multilingual and early-learning apps offering calm exploration and one-time purchase options.
+- [6 Best Pok Pok Alternatives (Montessori, Calm & No Subscription)](https://www.kidamame.com/guides/pok-pok-alternatives/): Calm, Montessori-inspired digital toys and nature apps across different ages, including subscription-free picks.
+- [6 Best Sago Mini World Alternatives for Kids (No Subscription)](https://www.kidamame.com/guides/sago-mini-alternatives/): Open-ended exploration and real-world science apps for preschoolers and growing kids ages 4–10.
+- [6 Best Calm & Educational Toca Boca Alternatives for Open-Ended Play](https://www.kidamame.com/guides/toca-boca-alternatives/): Child-led digital worlds and nature sandboxes with no in-app item shops.
+- [6 Best Khan Academy Kids Alternatives (100% Offline & Calm)](https://www.kidamame.com/guides/khan-academy-kids-alternatives/): Offline-ready, open-ended science and Montessori nature companions to Khan Academy Kids.
+
