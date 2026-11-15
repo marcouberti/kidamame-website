@@ -7,7 +7,7 @@
 - **Website**: [Kidamame Discovery](https://www.kidamame.com/discovery/)
 - **Target Age**: Children ages 4–10 (and family co-play)
 - **Platforms**: iOS, iPadOS, and Android
-- **Pricing Model**: Free to try, with a single one-time in-app purchase to unlock forever (no monthly or annual subscriptions)
+- **Pricing Model**: Free to try, with a single one-time in-app purchase to unlock forever (no monthly or annual subscriptions; automatic Apple Family Sharing on iOS, and free multi-device unlock assistance on Android or across Apple and Android by writing to support@kidamame.com)
 - **Offline Capability**: 100% offline (all content included on install; works in Airplane Mode for flights and road trips)
 - **Privacy**: Zero ads, zero data tracking, zero third-party analytics, and no user account or login required
 - **Languages Supported (6)**: English, Italian, French, German, Spanish, and Portuguese
